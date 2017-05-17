@@ -92,7 +92,7 @@
     }
   .instruction_text
   {
-    color:#fff;
+    color: $white;
     font-weight:bold;
     position: relative;
     top: 10px;
@@ -219,13 +219,13 @@
 
   .bg
   {
-    background-image: url("/app/assets/images/template/bg1.jpg");
+    background-image: url("/app/assets/images/template/Bg2.jpg");
     height:100%;
   }
 
   .instruction_text
   {
-    color:#fff;
+    color: $white;
     font-weight:bold;
   }
 
@@ -401,7 +401,7 @@
 
   .instruction_text {
     font-weight:bold;
-    color:#fff;
+    color: $white;
     margin:10px;
   }
 
