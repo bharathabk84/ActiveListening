@@ -4,57 +4,8 @@ import MediaQuery from 'react-responsive';
 export default class Interactivity1 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isPopupOpen: false,
-      currentPopup: 0
-    }
+    
   }
-
-  getPopupContent() {
-    var currentPopup = this.state.currentPopup;
-    switch(parseInt(currentPopup)) {
-      case 1:
-        return (
-          <div><div>High-level assessment of the adviser’s overall business activities </div>
-                <div>Review of substantiating documents and representations made on disclosure documents and marketing materials to assess your compliance program.</div></div>
-            
-        );
-        break;
-      case 2:
-        return (
-          <div>Regional examination staff may choose a comprehensive, risk-based examination of:
-               <ul>
-                   <li>Compliance Program</li>
-                <li>Filings and Disclosures</li>
-                <li>Marketing Materials</li>
-                <li>Portfolio Management</li>
-                <li>Safety of Client Assets</li>
-                   </ul>
-</div>
-        );
-        break;
-    }
-  }
-
-  displayPopup() {
-    return (
-      <div>
-        {this.state.isPopupOpen && <div className="popup-container">
-          <span className="close-btn icon-close" onClick={this.closePopup.bind(this)}></span>
-          {this.getPopupContent()}
-        </div>}
-      </div>
-    )
-  }
-
-  openPopup(currentPopup) {
-    this.setState({isPopupOpen: true, currentPopup: currentPopup})
-  }
-
-  closePopup() {
-    this.setState({isPopupOpen: false})
-  }
-
   render() {
     return (
       <div className="interactivity1">
@@ -87,16 +38,12 @@ export default class Interactivity1 extends React.Component {
                      <span className="instruction_text">Click each button to know more.</span>
                     </span>
                     <div className="buttons">
-                      <span><button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Approach 1</button></span>
-                      <span><button id="btn_02" onClick={this.openPopup.bind(this, 2)}>Approach 2</button></span>
+                      <span><button id="btn_01">Approach 1</button></span>
+                      <span><button id="btn_02">Approach 2</button></span>
                     </div>
                   </div>
                 </div>
-                <div className="right-side">
-                  {
-                    this.displayPopup()
-                  }
-                </div>
+               
               </div>
             </div>
           </div>
@@ -132,16 +79,12 @@ export default class Interactivity1 extends React.Component {
                      <span className="instruction_text">Click each button to know more.</span>
                     </span>
                     <div className="buttons">
-                      <span><button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Approach 1</button></span>
-                      <span><button id="btn_02" onClick={this.openPopup.bind(this, 2)}>Approach 2</button></span>
+                      <span><button id="btn_01">Approach 1</button></span>
+                      <span><button id="btn_02">Approach 2</button></span>
                     </div>
                   </div>
                 </div>
-                <div className="right-side">
-                  {
-                    this.displayPopup()
-                  }
-                </div>
+            
               </div>
             </div>
           </div>
@@ -177,16 +120,12 @@ export default class Interactivity1 extends React.Component {
                       <span className="instruction_text">Click each button to know more.</span>
                     </span>
                     <div className="buttons">
-                      <div><button id="btn_01" onClick={this.openPopup.bind(this, 1)}>Approach 1</button></div>
-                      <div><button id="btn_02" onClick={this.openPopup.bind(this, 2)}>Approach 2</button></div>
+                      <div><button id="btn_01">Approach 1</button></div>
+                      <div><button id="btn_02">Approach 2</button></div>
                     </div>
                   </div>
                 </div>
-                <div className="right-side">
-                  {
-                    this.displayPopup()
-                  }
-                </div>
+               
               </div>
             </div>
           </div>
