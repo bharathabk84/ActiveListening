@@ -96,17 +96,15 @@ export default class Interactivity4 extends React.Component {
                   <div className="page_title white">
                     <h1>Active Listening Behaviour</h1>
                   </div>
-              
-        
+               <div className="sub-heading white">
+                    WHAT IS <div className="highlight">Active Listening?</div></div>
               <div className="flex-container">
-                  <div className="left-side">
+                
                       <div className="left_content">
                   Active listening is paying attention to other people in a manner where they feel that you hear their message and that you fully understand them</div>
                   
-                  </div>
-                <div className="right-side">
-                  <div className="sub-heading white">
-                    WHAT IS <div className="highlight">Active Listening?</div></div>
+                 
+                
                     <div className="right_content">Active listening involves:</div>
                     <div className="container black">
                     <div className="box1"><div className="box_img"><img src="/app/assets/images/template/active_01.png" /></div>
@@ -122,7 +120,7 @@ export default class Interactivity4 extends React.Component {
                         </div>
                     </div>
                      </div>
-                </div>
+                
                 </div>
               </div>
             </div>
