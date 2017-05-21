@@ -16,7 +16,13 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
+<<<<<<< HEAD
     port: 8008
+=======
+    port: 8008,
+      compress: true,
+      disableHostCheck: true
+>>>>>>> 0175e8c9db0d2470f26d620fef18db9981aa86b3
   },
   resolve: {
     extensions: ['.js', '.jsx']

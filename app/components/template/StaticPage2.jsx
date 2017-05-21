@@ -58,6 +58,7 @@ export default class StaticPage2 extends React.Component {
         <MediaQuery query='(min-device-width: 1224px)'>
         <div className="content">
       		<div className="bg">
+<<<<<<< HEAD
       			<div className="intro white">
       				<div className="flex-container">
                         
@@ -100,10 +101,34 @@ export default class StaticPage2 extends React.Component {
                   
       		</div>
       	</div>
+=======
+      			<div className="intro">
+                          
+                 <div className="page_title black">
+                        <h1>Learning Objective</h1>
+                        
+                        </div>  
+                <div className="subHeading black">By the end of this lesson, you will be able to:</div>
+                    
+                              <div className="list black">
+                              <ul>
+                        
+                        <li>Identify active listening behaviours</li>
+                        </ul>
+                              </div>
+                </div>
+                    
+      			</div>
+      			
+                  
+      		</div>
+      	
+>>>>>>> 0175e8c9db0d2470f26d620fef18db9981aa86b3
             </MediaQuery>
         <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
             <div className="content">
       		<div className="bg">
+<<<<<<< HEAD
       			<div className="intro white">
       				<div className="flex-container">
                         
@@ -143,11 +168,32 @@ export default class StaticPage2 extends React.Component {
                         
       				</div>
       			</div>
+=======
+      			<div className="intro">
+                          <div className="left-side">
+                 <div className="page_title black">
+                        <h1>Learning Objective</h1>
+                        
+                        </div>  
+                <div className="subHeading black">By the end of this lesson, you will be able to:</div>
+                    
+                              <div className="list black">
+                              <ul>
+                        
+                        <li>Identify active listening behaviours</li>
+                        </ul>
+                              </div>
+                </div>
+                    
+      			</div>
+      			
+>>>>>>> 0175e8c9db0d2470f26d620fef18db9981aa86b3
                   
       		</div>
       	</div>
             </MediaQuery>
         <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
+<<<<<<< HEAD
             <div className="content">
       		<div className="bg">
       			<div className="intro white">
@@ -189,6 +235,28 @@ export default class StaticPage2 extends React.Component {
                         
       				</div>
       			</div>
+=======
+             <div className="content">
+      		<div className="bg">
+      			<div className="intro">
+                          <div className="left-side">
+                 <div className="page_title black">
+                        <h1>Learning Objective</h1>
+                        
+                        </div>  
+                <div className="subHeading black">By the end of this lesson, you will be able to:</div>
+                    
+                              <div className="list black">
+                              <ul>
+                        
+                        <li>Identify active listening behaviours</li>
+                        </ul>
+                              </div>
+                </div>
+                    
+      			</div>
+      			
+>>>>>>> 0175e8c9db0d2470f26d620fef18db9981aa86b3
                   
       		</div>
       	</div>

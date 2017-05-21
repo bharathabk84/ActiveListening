@@ -42,7 +42,11 @@ export default class Intro extends React.Component {
           <MediaQuery query='(min-device-width: 1224px)'>
             <div className="content">
               <div className="bg">
+<<<<<<< HEAD
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
+=======
+                <div className="logo"> </div>
+>>>>>>> 0175e8c9db0d2470f26d620fef18db9981aa86b3
                 <div className="title welcome_text">
                   <h1 className="white">Welcome to the course,</h1>
                   <h1 className="black">SEC Compliance Readiness</h1>
