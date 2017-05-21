@@ -53,8 +53,8 @@ export default class StaticPage1 extends React.Component {
               <div className="intro white">
                 <div className="flex-container">
                   <div className="left-side">
-                    <div className="intro_heading black">
-                      <h4>Which of the following is active listening?</h4>
+                    <div className="page_title black">
+                      <h1>Which of the following is active listening?</h1>
                     </div>
                     <div className="box1">
                         <ul>
@@ -91,8 +91,8 @@ export default class StaticPage1 extends React.Component {
               <div className="intro white">
                 <div className="flex-container">
                   <div className="left-side">
-                    <div className="intro_heading black">
-                      <h4>Which of the following is active listening?</h4>
+                    <div className="page_title black">
+                      <h1>Which of the following is active listening?</h1>
                     </div>
                     <div className="box1">
                         <ul>

@@ -4,10 +4,13 @@ import {
   StaticPage2,
   StaticPage3,
   StaticPage4,
+  StaticPage5,
   Interactivity1,
   Interactivity2,
   DragDrop1,
-  StaticPage5
+  Interactivity3,
+  Interactivity4
+  
 } from '../components/Templates.jsx';
 
 const routes = [
@@ -24,18 +27,25 @@ const routes = [
   { path: '/page4',
     comp: StaticPage4
   },
-  { path: '/page5',
+   { path: '/page5',
+    comp: StaticPage5
+  },
+  { path: '/page6',
     comp: Interactivity1
   },
-  { path: '/page6',
+  { path: '/page7',
     comp: Interactivity2
   },
-  { path: '/page6',
+  { path: '/page8',
     comp: DragDrop1
   },
-    { path: '/page7',
-    comp: StaticPage5
+   { path: '/page9',
+    comp: Interactivity3
+  },
+   { path: '/page10',
+    comp: Interactivity4
   }
+   
 ];
 
 module.exports = {

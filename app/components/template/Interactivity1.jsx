@@ -12,123 +12,115 @@ export default class Interactivity1 extends React.Component {
      <MediaQuery query='(min-device-width: 1224px)'>
         <div className="content">
           <div className="bg">
+              
+               <div className="page_title">
+                    <h1>Barriers to Active Listening </h1>
+                  </div>
+              <div className="sub_heading">There can also be barriers to active listening. They are: </div>
             <div className="intro white">
               <div className="flex-container">
-                <div className="left-side">
-                  <div className="intro_heading">
-                    <h1>The National Examination Programe "NEP" </h1>
+                
+                 <div className="box1">
+                     <div className="img_heading">Distractions
+                     </div><img src="/app/assets/images/template/pic-01.png" />
+                     <div className="img_caption">Distractions can be due to physical noise or psychological problems.</div>
                   </div>
-                  <div className="intro_para">
-                    <span>Senior Specialized Examiners with experience in:</span>
+                 <div className="box2">
+                     <div className="img_heading">Jargon/Vocabulary</div>
+                     <img src="/app/assets/images/template/pic-02.png" />
+                  <div className="img_caption">Some speaker use jargon or heavy vocabulary which cannot be understood by the listener.</div></div>
+                 <div className="box3">
+                     <div className="img_heading">Cultural Differences/ Speaker Accent</div>
+                     <img src="/app/assets/images/template/pic-03.png" />
+                  <div className="img_caption">Then there is a situation where the listener are unable to understand the speaker due to the accent.</div>
                   </div>
-                  <div className="intro_list">
-                    <ul>
-                      <li>Trading</li>
-                      <li>Portfolio Management</li>
-                      <li>Valuation</li>
-                      <li>Complex Products</li>
-                      <li>Sales</li>
-                      <li>Compliance</li>
-                      <li>Forensic Accounting</li>
-                    </ul>
-                  </div>
-                  <div className="btn_div">
-                    <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
-                     <span className="instruction_text">Click each button to know more.</span>
-                    </span>
-                    <div className="buttons">
-                      <span><button id="btn_01">Approach 1</button></span>
-                      <span><button id="btn_02">Approach 2</button></span>
-                    </div>
+                 <div className="box4"><div className="img_heading">Attitudes/Prejudices</div>
+                     <img src="/app/assets/images/template/pic-04.png" />
+                     <div className="img_caption">There are also situations where the listeners are prejudiced by the speaker's culture or background and hence may not fully listen to what the speaker is saying.</div>
                   </div>
                 </div>
                
               </div>
             </div>
-          </div>
+        
         </div>
           </MediaQuery>
             
               <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
         <div className="content">
           <div className="bg">
+              
+               <div className="page_title">
+                    <h1>Barriers to Active Listening </h1>
+                  </div>
+              <div className="sub_heading">There can also be barriers to active listening. They are: </div>
             <div className="intro white">
               <div className="flex-container">
-                <div className="left-side">
-                  <div className="intro_heading">
-                    <h1>The National Examination Programe "NEP" </h1>
+                
+                 <div className="box1">
+                     <div className="img_heading">Distractions
+                     </div><img src="/app/assets/images/template/pic-01.png" />
+                     <div className="img_caption">Distractions can be due to physical noise or psychological problems.</div>
                   </div>
-                  <div className="intro_para">
-                    <span>Senior Specialized Examiners with experience in:</span>
+                 <div className="box2">
+                     <div className="img_heading">Jargon/Vocabulary</div>
+                     <img src="/app/assets/images/template/pic-02.png" />
+                  <div className="img_caption">Some speaker use jargon or heavy vocabulary which cannot be understood by the listener.</div></div>
+                 <div className="box3">
+                     <div className="img_heading">Cultural Differences/ Speaker Accent</div>
+                     <img src="/app/assets/images/template/pic-03.png" />
+                  <div className="img_caption">Then there is a situation where the listener are unable to understand the speaker due to the accent.</div>
                   </div>
-                  <div className="intro_list">
-                    <ul>
-                      <li>Trading</li>
-                      <li>Portfolio Management</li>
-                      <li>Valuation</li>
-                      <li>Complex Products</li>
-                      <li>Sales</li>
-                      <li>Compliance</li>
-                      <li>Forensic Accounting</li>
-                    </ul>
-                  </div>
-                  <div className="btn_div">
-                    <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
-                     <span className="instruction_text">Click each button to know more.</span>
-                    </span>
-                    <div className="buttons">
-                      <span><button id="btn_01">Approach 1</button></span>
-                      <span><button id="btn_02">Approach 2</button></span>
-                    </div>
+                 <div className="box4"><div className="img_heading">Attitudes/Prejudices</div>
+                     <img src="/app/assets/images/template/pic-04.png" />
+                     <div className="img_caption">There are also situations where the listeners are prejudiced by the speaker's culture or background and hence may not fully listen to what the speaker is saying.</div>
                   </div>
                 </div>
-            
+               
               </div>
             </div>
-          </div>
+        
         </div>
           </MediaQuery>
             
               <MediaQuery query='(min-device-width: 320px) and (max-device-width: 736px)'>
         <div className="content">
           <div className="bg">
+              
+               <div className="page_title">
+                    <h1>Barriers to Active Listening </h1>
+                  </div>
+              <div className="sub_heading">There can also be barriers to active listening. They are: </div>
             <div className="intro white">
               <div className="flex-container">
-                <div className="left-side">
-                  <div className="intro_heading">
-                    <h1>The National Examination Programe "NEP" </h1>
+                
+                 <div className="box1">
+                     <div className="img_heading">Distractions
+                     </div><img src="/app/assets/images/template/pic-01.png" />
+                     <div className="img_caption">Distractions can be due to physical noise or psychological problems.</div>
                   </div>
-                  <div className="intro_para">
-                    <span>Senior Specialized Examiners with experience in:</span>
+                 
+                 <div className="box2">
+                     <div className="img_heading">Jargon/Vocabulary</div>
+                     <img src="/app/assets/images/template/pic-02.png" />
+                  <div className="img_caption">Some speaker use jargon or heavy vocabulary which cannot be understood by the listener.</div></div>
+                </div>
+                
+                   <div className="flex-container">
+                 <div className="box3">
+                     <div className="img_heading">Cultural Differences/ Speaker Accent</div>
+                     <img src="/app/assets/images/template/pic-03.png" />
+                  <div className="img_caption">Then there is a situation where the listener are unable to understand the speaker due to the accent.</div>
                   </div>
-                  <div className="intro_list">
-                    <ul>
-                      <li>Trading</li>
-                      <li>Portfolio Management</li>
-                      <li>Valuation</li>
-                      <li>Complex Products</li>
-                      <li>Sales</li>
-                      <li>Compliance</li>
-                      <li>Forensic Accounting</li>
-                    </ul>
-                  </div>
-                  <div className="btn_div">
-                    <span className="instruction_img">
-                      <img src="/app/assets/images/template/hand_icon.png" className ="middle_align"/>
-                      <span className="instruction_text">Click each button to know more.</span>
-                    </span>
-                    <div className="buttons">
-                      <div><button id="btn_01">Approach 1</button></div>
-                      <div><button id="btn_02">Approach 2</button></div>
-                    </div>
+                 <div className="box4"><div className="img_heading">Attitudes/Prejudices</div>
+                     <img src="/app/assets/images/template/pic-04.png" />
+                     <div className="img_caption">There are also situations where the listeners are prejudiced by the speaker's culture or background and hence may not fully listen to what the speaker is saying.</div>
                   </div>
                 </div>
                
               </div>
             </div>
-          </div>
+        
         </div>
           </MediaQuery>
       </div>

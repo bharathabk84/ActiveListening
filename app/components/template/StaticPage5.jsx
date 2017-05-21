@@ -60,7 +60,7 @@ export default class StaticPage3 extends React.Component {
         
         <div className="container">
         <div className="summary">
-        <div className="page_title white">
+        <div className="page_title">
         <h1>Active Listening </h1><h1> Behaviour - Importance</h1></div>
 
         <div className="sub_heading">
@@ -104,10 +104,10 @@ export default class StaticPage3 extends React.Component {
         
         <div className="container">
         <div className="summary">
-        <div className="page_title white">
+        <div className="page_title">
         <h1>Active Listening Behaviour - Importance</h1></div>
 
-        <div className="sub_heading white">
+        <div className="sub_heading">
             <div className="big">Why</div> is active listening <div className="big">behaviour</div> important?
 
             </div>
