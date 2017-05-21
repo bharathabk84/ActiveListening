@@ -4,6 +4,7 @@ import {
   StaticPage2,
   StaticPage3,
   StaticPage4,
+  DragDrop2,
   StaticPage5,
   Interactivity1,
   Interactivity2,
@@ -27,22 +28,26 @@ const routes = [
   { path: '/page4',
     comp: StaticPage4
   },
-   { path: '/page5',
+  { path: '/page5',
+    comp: DragDrop2
+  }
+  ,
+   { path: '/page6',
     comp: StaticPage5
   },
-  { path: '/page6',
+  { path: '/page7',
     comp: Interactivity1
   },
-  { path: '/page7',
+  { path: '/page8',
     comp: Interactivity2
   },
-  { path: '/page8',
+  { path: '/page9',
     comp: DragDrop1
   },
-   { path: '/page9',
+   { path: '/page10',
     comp: Interactivity3
   },
-   { path: '/page10',
+   { path: '/page11',
     comp: Interactivity4
   }
    
