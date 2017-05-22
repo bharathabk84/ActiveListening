@@ -24,43 +24,43 @@ export default class Dragdrop2 extends React.Component {
                   <div className="box1">
                       <div className="img_caption"> 
                           <div className="highlight_text">Listens without</div> interrupting </div>
-                  <div className="box_img"><img src="/app/assets/images/template/act_01.png" /></div>
+                  <div className="box_img"><img src="/app/assets/images/template/listening_01.png" /></div>
                   </div>
                   
                   <div className="box2">
                       <div className="img_caption"><div className="highlight_text">Attends to</div> non-verbal messages </div>
-                   <div className="box_img">  <img src="/app/assets/images/template/act_02.png" /></div>
+                   <div className="box_img">  <img src="/app/assets/images/template/listening_02.png" /></div>
                 
                   </div>
                   
                   <div className="box3"> 
                       <div className="img_caption"> <div className="highlight_text"> Listens to the</div> context and probe </div>
                       <div className="box_img">
-                    <img src="/app/assets/images/template/act_03.png" /></div>
+                    <img src="/app/assets/images/template/listening_03.png" /></div>
                   
                   </div>
                   
                   <div className="box4">
                       <div className="img_caption"> <div className="highlight_text">Uses words</div> and body language</div>
-                   <div className="box_img"><img src="/app/assets/images/template/act_04.png" /></div>
+                   <div className="box_img"><img src="/app/assets/images/template/listening_04.png" /></div>
                 
                   </div>
                   
                   <div className="box5">
                         <div className="img_caption"> <div className="highlight_text"> Responds to </div> words and feelings</div>
-                   <div className="box_img"><img src="/app/assets/images/template/act_05.png" /></div>
+                   <div className="box_img"><img src="/app/assets/images/template/listening_05.png" /></div>
                   
                   </div>
                   
                   <div className="box6">
                       <div className="img_caption"> <div className="highlight_text">Summarises</div> what is being said</div>
-                   <div className="box_img"><img src="/app/assets/images/template/act_06.png" /></div>
+                   <div className="box_img"><img src="/app/assets/images/template/listening_06.png" /></div>
                   
                   </div>
                   
                   <div className="box7">
                       <div className="img_caption"> <div className="highlight_text">Gives feedback</div></div>
-                   <div className="box_img"><img src="/app/assets/images/template/act_07.png" /></div>
+                   <div className="box_img"><img src="/app/assets/images/template/listening_07.png" /></div>
                   
                   </div>
         </div>
@@ -154,26 +154,31 @@ export default class Dragdrop2 extends React.Component {
                       <div className="img_caption"> 
                           <div className="highlight_text">Listens without</div> interrupting </div>
                   <div className="box_img"><img src="/app/assets/images/template/act_01.png" /></div>
+                     
                   </div>
                   
                   <div className="box2">
                       <div className="img_caption"><div className="highlight_text">Attends to</div> non-verbal messages </div>
-                   <div className="box_img">  <img src="/app/assets/images/template/act_02.png" /></div>
+                   <div className="box_img">  <img src="/app/assets/images/template/act_02.png" />
+                     </div>
                 
                   </div>
                   
                   <div className="box3"> 
                       <div className="img_caption"> <div className="highlight_text"> Listens to the</div> context and probe </div>
                       <div className="box_img">
-                    <img src="/app/assets/images/template/act_03.png" /></div>
+                    <img src="/app/assets/images/template/act_03.png" />
+                      
+                      </div>
                   
                   </div>
                   
                   <div className="box4">
                       <div className="img_caption"> <div className="highlight_text">Uses words</div> and body language</div>
-                   <div className="box_img"><img src="/app/assets/images/template/act_04.png" /></div>
+                   <div className="box_img"><img src="/app/assets/images/template/act_04.png" />
+                        </div></div>
                 
-                  </div>
+                  
                   
                   <div className="box5">
                         <div className="img_caption"> <div className="highlight_text"> Responds to </div> words and feelings</div>

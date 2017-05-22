@@ -18,14 +18,14 @@ export default class StaticPage3 extends React.Component {
         <div className="page_title white">
         <h1>Active Listening </h1><h1> Behaviour - Importance</h1></div>
 
-        <div className="sub_heading">
+        <div className="sub_heading ">
             <div className="big">Why</div> is active listening <div className="big">behaviour</div> important?
 
             </div>
             
             <div className="flex-container">
                 <div className="icons white">
-            <div className="box1"><img src="/app/assets/images/template/icon-1.png" />.
+            <div className="box1"><img src="/app/assets/images/template/icon-1.png" />
                 <div className="img_caption">Help the speaker know that you are listening</div></div>
             <div className="box2"><img src="/app/assets/images/template/icon-2.png" />
                 <div className="img_caption">Establish a good rapport with the speaker</div>
@@ -60,7 +60,7 @@ export default class StaticPage3 extends React.Component {
         
         <div className="container">
         <div className="summary">
-        <div className="page_title">
+        <div className="page_title white">
         <h1>Active Listening </h1><h1> Behaviour - Importance</h1></div>
 
         <div className="sub_heading">
@@ -70,7 +70,7 @@ export default class StaticPage3 extends React.Component {
             
             <div className="flex-container">
                 <div className="icons white">
-            <div className="box1"><img src="/app/assets/images/template/icon-1.png" />.
+            <div className="box1"><img src="/app/assets/images/template/icon-1.png" />
                 <div className="img_caption">Help the speaker know that you are listening</div></div>
             <div className="box2"><img src="/app/assets/images/template/icon-2.png" />
                 <div className="img_caption">Establish a good rapport with the speaker</div>
@@ -104,7 +104,7 @@ export default class StaticPage3 extends React.Component {
         
         <div className="container">
         <div className="summary">
-        <div className="page_title">
+        <div className="page_title white">
         <h1>Active Listening Behaviour - Importance</h1></div>
 
         <div className="sub_heading">
@@ -114,7 +114,7 @@ export default class StaticPage3 extends React.Component {
             
             <div className="flex-container">
                 <div className="icons white">
-            <div className="box1"><img src="/app/assets/images/template/icon-1.png" />.
+            <div className="box1"><img src="/app/assets/images/template/icon-1.png" />
                 <div className="img_caption">Help the speaker know that you are listening</div></div>
             <div className="box2"><img src="/app/assets/images/template/icon-2.png" />
                 <div className="img_caption">Establish a good rapport with the speaker</div>

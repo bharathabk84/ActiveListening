@@ -58,6 +58,7 @@ export default class StaticPage3 extends React.Component {
                   </div>
                 
           </MediaQuery>
+            
           <MediaQuery query='(min-device-width: 768px) and (max-device-width: 1024px)'>
                 <div className="intro">
 
