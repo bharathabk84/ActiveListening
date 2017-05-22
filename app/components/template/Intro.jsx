@@ -42,21 +42,24 @@ export default class Intro extends React.Component {
           <MediaQuery query='(min-device-width: 1224px)'>
             <div className="content">
               <div className="bg">
-                <div className="logo"> </div>
+                <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white">Welcome to the course,</h1>
-                  <h1 className="black">SEC Compliance Readiness</h1>
                   <div className="flex-container white">
-                    <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>
-                    <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
+                    <div className="left-sidetext">
+                        <p>Are you an Active Listener?</p>
+                        <p>What constitutes Active Listening?</p>
+                      </div>
+                    <div className="right-sidetext ">
+                        <p>Welcome to this course on</p>
+                        <h1>ACTIVE LISTENING</h1>
+                        <div className="btn">
+                      <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                        <span className="btn_text">Start</span>
+                      </a>
+                    </div>
+                      </div>
+                       
                   </div>
-                </div>
-                <br/>
-                <div className="btn white">
-                  <span className="instruction_text">Click Start to begin </span>
-                  <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
-                    <span className="btn_text">Start</span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -68,19 +71,22 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
                 <div className="title welcome_text">
-                  <h1 className="white">Welcome to the course,</h1>
-                  <h1 className="black">SEC Compliance Readiness</h1>
                   <div className="flex-container white">
-                    <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>
-                    <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
+                    <div className="left-sidetext">
+                        <p>Are you an Active Listener?</p>
+                        <p>What constitutes Active Listening?</p>
+                      </div>
+                    <div className="right-sidetext ">
+                        <p>Welcome to this course on</p>
+                        <h1>ACTIVE LISTENING</h1>
+                        <div className="btn">
+                      <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                        <span className="btn_text">Start</span>
+                      </a>
+                    </div>
+                      </div>
+                       
                   </div>
-                </div>
-                <br/>
-                <div className="btn white">
-                  <span className="instruction_text">Click Start to begin </span>
-                  <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
-                    <span className="btn_text">Start</span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -91,21 +97,23 @@ export default class Intro extends React.Component {
             <div className="content">
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
-
                 <div className="title welcome_text">
-                  <h1 className="white">Welcome to the course,</h1>
-                  <h1 className="black">SEC Compliance Readiness</h1>
                   <div className="flex-container white">
-                    <div className="left-side ">Standards <br/>Rules <br/>Regulations</div>
-                    <div className="right-side ">Strategy <br/>Governance <br/>Security</div>
+                    <div className="left-sidetext">
+                        <p>Are you an Active Listener?</p>
+                        <p>What constitutes Active Listening?</p>
+                      </div>
+                    <div className="right-sidetext ">
+                        <p>Welcome to this course on</p>
+                        <h1>ACTIVE LISTENING</h1>
+                        <div className="btn">
+                      <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                        <span className="btn_text">Start</span>
+                      </a>
+                    </div>
+                      </div>
+                       
                   </div>
-                </div>
-                
-                <div className="btn white">
-                  <span className="instruction_text">Click Start to begin </span>
-                  <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
-                    <span className="btn_text">Start</span>
-                  </a>
                 </div>
               </div>
             </div>
