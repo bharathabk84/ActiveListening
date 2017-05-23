@@ -219,7 +219,7 @@ h1{
         }
         
     }
-    @media only screen and (max-device-width: 768px) and (orientation: portrait){
+    @media only screen and (max-device-width: 768px) and (orientation : portrait){
         .right-sidetext {
             
             line-height: inherit;
@@ -238,8 +238,8 @@ h1{
             margin-left: 30%;
         }
         
-        .btn_text{
-            topL: 4px;
+        .btn .btn_text{
+            top: 4px;
         }
     }
         
@@ -890,16 +890,28 @@ h1{
         }
         .flex-container{
             
-            margin-top: 8%;
+            margin-top: 7%;
         }
         .btn_container {
             width: 90%;
         }
-        instruction_text {
+        .instruction_text {
         display: inline-block;
-            margin-top: -20px;
+        margin-top: -30px;
+        
         }
         
+        
+        
+        .middle_align{
+            vertical-align: initial;
+        }
+        
+    }
+    @media only screen and (max-device-width: 768px) and (orientation : portrait){
+        .instruction_text {
+            width: 45%;
+        }
     }
 	 @media only screen and (max-device-width: 700px)
      {
@@ -1262,6 +1274,9 @@ h1{
     
      @media only screen and (max-device-width: 1024px) {
         
+         .bg{
+             height: 600px;
+         }
          buttton{
              width: 160px;
          }
@@ -1293,6 +1308,15 @@ h1{
             left: 68%;
          }
     
+    }
+    
+    @media only screen and (max-device-width: 768px) and (orientation : portrait){
+        
+        .pop1, .pop2, .pop3{
+            
+            height: 380px;
+        }
+        
     }
     @media only screen and (max-device-width: 700px) {
         
@@ -1532,8 +1556,41 @@ h1{
     margin-top: 23%;
   }
 
+    @media only screen and (max-device-width: 1024px) {
+        .bg{
+            height: 600px;
+        }
+        
+        .intro{
+            margin-top: 27%;
+        }
+        
+        .flex-container{
+            margin-top: 10%;
+            margin-top: 2%;
+        }
+    }
     
-  
+    @media only screen and (max-device-width: 768px) and (orientation : portrait)  {
+        
+        .flex-container{
+            width: 100%;
+          
+            margin-top: -7%;
+        }   
+        .box1, .box2, .box3, .box4 {
+            width: 100%;
+            text-align: left;
+        }
+        .intro img{
+            width: 80%;
+        }
+        
+        .intro{
+            
+        height: 52%;
+        }
+    }
     
     @media only screen and (max-device-width: 700px) {
         
@@ -1722,8 +1779,22 @@ h1{
    
     
   }
-
+    @media only screen and (max-device-width: 1024px) {
+        
+        .bg{
+            height: 600px;
+        }
+        .flex-container{
+            margin-top: 35%;
+        }
+    }
   
+    @media only screen and (max-device-width: 768px) and (orientation : portrait)  {
+        
+         .flex-container{
+            margin-top: 50%;
+        }
+    }
      @media only screen and (max-device-width: 700px) {
         
  .flex-container
@@ -2020,6 +2091,14 @@ h1{
         margin-top: 5%; 
     }
     
+    @media only screen and (max-device-width: 1024px) {
+        
+        .bg{
+            height: 600px;
+            background-position-y: 0px; 
+        }
+    }
+    
     @media only screen and (max-device-width: 700px) {
         
             .content{
@@ -2191,12 +2270,12 @@ h1{
      @media only screen and (max-device-width: 1024px)
      {
         .box1, .box2,  .box3,  .box4, .box5, .box6 
-         {
-     width: 15%;
-     margin: 1%;
-    }
+           {
+         width: 15%;
+         margin: 1%;
+        }
          .flex-container{
-            margin-top: 20%;
+            margin-top: 17%;
 
          }
          
@@ -2205,13 +2284,13 @@ h1{
             left: 5%
          } 
     }
-     @media only screen and (max-device-width: 768px)
+     @media only screen and (max-device-width: 768px) and (orientation : portrait)
      {
          .box1, .box2,  .box3,  .box4, .box5, .box6 
          {
-     width: 15%;
-     margin: 1%;
-    }
+         width: 15%;
+         margin: 1%;
+        }
          .flex-container{
              margin-top: 24%;
          }
@@ -2220,7 +2299,7 @@ h1{
              width: 95%;
             margin: auto;
             position: absolute;
-            top: 38%;
+            top: 40%;
             left: 3%;
          }
     }
@@ -2414,7 +2493,19 @@ h1{
    
     
   }
-
+    
+    @media only screen and (max-device-width: 1024px) {
+        .bg{
+            height: 600px;
+            
+        }
+    }
+    @media only screen and (max-device-width: 768px) and (orientation : portrait) {
+    
+        .bg{
+                background-position-x: -180px;
+        }
+    }
   
      @media only screen and (max-device-width: 700px) {
         
@@ -2664,7 +2755,38 @@ h1{
         font-weight: bold;
         margin-top: 20%;
     }
-
+    
+    @media only screen and (max-device-width: 1024px) {
+        .bg{
+            height: 600px;
+        }
+        
+        .pc-img{
+            display: none;
+        }
+        
+    }
+    
+    @media only screen and (max-device-width: 768px) and (orientation : portrait)  {
+        .bg
+    {
+  	background-image: none;
+      background-color: #187CC8;
+    height: 100%;
+    width: 100%;
+    }
+        .flex-container
+        {
+            margin-top: 2%;
+        }
+    
+        .pc-img{
+            width: 90%;
+            margin: auto;
+            display: block;
+        }
+        
+    }
   
      @media only screen and (max-device-width: 700px) {
         
@@ -3009,39 +3131,47 @@ h1{
     
     @media only screen and (max-device-width: 1024px) {
         
+        .bg{
+            height: 600px;
+        }
+        
+        .container{
+            margin-top: 26%;
+        }
+        
          .box1{
         position: relative;
-        top: 45%;
+        top: 76%;
     }
     
       .box2{
         position: relative;
-        top: 126%;
+        top: 159%;
     }
     
       .box3{
         position: relative;
-        top: 29%;
+        top: 63%;
     }
     
      .box4{
         position: relative;
-        top: 103%;
+        top: 137%;
     }
     
      .box5{
         position: relative;
-        top: 144%;
+        top: 177%;
     }
     
      .box6{
         position: relative;
-        top: 25%;
+        top: 60%;
     }
     
      .box7{
         position: relative;
-        top: 160%;
+        top: 196%;
     }
     
         
@@ -3049,41 +3179,44 @@ h1{
     }
     
   
-    @media only screen and (max-device-width: 768px) {
+    @media only screen and (max-device-width: 768px) and (orientation : portrait) {
         
+        .container{
+            margin-top: 40%;
+        }
         .box1{
         position: relative;
-        top: 35%;
+        top: 155%;
     }
     
       .box2{
         position: relative;
-        top: 109%;
+        top: 228%;
     }
     
       .box3{
         position: relative;
-        top: 8%;
+        top: 125%;
     }
     
      .box4{
         position: relative;
-        top: 92%;
+        top: 211%;
     }
     
      .box5{
         position: relative;
-        top: 122%;
+        top: 241%;
     }
     
      .box6{
         position: relative;
-        top: 20%;
+        top: 140%;
     }
     
      .box7{
         position: relative;
-        top: 125%;
+        top: 248%;
     }
     
     }

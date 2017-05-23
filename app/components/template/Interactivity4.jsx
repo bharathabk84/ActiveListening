@@ -60,6 +60,7 @@ export default class Interactivity4 extends React.Component {
         
               <div className="flex-container">
                   <div className="left-side">
+                       <div className="pc-img"><img src="/app/assets/images/template/Pc-image.png" /></div>
                       <div className="left_content">
                   Active listening is paying attention to other people in a manner where they feel that you hear their message and that you fully understand them</div>
                   
@@ -81,6 +82,8 @@ export default class Interactivity4 extends React.Component {
                          <div className="box_text">Responding</div>
                         </div>
                     </div>
+                    
+                   
                      </div>
                 </div>
                 </div>
