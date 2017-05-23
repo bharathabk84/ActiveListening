@@ -44,6 +44,7 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
                 <div className="title welcome_text">
+
                   <h1 className="white">Welcome to the course,</h1>
                   <h1 className="black">SEC Compliance Readiness</h1>
                   <div className="flex-container white">
@@ -58,8 +59,27 @@ export default class Intro extends React.Component {
                     <span className="btn_text">Start</span>
                   </a>
                 </div>
+
+                  <div className="flex-container white">
+                    <div className="left-sidetext">
+                        <p>Are you an Active Listener?</p>
+                        <p>What constitutes Active Listening?</p>
+                      </div>
+                    <div className="right-sidetext ">
+                        <p>Welcome to this course on</p>
+                        <h1>ACTIVE LISTENING</h1>
+                        <div className="btn">
+                      <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                        <span className="btn_text">Start</span>
+                      </a>
+                    </div>
+                      </div>
+                       
+                  </div>
+                </div>
+
               </div>
-            </div>
+            
           </MediaQuery>
               
               
@@ -68,6 +88,7 @@ export default class Intro extends React.Component {
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
                 <div className="title welcome_text">
+
                   <h1 className="white">Welcome to the course,</h1>
                   <h1 className="black">SEC Compliance Readiness</h1>
                   <div className="flex-container white">
@@ -82,8 +103,27 @@ export default class Intro extends React.Component {
                     <span className="btn_text">Start</span>
                   </a>
                 </div>
+
+                  <div className="flex-container white">
+                    <div className="left-sidetext">
+                        <p>Are you an Active Listener?</p>
+                        <p>What constitutes Active Listening?</p>
+                      </div>
+                    <div className="right-sidetext ">
+                        <p>Welcome to this course on</p>
+                        <h1>ACTIVE LISTENING</h1>
+                        <div className="btn">
+                      <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                        <span className="btn_text">Start</span>
+                      </a>
+                    </div>
+                      </div>
+                       
+                  </div>
+                </div>
+
               </div>
-            </div>
+            
           </MediaQuery>
                   
                   
@@ -91,6 +131,7 @@ export default class Intro extends React.Component {
             <div className="content">
               <div className="bg">
                 <div className="logo"> <img src="/app/assets/images/template/logo.jpg"/></div>
+
 
                 <div className="title welcome_text">
                   <h1 className="white">Welcome to the course,</h1>
@@ -107,6 +148,26 @@ export default class Intro extends React.Component {
                     <span className="btn_text">Start</span>
                   </a>
                 </div>
+
+                <div className="title welcome_text">
+                  <div className="flex-container white">
+                    <div className="left-sidetext">
+                        <p>Are you an Active Listener?</p>
+                        <p>What constitutes Active Listening?</p>
+                      </div>
+                    <div className="right-sidetext ">
+                        <p>Welcome to this course on</p>
+                        <h1>ACTIVE LISTENING</h1>
+                        <div className="btn">
+                      <a href="#" className="start-button" role="button" onClick={this.startCourse.bind(this)}>
+                        <span className="btn_text">Start</span>
+                      </a>
+                    </div>
+                      </div>
+                       
+                  </div>
+                </div>
+
               </div>
             </div>
           </MediaQuery>

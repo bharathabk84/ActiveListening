@@ -33,7 +33,11 @@ export default class Shell extends React.Component {
         onLoadNext={this.loadNext.bind(this)}
         onLoadPrev={this.loadPrev.bind(this)}
         onMenuClick={this.toggleMenu.bind(this)}
-        totalPages={8}
+
+       
+
+        totalPages={11}
+
       />
     )
   }
@@ -47,7 +51,11 @@ export default class Shell extends React.Component {
               onLoadNext={this.loadNext.bind(this)}
               onLoadPrev={this.loadPrev.bind(this)}
               onMenuClick={this.toggleMenu.bind(this)}
-              totalPages={8}
+
+             
+
+              totalPages={11}
+
             />
           </MediaQuery>
           <MediaQuery query='(min-width: 680px)'>
@@ -73,7 +81,9 @@ export default class Shell extends React.Component {
           onLoadNext={this.loadNext.bind(this)}
           onLoadPrev={this.loadPrev.bind(this)}
           onMenuClick={this.toggleMenu.bind(this)}
-          totalPages={8}
+
+          totalPages={11}
+
         />
     )
   }
