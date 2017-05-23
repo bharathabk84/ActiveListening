@@ -46,8 +46,8 @@ export default class Intro extends React.Component {
                 <div className="title welcome_text">
                   <div className="flex-container white">
                     <div className="left-sidetext">
-                        <p>Are you an Active Listener?</p>
-                        <p>What constitutes Active Listening?</p>
+                        <p>Are you an  <span className="bold">Active Listener?</span></p>
+                        <p>What constitutes  <span className="bold"> Active Listening?</span></p>
                       </div>
                     <div className="right-sidetext ">
                         <p>Welcome to this course on</p>
@@ -73,8 +73,8 @@ export default class Intro extends React.Component {
                 <div className="title welcome_text">
                   <div className="flex-container white">
                     <div className="left-sidetext">
-                        <p>Are you an Active Listener?</p>
-                        <p>What constitutes Active Listening?</p>
+                        <p>Are you an  <span className="bold">Active Listener?</span></p>
+                        <p>What constitutes <span className="bold">Active Listening? </span> </p>
                       </div>
                     <div className="right-sidetext ">
                         <p>Welcome to this course on</p>
@@ -100,8 +100,8 @@ export default class Intro extends React.Component {
                 <div className="title welcome_text">
                   <div className="flex-container white">
                     <div className="left-sidetext">
-                        <p>Are you an Active Listener?</p>
-                        <p>What constitutes Active Listening?</p>
+                        <p>Are you an  <span className="bold">Active Listener?</span></p>
+                        <p>What constitutes  <span className="bold">Active Listening?</span></p>
                       </div>
                     <div className="right-sidetext ">
                         <p>Welcome to this course on</p>

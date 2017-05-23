@@ -4,8 +4,17 @@ import MediaQuery from 'react-responsive';
 export default class StaticPage3 extends React.Component {
   constructor(props) {
     super(props);
+        var uagent = navigator.userAgent.toLowerCase();
+    this.state = {
+      isStartCourse: false,
+      isMobile: uagent.search("mobile") > -1,
+      isLoading: true,
+    }
   }
-
+    
+     startCourse() {
+    this.setState({isStartCourse: true})
+  }
   render() {
     return (
       <div className="static-page3">
@@ -28,7 +37,7 @@ export default class StaticPage3 extends React.Component {
                             </div>
                           </div>
                           <div className="box2">
-                          <img src="/app/assets/images/template/Red-icon.png" />
+                          <img src="/app/assets/images/template/Yellow-icon.png" />
                             <div className="img-caption">
                         If you are not attentive, you may miss out on crucial details. This will in turn affect your performance.
 
@@ -36,7 +45,7 @@ export default class StaticPage3 extends React.Component {
                           </div>
                           
                           <div className="box3">
-                          <img src="/app/assets/images/template/Red-icon.png" />
+                          <img src="/app/assets/images/template/Green_icon.png" />
                             <div className="img-caption">
                        However, If you are an active listener, you will not face any difficulty in understanding them.
                             </div>
@@ -50,7 +59,9 @@ export default class StaticPage3 extends React.Component {
                         <div className="btn_container">
                             <div className="instruction_text white">In this session, you will learn about active listening and the steps involved in active listening.</div>
                             <div className="arrow_img"><img src="/app/assets/images/template/Arrow.png" className="middle_align" /></div> 
-                            <div className="btn"><img src="/app/assets/images/template/btn_02.png" className="middle_align" /><span className="btn_text">What is active listening</span></div></div></div>
+                            <div className="btn" >
+                    
+                <img src="/app/assets/images/template/btn_02.png" className="middle_align" /><span className="btn_text">What is active listening</span></div></div></div>
                     <div className="blue_banner"></div>
                     </div> 
                      
@@ -75,7 +86,7 @@ export default class StaticPage3 extends React.Component {
                             </div>
                           </div>
                           <div className="box2">
-                          <img src="/app/assets/images/template/Red-icon.png" />
+                          <img src="/app/assets/images/template/Yellow-icon.png" />
                             <div className="img-caption">
                         If you are not attentive, you may miss out on crucial details. This will in turn affect your performance.
 
@@ -83,7 +94,7 @@ export default class StaticPage3 extends React.Component {
                           </div>
                           
                           <div className="box3">
-                          <img src="/app/assets/images/template/Red-icon.png" />
+                          <img src="/app/assets/images/template/Green_icon.png" />
                             <div className="img-caption">
                        However, If you are an active listener, you will not face any difficulty in understanding them.
                             </div>

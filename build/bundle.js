@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 107);
+/******/ 	return __webpack_require__(__webpack_require__.s = 117);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -335,7 +335,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(9);
+var emptyFunction = __webpack_require__(10);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -396,6 +396,16 @@ module.exports = warning;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(24);
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -434,16 +444,6 @@ function reactProdInvariant(code) {
 }
 
 module.exports = reactProdInvariant;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(23);
-
 
 /***/ }),
 /* 5 */
@@ -559,10 +559,10 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var DOMProperty = __webpack_require__(16);
-var ReactDOMComponentFlags = __webpack_require__(70);
+var DOMProperty = __webpack_require__(17);
+var ReactDOMComponentFlags = __webpack_require__(71);
 
 var invariant = __webpack_require__(1);
 
@@ -788,6 +788,1670 @@ module.exports = ExecutionEnvironment;
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory(__webpack_require__(3));
+	else if(typeof define === 'function' && define.amd)
+		define(["react"], factory);
+	else if(typeof exports === 'object')
+		exports["MediaQuery"] = factory(require("react"));
+	else
+		root["MediaQuery"] = factory(root["react"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_15__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _react = __webpack_require__(15);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _propTypes = __webpack_require__(7);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	var _matchmedia = __webpack_require__(11);
+	
+	var _matchmedia2 = _interopRequireDefault(_matchmedia);
+	
+	var _hyphenateStyleName = __webpack_require__(6);
+	
+	var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
+	
+	var _mediaQuery = __webpack_require__(4);
+	
+	var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
+	
+	var _toQuery = __webpack_require__(9);
+	
+	var _toQuery2 = _interopRequireDefault(_toQuery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var defaultTypes = {
+	  component: _propTypes2.default.node,
+	  query: _propTypes2.default.string,
+	  values: _propTypes2.default.shape(_mediaQuery2.default.matchers),
+	  children: _propTypes2.default.oneOfType([_propTypes2.default.node, _propTypes2.default.function])
+	};
+	var mediaKeys = Object.keys(_mediaQuery2.default.all);
+	var excludedQueryKeys = Object.keys(defaultTypes);
+	var excludedPropKeys = excludedQueryKeys.concat(mediaKeys);
+	
+	function omit(object, keys) {
+	  var newObject = _extends({}, object);
+	  keys.forEach(function (key) {
+	    return delete newObject[key];
+	  });
+	  return newObject;
+	}
+	
+	var MediaQuery = function (_React$Component) {
+	  _inherits(MediaQuery, _React$Component);
+	
+	  function MediaQuery() {
+	    var _ref;
+	
+	    var _temp, _this, _ret;
+	
+	    _classCallCheck(this, MediaQuery);
+	
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MediaQuery.__proto__ || Object.getPrototypeOf(MediaQuery)).call.apply(_ref, [this].concat(args))), _this), _this.state = { matches: false }, _this.updateMatches = function () {
+	      if (_this._mql.matches === _this.state.matches) {
+	        return;
+	      }
+	      _this.setState({
+	        matches: _this._mql.matches
+	      });
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+	
+	  _createClass(MediaQuery, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.updateQuery(this.props);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      this.updateQuery(nextProps);
+	    }
+	  }, {
+	    key: 'updateQuery',
+	    value: function updateQuery(props) {
+	      var values = void 0;
+	      if (props.query) {
+	        this.query = props.query;
+	      } else {
+	        this.query = (0, _toQuery2.default)(omit(props, excludedQueryKeys));
+	      }
+	
+	      if (!this.query) {
+	        throw new Error('Invalid or missing MediaQuery!');
+	      }
+	
+	      if (props.values) {
+	        values = Object.keys(props.values).reduce(function (result, key) {
+	          result[(0, _hyphenateStyleName2.default)(key)] = props.values[key];
+	          return result;
+	        }, {});
+	      }
+	
+	      if (this._mql) {
+	        this._mql.removeListener(this.updateMatches);
+	      }
+	
+	      this._mql = (0, _matchmedia2.default)(this.query, values);
+	      this._mql.addListener(this.updateMatches);
+	      this.updateMatches();
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this._mql.removeListener(this.updateMatches);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      if (typeof this.props.children === 'function') {
+	        return this.props.children(this.state.matches);
+	      }
+	
+	      if (this.state.matches === false) {
+	        return null;
+	      }
+	      var props = omit(this.props, excludedPropKeys);
+	      var hasMergeProps = Object.keys(props).length > 0;
+	      var childrenCount = _react2.default.Children.count(this.props.children);
+	      var wrapChildren = this.props.component || childrenCount > 1 || typeof this.props.children === 'string' || Array.isArray(this.props.children) && childrenCount == 1 || this.props.children === undefined;
+	      if (wrapChildren) {
+	        return _react2.default.createElement(this.props.component || 'div', props, this.props.children);
+	      } else if (hasMergeProps) {
+	        return _react2.default.cloneElement(this.props.children, props);
+	      } else if (childrenCount) {
+	        return this.props.children;
+	      } else {
+	        return null;
+	      }
+	    }
+	  }]);
+	
+	  return MediaQuery;
+	}(_react2.default.Component);
+	
+	MediaQuery.displayName = 'MediaQuery';
+	MediaQuery.defaultProps = {
+	  values: {}
+	};
+	exports.default = MediaQuery;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+	// shim for using process in browser
+	var process = module.exports = {};
+	
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
+	
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+	
+	function defaultSetTimout() {
+	    throw new Error('setTimeout has not been defined');
+	}
+	function defaultClearTimeout () {
+	    throw new Error('clearTimeout has not been defined');
+	}
+	(function () {
+	    try {
+	        if (typeof setTimeout === 'function') {
+	            cachedSetTimeout = setTimeout;
+	        } else {
+	            cachedSetTimeout = defaultSetTimout;
+	        }
+	    } catch (e) {
+	        cachedSetTimeout = defaultSetTimout;
+	    }
+	    try {
+	        if (typeof clearTimeout === 'function') {
+	            cachedClearTimeout = clearTimeout;
+	        } else {
+	            cachedClearTimeout = defaultClearTimeout;
+	        }
+	    } catch (e) {
+	        cachedClearTimeout = defaultClearTimeout;
+	    }
+	} ())
+	function runTimeout(fun) {
+	    if (cachedSetTimeout === setTimeout) {
+	        //normal enviroments in sane situations
+	        return setTimeout(fun, 0);
+	    }
+	    // if setTimeout wasn't available but was latter defined
+	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+	        cachedSetTimeout = setTimeout;
+	        return setTimeout(fun, 0);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedSetTimeout(fun, 0);
+	    } catch(e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+	            return cachedSetTimeout.call(null, fun, 0);
+	        } catch(e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+	            return cachedSetTimeout.call(this, fun, 0);
+	        }
+	    }
+	
+	
+	}
+	function runClearTimeout(marker) {
+	    if (cachedClearTimeout === clearTimeout) {
+	        //normal enviroments in sane situations
+	        return clearTimeout(marker);
+	    }
+	    // if clearTimeout wasn't available but was latter defined
+	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+	        cachedClearTimeout = clearTimeout;
+	        return clearTimeout(marker);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedClearTimeout(marker);
+	    } catch (e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+	            return cachedClearTimeout.call(null, marker);
+	        } catch (e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+	            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+	            return cachedClearTimeout.call(this, marker);
+	        }
+	    }
+	
+	
+	
+	}
+	var queue = [];
+	var draining = false;
+	var currentQueue;
+	var queueIndex = -1;
+	
+	function cleanUpNextTick() {
+	    if (!draining || !currentQueue) {
+	        return;
+	    }
+	    draining = false;
+	    if (currentQueue.length) {
+	        queue = currentQueue.concat(queue);
+	    } else {
+	        queueIndex = -1;
+	    }
+	    if (queue.length) {
+	        drainQueue();
+	    }
+	}
+	
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    var timeout = runTimeout(cleanUpNextTick);
+	    draining = true;
+	
+	    var len = queue.length;
+	    while(len) {
+	        currentQueue = queue;
+	        queue = [];
+	        while (++queueIndex < len) {
+	            if (currentQueue) {
+	                currentQueue[queueIndex].run();
+	            }
+	        }
+	        queueIndex = -1;
+	        len = queue.length;
+	    }
+	    currentQueue = null;
+	    draining = false;
+	    runClearTimeout(timeout);
+	}
+	
+	process.nextTick = function (fun) {
+	    var args = new Array(arguments.length - 1);
+	    if (arguments.length > 1) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            args[i - 1] = arguments[i];
+	        }
+	    }
+	    queue.push(new Item(fun, args));
+	    if (queue.length === 1 && !draining) {
+	        runTimeout(drainQueue);
+	    }
+	};
+	
+	// v8 likes predictible objects
+	function Item(fun, array) {
+	    this.fun = fun;
+	    this.array = array;
+	}
+	Item.prototype.run = function () {
+	    this.fun.apply(null, this.array);
+	};
+	process.title = 'browser';
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = ''; // empty string to avoid regexp issues
+	process.versions = {};
+	
+	function noop() {}
+	
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+	
+	process.binding = function (name) {
+	    throw new Error('process.binding is not supported');
+	};
+	
+	process.cwd = function () { return '/' };
+	process.chdir = function (dir) {
+	    throw new Error('process.chdir is not supported');
+	};
+	process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+	"use strict";
+	
+	/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * 
+	 */
+	
+	function makeEmptyFunction(arg) {
+	  return function () {
+	    return arg;
+	  };
+	}
+	
+	/**
+	 * This function accepts and discards inputs; it has no side effects. This is
+	 * primarily useful idiomatically for overridable function endpoints which
+	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+	 */
+	var emptyFunction = function emptyFunction() {};
+	
+	emptyFunction.thatReturns = makeEmptyFunction;
+	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+	emptyFunction.thatReturnsThis = function () {
+	  return this;
+	};
+	emptyFunction.thatReturnsArgument = function (arg) {
+	  return arg;
+	};
+	
+	module.exports = emptyFunction;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 */
+	
+	'use strict';
+	
+	/**
+	 * Use invariant() to assert state which your program assumes to be true.
+	 *
+	 * Provide sprintf-style format (only %s is supported) and arguments
+	 * to provide information about what broke and what you were
+	 * expecting.
+	 *
+	 * The invariant message will be stripped in production, but the invariant
+	 * will remain to ensure logic does not differ in production.
+	 */
+	
+	var validateFormat = function validateFormat(format) {};
+	
+	if (process.env.NODE_ENV !== 'production') {
+	  validateFormat = function validateFormat(format) {
+	    if (format === undefined) {
+	      throw new Error('invariant requires an error message argument');
+	    }
+	  };
+	}
+	
+	function invariant(condition, format, a, b, c, d, e, f) {
+	  validateFormat(format);
+	
+	  if (!condition) {
+	    var error;
+	    if (format === undefined) {
+	      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+	    } else {
+	      var args = [a, b, c, d, e, f];
+	      var argIndex = 0;
+	      error = new Error(format.replace(/%s/g, function () {
+	        return args[argIndex++];
+	      }));
+	      error.name = 'Invariant Violation';
+	    }
+	
+	    error.framesToPop = 1; // we don't care about invariant's own frame
+	    throw error;
+	  }
+	}
+	
+	module.exports = invariant;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _propTypes = __webpack_require__(7);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var stringOrNumber = _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]);
+	
+	// properties that match media queries
+	var matchers = {
+	  orientation: _propTypes2.default.oneOf(['portrait', 'landscape']),
+	
+	  scan: _propTypes2.default.oneOf(['progressive', 'interlace']),
+	
+	  aspectRatio: _propTypes2.default.string,
+	  deviceAspectRatio: _propTypes2.default.string,
+	
+	  height: stringOrNumber,
+	  deviceHeight: stringOrNumber,
+	
+	  width: stringOrNumber,
+	  deviceWidth: stringOrNumber,
+	
+	  color: _propTypes2.default.bool,
+	
+	  colorIndex: _propTypes2.default.bool,
+	
+	  monochrome: _propTypes2.default.bool,
+	  resolution: stringOrNumber
+	};
+	
+	// media features
+	var features = _extends({
+	  minAspectRatio: _propTypes2.default.string,
+	  maxAspectRatio: _propTypes2.default.string,
+	  minDeviceAspectRatio: _propTypes2.default.string,
+	  maxDeviceAspectRatio: _propTypes2.default.string,
+	
+	  minHeight: stringOrNumber,
+	  maxHeight: stringOrNumber,
+	  minDeviceHeight: stringOrNumber,
+	  maxDeviceHeight: stringOrNumber,
+	
+	  minWidth: stringOrNumber,
+	  maxWidth: stringOrNumber,
+	  minDeviceWidth: stringOrNumber,
+	  maxDeviceWidth: stringOrNumber,
+	
+	  minColor: _propTypes2.default.number,
+	  maxColor: _propTypes2.default.number,
+	
+	  minColorIndex: _propTypes2.default.number,
+	  maxColorIndex: _propTypes2.default.number,
+	
+	  minMonochrome: _propTypes2.default.number,
+	  maxMonochrome: _propTypes2.default.number,
+	
+	  minResolution: stringOrNumber,
+	  maxResolution: stringOrNumber
+	
+	}, matchers);
+	
+	// media types
+	var types = {
+	  all: _propTypes2.default.bool,
+	  grid: _propTypes2.default.bool,
+	  aural: _propTypes2.default.bool,
+	  braille: _propTypes2.default.bool,
+	  handheld: _propTypes2.default.bool,
+	  print: _propTypes2.default.bool,
+	  projection: _propTypes2.default.bool,
+	  screen: _propTypes2.default.bool,
+	  tty: _propTypes2.default.bool,
+	  tv: _propTypes2.default.bool,
+	  embossed: _propTypes2.default.bool
+	};
+	
+	var all = _extends({}, types, features);
+	
+	// add the type property
+	matchers.type = Object.keys(types);
+	
+	exports.default = {
+	  all: all,
+	  types: types,
+	  matchers: matchers,
+	  features: features
+	};
+	module.exports = exports['default'];
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 */
+	
+	'use strict';
+	
+	var emptyFunction = __webpack_require__(2);
+	
+	/**
+	 * Similar to invariant but only logs a warning if the condition is not met.
+	 * This can be used to log issues in development environments in critical
+	 * paths. Removing the logging code for production environments will keep the
+	 * same logic and follow the same code paths.
+	 */
+	
+	var warning = emptyFunction;
+	
+	if (process.env.NODE_ENV !== 'production') {
+	  (function () {
+	    var printWarning = function printWarning(format) {
+	      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	        args[_key - 1] = arguments[_key];
+	      }
+	
+	      var argIndex = 0;
+	      var message = 'Warning: ' + format.replace(/%s/g, function () {
+	        return args[argIndex++];
+	      });
+	      if (typeof console !== 'undefined') {
+	        console.error(message);
+	      }
+	      try {
+	        // --- Welcome to debugging React ---
+	        // This error was thrown as a convenience so that you can use this stack
+	        // to find the callsite that caused this warning to fire.
+	        throw new Error(message);
+	      } catch (x) {}
+	    };
+	
+	    warning = function warning(condition, format) {
+	      if (format === undefined) {
+	        throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
+	      }
+	
+	      if (format.indexOf('Failed Composite propType: ') === 0) {
+	        return; // Ignore CompositeComponent proptype check.
+	      }
+	
+	      if (!condition) {
+	        for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+	          args[_key2 - 2] = arguments[_key2];
+	        }
+	
+	        printWarning.apply(undefined, [format].concat(args));
+	      }
+	    };
+	  })();
+	}
+	
+	module.exports = warning;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+	'use strict';
+	
+	var uppercasePattern = /[A-Z]/g;
+	var msPattern = /^ms-/;
+	var cache = {};
+	
+	function hyphenateStyleName(string) {
+	    return string in cache
+	    ? cache[string]
+	    : cache[string] = string
+	      .replace(uppercasePattern, '-$&')
+	      .toLowerCase()
+	      .replace(msPattern, '-ms-');
+	}
+	
+	module.exports = hyphenateStyleName;
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+	
+	if (process.env.NODE_ENV !== 'production') {
+	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+	    Symbol.for &&
+	    Symbol.for('react.element')) ||
+	    0xeac7;
+	
+	  var isValidElement = function(object) {
+	    return typeof object === 'object' &&
+	      object !== null &&
+	      object.$$typeof === REACT_ELEMENT_TYPE;
+	  };
+	
+	  // By explicitly using `prop-types` you are opting into new development behavior.
+	  // http://fb.me/prop-types-in-prod
+	  var throwOnDirectAccess = true;
+	  module.exports = __webpack_require__(14)(isValidElement, throwOnDirectAccess);
+	} else {
+	  // By explicitly using `prop-types` you are opting into new production behavior.
+	  // http://fb.me/prop-types-in-prod
+	  module.exports = __webpack_require__(13)();
+	}
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+	/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+	
+	'use strict';
+	
+	var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+	
+	module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	exports.default = function (obj) {
+	  var rules = [];
+	  Object.keys(_mediaQuery2.default.all).forEach(function (k) {
+	    var v = obj[k];
+	    if (v != null) {
+	      rules.push(keyVal(k, v));
+	    }
+	  });
+	  return join(rules);
+	};
+	
+	var _hyphenateStyleName = __webpack_require__(6);
+	
+	var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
+	
+	var _mediaQuery = __webpack_require__(4);
+	
+	var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var negate = function negate(cond) {
+	  return 'not ' + cond;
+	};
+	
+	function keyVal(k, v) {
+	  var realKey = (0, _hyphenateStyleName2.default)(k);
+	
+	  // px shorthand
+	  if (typeof v === 'number') {
+	    v = v + 'px';
+	  }
+	  if (v === true) {
+	    return k;
+	  }
+	  if (v === false) {
+	    return negate(k);
+	  }
+	  return '(' + realKey + ': ' + v + ')';
+	}
+	
+	function join(conds) {
+	  return conds.join(' and ');
+	}
+	
+	module.exports = exports['default'];
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+	/*
+	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
+	Copyrights licensed under the New BSD License.
+	See the accompanying LICENSE file for terms.
+	*/
+	
+	'use strict';
+	
+	exports.match = matchQuery;
+	exports.parse = parseQuery;
+	
+	// -----------------------------------------------------------------------------
+	
+	var RE_MEDIA_QUERY     = /(?:(only|not)?\s*([^\s\(\)]+)(?:\s*and)?\s*)?(.+)?/i,
+	    RE_MQ_EXPRESSION   = /\(\s*([^\s\:\)]+)\s*(?:\:\s*([^\s\)]+))?\s*\)/,
+	    RE_MQ_FEATURE      = /^(?:(min|max)-)?(.+)/,
+	    RE_LENGTH_UNIT     = /(em|rem|px|cm|mm|in|pt|pc)?$/,
+	    RE_RESOLUTION_UNIT = /(dpi|dpcm|dppx)?$/;
+	
+	function matchQuery(mediaQuery, values) {
+	    return parseQuery(mediaQuery).some(function (query) {
+	        var inverse = query.inverse;
+	
+	        // Either the parsed or specified `type` is "all", or the types must be
+	        // equal for a match.
+	        var typeMatch = query.type === 'all' || values.type === query.type;
+	
+	        // Quit early when `type` doesn't match, but take "not" into account.
+	        if ((typeMatch && inverse) || !(typeMatch || inverse)) {
+	            return false;
+	        }
+	
+	        var expressionsMatch = query.expressions.every(function (expression) {
+	            var feature  = expression.feature,
+	                modifier = expression.modifier,
+	                expValue = expression.value,
+	                value    = values[feature];
+	
+	            // Missing or falsy values don't match.
+	            if (!value) { return false; }
+	
+	            switch (feature) {
+	                case 'orientation':
+	                case 'scan':
+	                    return value.toLowerCase() === expValue.toLowerCase();
+	
+	                case 'width':
+	                case 'height':
+	                case 'device-width':
+	                case 'device-height':
+	                    expValue = toPx(expValue);
+	                    value    = toPx(value);
+	                    break;
+	
+	                case 'resolution':
+	                    expValue = toDpi(expValue);
+	                    value    = toDpi(value);
+	                    break;
+	
+	                case 'aspect-ratio':
+	                case 'device-aspect-ratio':
+	                case /* Deprecated */ 'device-pixel-ratio':
+	                    expValue = toDecimal(expValue);
+	                    value    = toDecimal(value);
+	                    break;
+	
+	                case 'grid':
+	                case 'color':
+	                case 'color-index':
+	                case 'monochrome':
+	                    expValue = parseInt(expValue, 10) || 1;
+	                    value    = parseInt(value, 10) || 0;
+	                    break;
+	            }
+	
+	            switch (modifier) {
+	                case 'min': return value >= expValue;
+	                case 'max': return value <= expValue;
+	                default   : return value === expValue;
+	            }
+	        });
+	
+	        return (expressionsMatch && !inverse) || (!expressionsMatch && inverse);
+	    });
+	}
+	
+	function parseQuery(mediaQuery) {
+	    return mediaQuery.split(',').map(function (query) {
+	        query = query.trim();
+	
+	        var captures    = query.match(RE_MEDIA_QUERY),
+	            modifier    = captures[1],
+	            type        = captures[2],
+	            expressions = captures[3] || '',
+	            parsed      = {};
+	
+	        parsed.inverse = !!modifier && modifier.toLowerCase() === 'not';
+	        parsed.type    = type ? type.toLowerCase() : 'all';
+	
+	        // Split expressions into a list.
+	        expressions = expressions.match(/\([^\)]+\)/g) || [];
+	
+	        parsed.expressions = expressions.map(function (expression) {
+	            var captures = expression.match(RE_MQ_EXPRESSION),
+	                feature  = captures[1].toLowerCase().match(RE_MQ_FEATURE);
+	
+	            return {
+	                modifier: feature[1],
+	                feature : feature[2],
+	                value   : captures[2]
+	            };
+	        });
+	
+	        return parsed;
+	    });
+	}
+	
+	// -- Utilities ----------------------------------------------------------------
+	
+	function toDecimal(ratio) {
+	    var decimal = Number(ratio),
+	        numbers;
+	
+	    if (!decimal) {
+	        numbers = ratio.match(/^(\d+)\s*\/\s*(\d+)$/);
+	        decimal = numbers[1] / numbers[2];
+	    }
+	
+	    return decimal;
+	}
+	
+	function toDpi(resolution) {
+	    var value = parseFloat(resolution),
+	        units = String(resolution).match(RE_RESOLUTION_UNIT)[1];
+	
+	    switch (units) {
+	        case 'dpcm': return value / 2.54;
+	        case 'dppx': return value * 96;
+	        default    : return value;
+	    }
+	}
+	
+	function toPx(length) {
+	    var value = parseFloat(length),
+	        units = String(length).match(RE_LENGTH_UNIT)[1];
+	
+	    switch (units) {
+	        case 'em' : return value * 16;
+	        case 'rem': return value * 16;
+	        case 'cm' : return value * 96 / 2.54;
+	        case 'mm' : return value * 96 / 2.54 / 10;
+	        case 'in' : return value * 96;
+	        case 'pt' : return value * 72;
+	        case 'pc' : return value * 72 / 12;
+	        default   : return value;
+	    }
+	}
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var staticMatch = __webpack_require__(10).match;
+	var dynamicMatch = typeof window !== 'undefined' ? window.matchMedia : null;
+	
+	// our fake MediaQueryList
+	function Mql(query, values){
+	  var self = this;
+	  if(dynamicMatch){
+	    var mql = dynamicMatch.call(window, query);
+	    this.matches = mql.matches;
+	    this.media = mql.media;
+	    // TODO: is there a time it makes sense to remove this listener?
+	    mql.addListener(update);
+	  } else {
+	    this.matches = staticMatch(query, values);
+	    this.media = query;
+	  }
+	
+	  this.addListener = addListener;
+	  this.removeListener = removeListener;
+	
+	  function addListener(listener){
+	    if(mql){
+	      mql.addListener(listener);
+	    }
+	  }
+	
+	  function removeListener(listener){
+	    if(mql){
+	      mql.removeListener(listener);
+	    }
+	  }
+	
+	  // update ourselves!
+	  function update(evt){
+	    self.matches = evt.matches;
+	    self.media = evt.media;
+	  }
+	}
+	
+	function matchMedia(query, values){
+	  return new Mql(query, values);
+	}
+	
+	module.exports = matchMedia;
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+	
+	'use strict';
+	
+	if (process.env.NODE_ENV !== 'production') {
+	  var invariant = __webpack_require__(3);
+	  var warning = __webpack_require__(5);
+	  var ReactPropTypesSecret = __webpack_require__(8);
+	  var loggedTypeFailures = {};
+	}
+	
+	/**
+	 * Assert that the values match with the type specs.
+	 * Error messages are memorized and will only be shown once.
+	 *
+	 * @param {object} typeSpecs Map of name to a ReactPropType
+	 * @param {object} values Runtime values that need to be type-checked
+	 * @param {string} location e.g. "prop", "context", "child context"
+	 * @param {string} componentName Name of the component for error messages.
+	 * @param {?Function} getStack Returns the component stack.
+	 * @private
+	 */
+	function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+	  if (process.env.NODE_ENV !== 'production') {
+	    for (var typeSpecName in typeSpecs) {
+	      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+	        var error;
+	        // Prop type validation may throw. In case they do, we don't want to
+	        // fail the render phase where it didn't fail before. So we log it.
+	        // After these have been cleaned up, we'll let them throw.
+	        try {
+	          // This is intentionally an invariant that gets caught. It's the same
+	          // behavior as without this statement except with a better message.
+	          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
+	          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+	        } catch (ex) {
+	          error = ex;
+	        }
+	        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
+	        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+	          // Only monitor this failure once because there tends to be a lot of the
+	          // same error.
+	          loggedTypeFailures[error.message] = true;
+	
+	          var stack = getStack ? getStack() : '';
+	
+	          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+	        }
+	      }
+	    }
+	  }
+	}
+	
+	module.exports = checkPropTypes;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+	
+	'use strict';
+	
+	var emptyFunction = __webpack_require__(2);
+	var invariant = __webpack_require__(3);
+	
+	module.exports = function() {
+	  // Important!
+	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+	  function shim() {
+	    invariant(
+	      false,
+	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+	      'Use PropTypes.checkPropTypes() to call them. ' +
+	      'Read more at http://fb.me/use-check-prop-types'
+	    );
+	  };
+	  shim.isRequired = shim;
+	  function getShim() {
+	    return shim;
+	  };
+	  var ReactPropTypes = {
+	    array: shim,
+	    bool: shim,
+	    func: shim,
+	    number: shim,
+	    object: shim,
+	    string: shim,
+	    symbol: shim,
+	
+	    any: shim,
+	    arrayOf: getShim,
+	    element: shim,
+	    instanceOf: getShim,
+	    node: shim,
+	    objectOf: getShim,
+	    oneOf: getShim,
+	    oneOfType: getShim,
+	    shape: getShim
+	  };
+	
+	  ReactPropTypes.checkPropTypes = emptyFunction;
+	  ReactPropTypes.PropTypes = ReactPropTypes;
+	
+	  return ReactPropTypes;
+	};
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-present, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 */
+	
+	'use strict';
+	
+	var emptyFunction = __webpack_require__(2);
+	var invariant = __webpack_require__(3);
+	var warning = __webpack_require__(5);
+	
+	var ReactPropTypesSecret = __webpack_require__(8);
+	var checkPropTypes = __webpack_require__(12);
+	
+	module.exports = function(isValidElement, throwOnDirectAccess) {
+	  /* global Symbol */
+	  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+	  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+	
+	  /**
+	   * Returns the iterator method function contained on the iterable object.
+	   *
+	   * Be sure to invoke the function with the iterable as context:
+	   *
+	   *     var iteratorFn = getIteratorFn(myIterable);
+	   *     if (iteratorFn) {
+	   *       var iterator = iteratorFn.call(myIterable);
+	   *       ...
+	   *     }
+	   *
+	   * @param {?object} maybeIterable
+	   * @return {?function}
+	   */
+	  function getIteratorFn(maybeIterable) {
+	    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+	    if (typeof iteratorFn === 'function') {
+	      return iteratorFn;
+	    }
+	  }
+	
+	  /**
+	   * Collection of methods that allow declaration and validation of props that are
+	   * supplied to React components. Example usage:
+	   *
+	   *   var Props = require('ReactPropTypes');
+	   *   var MyArticle = React.createClass({
+	   *     propTypes: {
+	   *       // An optional string prop named "description".
+	   *       description: Props.string,
+	   *
+	   *       // A required enum prop named "category".
+	   *       category: Props.oneOf(['News','Photos']).isRequired,
+	   *
+	   *       // A prop named "dialog" that requires an instance of Dialog.
+	   *       dialog: Props.instanceOf(Dialog).isRequired
+	   *     },
+	   *     render: function() { ... }
+	   *   });
+	   *
+	   * A more formal specification of how these methods are used:
+	   *
+	   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+	   *   decl := ReactPropTypes.{type}(.isRequired)?
+	   *
+	   * Each and every declaration produces a function with the same signature. This
+	   * allows the creation of custom validation functions. For example:
+	   *
+	   *  var MyLink = React.createClass({
+	   *    propTypes: {
+	   *      // An optional string or URI prop named "href".
+	   *      href: function(props, propName, componentName) {
+	   *        var propValue = props[propName];
+	   *        if (propValue != null && typeof propValue !== 'string' &&
+	   *            !(propValue instanceof URI)) {
+	   *          return new Error(
+	   *            'Expected a string or an URI for ' + propName + ' in ' +
+	   *            componentName
+	   *          );
+	   *        }
+	   *      }
+	   *    },
+	   *    render: function() {...}
+	   *  });
+	   *
+	   * @internal
+	   */
+	
+	  var ANONYMOUS = '<<anonymous>>';
+	
+	  // Important!
+	  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+	  var ReactPropTypes = {
+	    array: createPrimitiveTypeChecker('array'),
+	    bool: createPrimitiveTypeChecker('boolean'),
+	    func: createPrimitiveTypeChecker('function'),
+	    number: createPrimitiveTypeChecker('number'),
+	    object: createPrimitiveTypeChecker('object'),
+	    string: createPrimitiveTypeChecker('string'),
+	    symbol: createPrimitiveTypeChecker('symbol'),
+	
+	    any: createAnyTypeChecker(),
+	    arrayOf: createArrayOfTypeChecker,
+	    element: createElementTypeChecker(),
+	    instanceOf: createInstanceTypeChecker,
+	    node: createNodeChecker(),
+	    objectOf: createObjectOfTypeChecker,
+	    oneOf: createEnumTypeChecker,
+	    oneOfType: createUnionTypeChecker,
+	    shape: createShapeTypeChecker
+	  };
+	
+	  /**
+	   * inlined Object.is polyfill to avoid requiring consumers ship their own
+	   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+	   */
+	  /*eslint-disable no-self-compare*/
+	  function is(x, y) {
+	    // SameValue algorithm
+	    if (x === y) {
+	      // Steps 1-5, 7-10
+	      // Steps 6.b-6.e: +0 != -0
+	      return x !== 0 || 1 / x === 1 / y;
+	    } else {
+	      // Step 6.a: NaN == NaN
+	      return x !== x && y !== y;
+	    }
+	  }
+	  /*eslint-enable no-self-compare*/
+	
+	  /**
+	   * We use an Error-like object for backward compatibility as people may call
+	   * PropTypes directly and inspect their output. However, we don't use real
+	   * Errors anymore. We don't inspect their stack anyway, and creating them
+	   * is prohibitively expensive if they are created too often, such as what
+	   * happens in oneOfType() for any type before the one that matched.
+	   */
+	  function PropTypeError(message) {
+	    this.message = message;
+	    this.stack = '';
+	  }
+	  // Make `instanceof Error` still work for returned errors.
+	  PropTypeError.prototype = Error.prototype;
+	
+	  function createChainableTypeChecker(validate) {
+	    if (process.env.NODE_ENV !== 'production') {
+	      var manualPropTypeCallCache = {};
+	      var manualPropTypeWarningCount = 0;
+	    }
+	    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+	      componentName = componentName || ANONYMOUS;
+	      propFullName = propFullName || propName;
+	
+	      if (secret !== ReactPropTypesSecret) {
+	        if (throwOnDirectAccess) {
+	          // New behavior only for users of `prop-types` package
+	          invariant(
+	            false,
+	            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+	            'Use `PropTypes.checkPropTypes()` to call them. ' +
+	            'Read more at http://fb.me/use-check-prop-types'
+	          );
+	        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
+	          // Old behavior for people using React.PropTypes
+	          var cacheKey = componentName + ':' + propName;
+	          if (
+	            !manualPropTypeCallCache[cacheKey] &&
+	            // Avoid spamming the console because they are often not actionable except for lib authors
+	            manualPropTypeWarningCount < 3
+	          ) {
+	            warning(
+	              false,
+	              'You are manually calling a React.PropTypes validation ' +
+	              'function for the `%s` prop on `%s`. This is deprecated ' +
+	              'and will throw in the standalone `prop-types` package. ' +
+	              'You may be seeing this warning due to a third-party PropTypes ' +
+	              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
+	              propFullName,
+	              componentName
+	            );
+	            manualPropTypeCallCache[cacheKey] = true;
+	            manualPropTypeWarningCount++;
+	          }
+	        }
+	      }
+	      if (props[propName] == null) {
+	        if (isRequired) {
+	          if (props[propName] === null) {
+	            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+	          }
+	          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+	        }
+	        return null;
+	      } else {
+	        return validate(props, propName, componentName, location, propFullName);
+	      }
+	    }
+	
+	    var chainedCheckType = checkType.bind(null, false);
+	    chainedCheckType.isRequired = checkType.bind(null, true);
+	
+	    return chainedCheckType;
+	  }
+	
+	  function createPrimitiveTypeChecker(expectedType) {
+	    function validate(props, propName, componentName, location, propFullName, secret) {
+	      var propValue = props[propName];
+	      var propType = getPropType(propValue);
+	      if (propType !== expectedType) {
+	        // `propValue` being instance of, say, date/regexp, pass the 'object'
+	        // check, but we can offer a more precise error message here rather than
+	        // 'of type `object`'.
+	        var preciseType = getPreciseType(propValue);
+	
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+	      }
+	      return null;
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createAnyTypeChecker() {
+	    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
+	  }
+	
+	  function createArrayOfTypeChecker(typeChecker) {
+	    function validate(props, propName, componentName, location, propFullName) {
+	      if (typeof typeChecker !== 'function') {
+	        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+	      }
+	      var propValue = props[propName];
+	      if (!Array.isArray(propValue)) {
+	        var propType = getPropType(propValue);
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+	      }
+	      for (var i = 0; i < propValue.length; i++) {
+	        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+	        if (error instanceof Error) {
+	          return error;
+	        }
+	      }
+	      return null;
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createElementTypeChecker() {
+	    function validate(props, propName, componentName, location, propFullName) {
+	      var propValue = props[propName];
+	      if (!isValidElement(propValue)) {
+	        var propType = getPropType(propValue);
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+	      }
+	      return null;
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createInstanceTypeChecker(expectedClass) {
+	    function validate(props, propName, componentName, location, propFullName) {
+	      if (!(props[propName] instanceof expectedClass)) {
+	        var expectedClassName = expectedClass.name || ANONYMOUS;
+	        var actualClassName = getClassName(props[propName]);
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+	      }
+	      return null;
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createEnumTypeChecker(expectedValues) {
+	    if (!Array.isArray(expectedValues)) {
+	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
+	      return emptyFunction.thatReturnsNull;
+	    }
+	
+	    function validate(props, propName, componentName, location, propFullName) {
+	      var propValue = props[propName];
+	      for (var i = 0; i < expectedValues.length; i++) {
+	        if (is(propValue, expectedValues[i])) {
+	          return null;
+	        }
+	      }
+	
+	      var valuesString = JSON.stringify(expectedValues);
+	      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createObjectOfTypeChecker(typeChecker) {
+	    function validate(props, propName, componentName, location, propFullName) {
+	      if (typeof typeChecker !== 'function') {
+	        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+	      }
+	      var propValue = props[propName];
+	      var propType = getPropType(propValue);
+	      if (propType !== 'object') {
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+	      }
+	      for (var key in propValue) {
+	        if (propValue.hasOwnProperty(key)) {
+	          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+	          if (error instanceof Error) {
+	            return error;
+	          }
+	        }
+	      }
+	      return null;
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createUnionTypeChecker(arrayOfTypeCheckers) {
+	    if (!Array.isArray(arrayOfTypeCheckers)) {
+	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+	      return emptyFunction.thatReturnsNull;
+	    }
+	
+	    function validate(props, propName, componentName, location, propFullName) {
+	      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+	        var checker = arrayOfTypeCheckers[i];
+	        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+	          return null;
+	        }
+	      }
+	
+	      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createNodeChecker() {
+	    function validate(props, propName, componentName, location, propFullName) {
+	      if (!isNode(props[propName])) {
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+	      }
+	      return null;
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createShapeTypeChecker(shapeTypes) {
+	    function validate(props, propName, componentName, location, propFullName) {
+	      var propValue = props[propName];
+	      var propType = getPropType(propValue);
+	      if (propType !== 'object') {
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+	      }
+	      for (var key in shapeTypes) {
+	        var checker = shapeTypes[key];
+	        if (!checker) {
+	          continue;
+	        }
+	        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+	        if (error) {
+	          return error;
+	        }
+	      }
+	      return null;
+	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function isNode(propValue) {
+	    switch (typeof propValue) {
+	      case 'number':
+	      case 'string':
+	      case 'undefined':
+	        return true;
+	      case 'boolean':
+	        return !propValue;
+	      case 'object':
+	        if (Array.isArray(propValue)) {
+	          return propValue.every(isNode);
+	        }
+	        if (propValue === null || isValidElement(propValue)) {
+	          return true;
+	        }
+	
+	        var iteratorFn = getIteratorFn(propValue);
+	        if (iteratorFn) {
+	          var iterator = iteratorFn.call(propValue);
+	          var step;
+	          if (iteratorFn !== propValue.entries) {
+	            while (!(step = iterator.next()).done) {
+	              if (!isNode(step.value)) {
+	                return false;
+	              }
+	            }
+	          } else {
+	            // Iterator will provide entry [k,v] tuples rather than values.
+	            while (!(step = iterator.next()).done) {
+	              var entry = step.value;
+	              if (entry) {
+	                if (!isNode(entry[1])) {
+	                  return false;
+	                }
+	              }
+	            }
+	          }
+	        } else {
+	          return false;
+	        }
+	
+	        return true;
+	      default:
+	        return false;
+	    }
+	  }
+	
+	  function isSymbol(propType, propValue) {
+	    // Native Symbol.
+	    if (propType === 'symbol') {
+	      return true;
+	    }
+	
+	    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+	    if (propValue['@@toStringTag'] === 'Symbol') {
+	      return true;
+	    }
+	
+	    // Fallback for non-spec compliant Symbols which are polyfilled.
+	    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+	      return true;
+	    }
+	
+	    return false;
+	  }
+	
+	  // Equivalent of `typeof` but with special handling for array and regexp.
+	  function getPropType(propValue) {
+	    var propType = typeof propValue;
+	    if (Array.isArray(propValue)) {
+	      return 'array';
+	    }
+	    if (propValue instanceof RegExp) {
+	      // Old webkits (at least until Android 4.0) return 'function' rather than
+	      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+	      // passes PropTypes.object.
+	      return 'object';
+	    }
+	    if (isSymbol(propType, propValue)) {
+	      return 'symbol';
+	    }
+	    return propType;
+	  }
+	
+	  // This handles more types than `getPropType`. Only used for error messages.
+	  // See `createPrimitiveTypeChecker`.
+	  function getPreciseType(propValue) {
+	    var propType = getPropType(propValue);
+	    if (propType === 'object') {
+	      if (propValue instanceof Date) {
+	        return 'date';
+	      } else if (propValue instanceof RegExp) {
+	        return 'regexp';
+	      }
+	    }
+	    return propType;
+	  }
+	
+	  // Returns class name of the object, if any.
+	  function getClassName(propValue) {
+	    if (!propValue.constructor || !propValue.constructor.name) {
+	      return ANONYMOUS;
+	    }
+	    return propValue.constructor.name;
+	  }
+	
+	  ReactPropTypes.checkPropTypes = checkPropTypes;
+	  ReactPropTypes.PropTypes = ReactPropTypes;
+	
+	  return ReactPropTypes;
+	};
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_15__;
+
+/***/ })
+/******/ ])
+});
+;
+//# sourceMappingURL=react-responsive.js.map
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright 2016-present, Facebook, Inc.
@@ -802,9 +2466,9 @@ module.exports = ExecutionEnvironment;
 
 
 
-var _prodInvariant = __webpack_require__(19);
+var _prodInvariant = __webpack_require__(20);
 
-var ReactCurrentOwner = __webpack_require__(13);
+var ReactCurrentOwner = __webpack_require__(14);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -1125,7 +2789,7 @@ module.exports = ReactComponentTreeHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1169,7 +2833,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1191,7 +2855,7 @@ module.exports = emptyFunction;
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(162);
+  var ReactDebugTool = __webpack_require__(172);
   debugTool = ReactDebugTool;
 }
 
@@ -1199,27 +2863,27 @@ module.exports = { debugTool: debugTool };
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(227);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(228);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_1__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(229);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_2__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(90);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_3__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(57);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(230);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_5__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(231);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(58);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(232);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_8__withRouter__["a"]; });
 
 
@@ -1241,7 +2905,7 @@ module.exports = { debugTool: debugTool };
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1257,14 +2921,14 @@ module.exports = { debugTool: debugTool };
 
 
 
-var _prodInvariant = __webpack_require__(3),
+var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(5);
 
-var CallbackQueue = __webpack_require__(68);
-var PooledClass = __webpack_require__(17);
-var ReactFeatureFlags = __webpack_require__(73);
-var ReactReconciler = __webpack_require__(22);
-var Transaction = __webpack_require__(34);
+var CallbackQueue = __webpack_require__(69);
+var PooledClass = __webpack_require__(18);
+var ReactFeatureFlags = __webpack_require__(74);
+var ReactReconciler = __webpack_require__(23);
+var Transaction = __webpack_require__(35);
 
 var invariant = __webpack_require__(1);
 
@@ -1498,7 +3162,7 @@ module.exports = ReactUpdates;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1534,7 +3198,7 @@ var ReactCurrentOwner = {
 module.exports = ReactCurrentOwner;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1561,17 +3225,17 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(65)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(66)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(133)();
+  module.exports = __webpack_require__(143)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1589,9 +3253,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 var _assign = __webpack_require__(5);
 
-var PooledClass = __webpack_require__(17);
+var PooledClass = __webpack_require__(18);
 
-var emptyFunction = __webpack_require__(9);
+var emptyFunction = __webpack_require__(10);
 var warning = __webpack_require__(2);
 
 var didWarnForAddedNewProperty = false;
@@ -1845,7 +3509,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1861,7 +3525,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -2061,7 +3725,7 @@ module.exports = DOMProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2078,7 +3742,7 @@ module.exports = DOMProperty;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -2179,7 +3843,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2197,13 +3861,13 @@ module.exports = PooledClass;
 
 var _assign = __webpack_require__(5);
 
-var ReactCurrentOwner = __webpack_require__(13);
+var ReactCurrentOwner = __webpack_require__(14);
 
 var warning = __webpack_require__(2);
-var canDefineProperty = __webpack_require__(37);
+var canDefineProperty = __webpack_require__(38);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var REACT_ELEMENT_TYPE = __webpack_require__(90);
+var REACT_ELEMENT_TYPE = __webpack_require__(91);
 
 var RESERVED_PROPS = {
   key: true,
@@ -2526,7 +4190,7 @@ module.exports = ReactElement;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2570,7 +4234,7 @@ function reactProdInvariant(code) {
 module.exports = reactProdInvariant;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2638,7 +4302,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2654,11 +4318,11 @@ module.exports = warning;
 
 
 
-var DOMNamespaces = __webpack_require__(42);
-var setInnerHTML = __webpack_require__(36);
+var DOMNamespaces = __webpack_require__(43);
+var setInnerHTML = __webpack_require__(37);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
-var setTextContent = __webpack_require__(86);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(50);
+var setTextContent = __webpack_require__(87);
 
 var ELEMENT_NODE_TYPE = 1;
 var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -2761,7 +4425,7 @@ DOMLazyTree.queueText = queueText;
 module.exports = DOMLazyTree;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2777,8 +4441,8 @@ module.exports = DOMLazyTree;
 
 
 
-var ReactRef = __webpack_require__(176);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactRef = __webpack_require__(186);
+var ReactInstrumentation = __webpack_require__(11);
 
 var warning = __webpack_require__(2);
 
@@ -2935,7 +4599,7 @@ module.exports = ReactReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2953,16 +4617,16 @@ module.exports = ReactReconciler;
 
 var _assign = __webpack_require__(5);
 
-var ReactChildren = __webpack_require__(230);
-var ReactComponent = __webpack_require__(58);
-var ReactPureComponent = __webpack_require__(235);
-var ReactClass = __webpack_require__(231);
-var ReactDOMFactories = __webpack_require__(232);
-var ReactElement = __webpack_require__(18);
-var ReactPropTypes = __webpack_require__(233);
-var ReactVersion = __webpack_require__(236);
+var ReactChildren = __webpack_require__(239);
+var ReactComponent = __webpack_require__(59);
+var ReactPureComponent = __webpack_require__(244);
+var ReactClass = __webpack_require__(240);
+var ReactDOMFactories = __webpack_require__(241);
+var ReactElement = __webpack_require__(19);
+var ReactPropTypes = __webpack_require__(242);
+var ReactVersion = __webpack_require__(245);
 
-var onlyChild = __webpack_require__(239);
+var onlyChild = __webpack_require__(248);
 var warning = __webpack_require__(2);
 
 var createElement = ReactElement.createElement;
@@ -2970,8 +4634,8 @@ var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var canDefineProperty = __webpack_require__(37);
-  var ReactElementValidator = __webpack_require__(91);
+  var canDefineProperty = __webpack_require__(38);
+  var ReactElementValidator = __webpack_require__(92);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
   createFactory = ReactElementValidator.createFactory;
@@ -3045,7 +4709,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3071,7 +4735,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3136,7 +4800,7 @@ var createPath = exports.createPath = function createPath(location) {
 };
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3152,14 +4816,14 @@ var createPath = exports.createPath = function createPath(location) {
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var EventPluginRegistry = __webpack_require__(31);
-var EventPluginUtils = __webpack_require__(43);
-var ReactErrorUtils = __webpack_require__(47);
+var EventPluginRegistry = __webpack_require__(32);
+var EventPluginUtils = __webpack_require__(44);
+var ReactErrorUtils = __webpack_require__(48);
 
-var accumulateInto = __webpack_require__(80);
-var forEachAccumulated = __webpack_require__(81);
+var accumulateInto = __webpack_require__(81);
+var forEachAccumulated = __webpack_require__(82);
 var invariant = __webpack_require__(1);
 
 /**
@@ -3420,7 +5084,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3436,11 +5100,11 @@ module.exports = EventPluginHub;
 
 
 
-var EventPluginHub = __webpack_require__(26);
-var EventPluginUtils = __webpack_require__(43);
+var EventPluginHub = __webpack_require__(27);
+var EventPluginUtils = __webpack_require__(44);
 
-var accumulateInto = __webpack_require__(80);
-var forEachAccumulated = __webpack_require__(81);
+var accumulateInto = __webpack_require__(81);
+var forEachAccumulated = __webpack_require__(82);
 var warning = __webpack_require__(2);
 
 var getListener = EventPluginHub.getListener;
@@ -3560,7 +5224,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3613,7 +5277,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3629,9 +5293,9 @@ module.exports = ReactInstanceMap;
 
 
 
-var SyntheticEvent = __webpack_require__(15);
+var SyntheticEvent = __webpack_require__(16);
 
-var getEventTarget = __webpack_require__(52);
+var getEventTarget = __webpack_require__(53);
 
 /**
  * @interface UIEvent
@@ -3677,7 +5341,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3736,7 +5400,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3753,7 +5417,7 @@ module.exports = invariant;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -3997,7 +5661,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4015,12 +5679,12 @@ module.exports = EventPluginRegistry;
 
 var _assign = __webpack_require__(5);
 
-var EventPluginRegistry = __webpack_require__(31);
-var ReactEventEmitterMixin = __webpack_require__(166);
-var ViewportMetrics = __webpack_require__(79);
+var EventPluginRegistry = __webpack_require__(32);
+var ReactEventEmitterMixin = __webpack_require__(176);
+var ViewportMetrics = __webpack_require__(80);
 
-var getVendorPrefixedEventName = __webpack_require__(201);
-var isEventSupported = __webpack_require__(53);
+var getVendorPrefixedEventName = __webpack_require__(211);
+var isEventSupported = __webpack_require__(54);
 
 /**
  * Summary of `ReactBrowserEventEmitter` event handling:
@@ -4330,7 +5994,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 module.exports = ReactBrowserEventEmitter;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4346,10 +6010,10 @@ module.exports = ReactBrowserEventEmitter;
 
 
 
-var SyntheticUIEvent = __webpack_require__(29);
-var ViewportMetrics = __webpack_require__(79);
+var SyntheticUIEvent = __webpack_require__(30);
+var ViewportMetrics = __webpack_require__(80);
 
-var getEventModifierState = __webpack_require__(51);
+var getEventModifierState = __webpack_require__(52);
 
 /**
  * @interface MouseEvent
@@ -4407,7 +6071,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 module.exports = SyntheticMouseEvent;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4424,7 +6088,7 @@ module.exports = SyntheticMouseEvent;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -4638,7 +6302,7 @@ module.exports = TransactionImpl;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4766,7 +6430,7 @@ function escapeTextContentForBrowser(text) {
 module.exports = escapeTextContentForBrowser;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4783,12 +6447,12 @@ module.exports = escapeTextContentForBrowser;
 
 
 var ExecutionEnvironment = __webpack_require__(7);
-var DOMNamespaces = __webpack_require__(42);
+var DOMNamespaces = __webpack_require__(43);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(50);
 
 // SVG temp container for IE lacking innerHTML
 var reusableSVGContainer;
@@ -4869,7 +6533,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setInnerHTML;
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4901,7 +6565,7 @@ module.exports = canDefineProperty;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4974,7 +6638,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4985,15 +6649,15 @@ exports.locationsAreEqual = exports.createLocation = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _resolvePathname = __webpack_require__(241);
+var _resolvePathname = __webpack_require__(250);
 
 var _resolvePathname2 = _interopRequireDefault(_resolvePathname);
 
-var _valueEqual = __webpack_require__(244);
+var _valueEqual = __webpack_require__(253);
 
 var _valueEqual2 = _interopRequireDefault(_valueEqual);
 
-var _PathUtils = __webpack_require__(25);
+var _PathUtils = __webpack_require__(26);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5043,7 +6707,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 };
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5051,7 +6715,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 
 exports.__esModule = true;
 
-var _warning = __webpack_require__(20);
+var _warning = __webpack_require__(21);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -5134,7 +6798,7 @@ var createTransitionManager = function createTransitionManager() {
 exports.default = createTransitionManager;
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5150,14 +6814,14 @@ exports.default = createTransitionManager;
 
 
 
-var DOMLazyTree = __webpack_require__(21);
-var Danger = __webpack_require__(139);
+var DOMLazyTree = __webpack_require__(22);
+var Danger = __webpack_require__(149);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
-var setInnerHTML = __webpack_require__(36);
-var setTextContent = __webpack_require__(86);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(50);
+var setInnerHTML = __webpack_require__(37);
+var setTextContent = __webpack_require__(87);
 
 function getNodeAfter(parentNode, node) {
   // Special case for text components, which return [open, close] comments
@@ -5365,7 +7029,7 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5390,7 +7054,7 @@ var DOMNamespaces = {
 module.exports = DOMNamespaces;
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5406,9 +7070,9 @@ module.exports = DOMNamespaces;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var ReactErrorUtils = __webpack_require__(47);
+var ReactErrorUtils = __webpack_require__(48);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -5622,7 +7286,7 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5686,7 +7350,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5702,12 +7366,12 @@ module.exports = KeyEscapeUtils;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var ReactPropTypesSecret = __webpack_require__(78);
-var propTypesFactory = __webpack_require__(64);
+var ReactPropTypesSecret = __webpack_require__(79);
+var propTypesFactory = __webpack_require__(65);
 
-var React = __webpack_require__(23);
+var React = __webpack_require__(24);
 var PropTypes = propTypesFactory(React.isValidElement);
 
 var invariant = __webpack_require__(1);
@@ -5830,7 +7494,7 @@ module.exports = LinkedValueUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5847,7 +7511,7 @@ module.exports = LinkedValueUtils;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -5882,7 +7546,7 @@ module.exports = ReactComponentEnvironment;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5964,7 +7628,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5980,12 +7644,12 @@ module.exports = ReactErrorUtils;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var ReactCurrentOwner = __webpack_require__(13);
-var ReactInstanceMap = __webpack_require__(28);
-var ReactInstrumentation = __webpack_require__(10);
-var ReactUpdates = __webpack_require__(12);
+var ReactCurrentOwner = __webpack_require__(14);
+var ReactInstanceMap = __webpack_require__(29);
+var ReactInstrumentation = __webpack_require__(11);
+var ReactUpdates = __webpack_require__(13);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -6206,7 +7870,7 @@ module.exports = ReactUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6243,7 +7907,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6298,7 +7962,7 @@ function getEventCharCode(nativeEvent) {
 module.exports = getEventCharCode;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6346,7 +8010,7 @@ function getEventModifierState(nativeEvent) {
 module.exports = getEventModifierState;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6386,7 +8050,7 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6451,7 +8115,7 @@ function isEventSupported(eventNameSuffix, capture) {
 module.exports = isEventSupported;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6498,7 +8162,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6516,7 +8180,7 @@ module.exports = shouldUpdateReactComponent;
 
 var _assign = __webpack_require__(5);
 
-var emptyFunction = __webpack_require__(9);
+var emptyFunction = __webpack_require__(10);
 var warning = __webpack_require__(2);
 
 var validateDOMNesting = emptyFunction;
@@ -6881,17 +8545,17 @@ module.exports = validateDOMNesting;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -7000,11 +8664,11 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -7075,7 +8739,7 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7091,12 +8755,12 @@ var matchPath = function matchPath(pathname) {
 
 
 
-var _prodInvariant = __webpack_require__(19);
+var _prodInvariant = __webpack_require__(20);
 
-var ReactNoopUpdateQueue = __webpack_require__(59);
+var ReactNoopUpdateQueue = __webpack_require__(60);
 
-var canDefineProperty = __webpack_require__(37);
-var emptyObject = __webpack_require__(24);
+var canDefineProperty = __webpack_require__(38);
+var emptyObject = __webpack_require__(25);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -7199,7 +8863,7 @@ module.exports = ReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7301,7 +8965,7 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7325,7 +8989,7 @@ module.exports = ReactNoopUpdateQueue;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(9);
+var emptyFunction = __webpack_require__(10);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -7391,7 +9055,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7423,7 +9087,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7467,7 +9131,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7528,7 +9192,7 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 };
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7547,7 +9211,7 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 // Therefore we re-export development-only version with all the PropTypes checks here.
 // However if one is migrating to the `prop-types` npm library, they will go through the
 // `index.js` entry point, and it will branch depending on the environment.
-var factory = __webpack_require__(65);
+var factory = __webpack_require__(66);
 module.exports = function(isValidElement) {
   // It is still allowed in 15.5.
   var throwOnDirectAccess = false;
@@ -7556,7 +9220,7 @@ module.exports = function(isValidElement) {
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7571,12 +9235,12 @@ module.exports = function(isValidElement) {
 
 
 
-var emptyFunction = __webpack_require__(9);
+var emptyFunction = __webpack_require__(10);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
-var ReactPropTypesSecret = __webpack_require__(66);
-var checkPropTypes = __webpack_require__(132);
+var ReactPropTypesSecret = __webpack_require__(67);
+var checkPropTypes = __webpack_require__(142);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -8042,7 +9706,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8063,7 +9727,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8216,7 +9880,7 @@ var CSSProperty = {
 module.exports = CSSProperty;
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8233,11 +9897,11 @@ module.exports = CSSProperty;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var PooledClass = __webpack_require__(17);
+var PooledClass = __webpack_require__(18);
 
 var invariant = __webpack_require__(1);
 
@@ -8341,7 +10005,7 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8357,11 +10021,11 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 
 
 
-var DOMProperty = __webpack_require__(16);
+var DOMProperty = __webpack_require__(17);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
-var quoteAttributeValueForBrowser = __webpack_require__(202);
+var quoteAttributeValueForBrowser = __webpack_require__(212);
 var warning = __webpack_require__(2);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -8584,7 +10248,7 @@ module.exports = DOMPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8607,7 +10271,7 @@ var ReactDOMComponentFlags = {
 module.exports = ReactDOMComponentFlags;
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8625,9 +10289,9 @@ module.exports = ReactDOMComponentFlags;
 
 var _assign = __webpack_require__(5);
 
-var LinkedValueUtils = __webpack_require__(45);
+var LinkedValueUtils = __webpack_require__(46);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(12);
+var ReactUpdates = __webpack_require__(13);
 
 var warning = __webpack_require__(2);
 
@@ -8813,7 +10477,7 @@ module.exports = ReactDOMSelect;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8848,7 +10512,7 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 module.exports = ReactEmptyComponent;
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8875,7 +10539,7 @@ var ReactFeatureFlags = {
 module.exports = ReactFeatureFlags;
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8891,7 +10555,7 @@ module.exports = ReactFeatureFlags;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -8949,7 +10613,7 @@ module.exports = ReactHostComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8965,11 +10629,11 @@ module.exports = ReactHostComponent;
 
 
 
-var ReactDOMSelection = __webpack_require__(157);
+var ReactDOMSelection = __webpack_require__(167);
 
-var containsNode = __webpack_require__(114);
-var focusNode = __webpack_require__(61);
-var getActiveElement = __webpack_require__(62);
+var containsNode = __webpack_require__(124);
+var focusNode = __webpack_require__(62);
+var getActiveElement = __webpack_require__(63);
 
 function isInDocument(node) {
   return containsNode(document.documentElement, node);
@@ -9078,7 +10742,7 @@ var ReactInputSelection = {
 module.exports = ReactInputSelection;
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9094,29 +10758,29 @@ module.exports = ReactInputSelection;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var DOMLazyTree = __webpack_require__(21);
-var DOMProperty = __webpack_require__(16);
-var React = __webpack_require__(23);
-var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactCurrentOwner = __webpack_require__(13);
+var DOMLazyTree = __webpack_require__(22);
+var DOMProperty = __webpack_require__(17);
+var React = __webpack_require__(24);
+var ReactBrowserEventEmitter = __webpack_require__(33);
+var ReactCurrentOwner = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMContainerInfo = __webpack_require__(149);
-var ReactDOMFeatureFlags = __webpack_require__(151);
-var ReactFeatureFlags = __webpack_require__(73);
-var ReactInstanceMap = __webpack_require__(28);
-var ReactInstrumentation = __webpack_require__(10);
-var ReactMarkupChecksum = __webpack_require__(171);
-var ReactReconciler = __webpack_require__(22);
-var ReactUpdateQueue = __webpack_require__(48);
-var ReactUpdates = __webpack_require__(12);
+var ReactDOMContainerInfo = __webpack_require__(159);
+var ReactDOMFeatureFlags = __webpack_require__(161);
+var ReactFeatureFlags = __webpack_require__(74);
+var ReactInstanceMap = __webpack_require__(29);
+var ReactInstrumentation = __webpack_require__(11);
+var ReactMarkupChecksum = __webpack_require__(181);
+var ReactReconciler = __webpack_require__(23);
+var ReactUpdateQueue = __webpack_require__(49);
+var ReactUpdates = __webpack_require__(13);
 
-var emptyObject = __webpack_require__(24);
-var instantiateReactComponent = __webpack_require__(84);
+var emptyObject = __webpack_require__(25);
+var instantiateReactComponent = __webpack_require__(85);
 var invariant = __webpack_require__(1);
-var setInnerHTML = __webpack_require__(36);
-var shouldUpdateReactComponent = __webpack_require__(54);
+var setInnerHTML = __webpack_require__(37);
+var shouldUpdateReactComponent = __webpack_require__(55);
 var warning = __webpack_require__(2);
 
 var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -9622,7 +11286,7 @@ module.exports = ReactMount;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9639,9 +11303,9 @@ module.exports = ReactMount;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var React = __webpack_require__(23);
+var React = __webpack_require__(24);
 
 var invariant = __webpack_require__(1);
 
@@ -9668,7 +11332,7 @@ module.exports = ReactNodeTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9690,7 +11354,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9722,7 +11386,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9739,7 +11403,7 @@ module.exports = ViewportMetrics;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -9786,7 +11450,7 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9822,7 +11486,7 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9838,7 +11502,7 @@ module.exports = forEachAccumulated;
 
 
 
-var ReactNodeTypes = __webpack_require__(77);
+var ReactNodeTypes = __webpack_require__(78);
 
 function getHostComponentFromComposite(inst) {
   var type;
@@ -9857,7 +11521,7 @@ function getHostComponentFromComposite(inst) {
 module.exports = getHostComponentFromComposite;
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9895,7 +11559,7 @@ function getTextContentAccessor() {
 module.exports = getTextContentAccessor;
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9911,14 +11575,14 @@ module.exports = getTextContentAccessor;
 
 
 
-var _prodInvariant = __webpack_require__(3),
+var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(5);
 
-var ReactCompositeComponent = __webpack_require__(146);
-var ReactEmptyComponent = __webpack_require__(72);
-var ReactHostComponent = __webpack_require__(74);
+var ReactCompositeComponent = __webpack_require__(156);
+var ReactEmptyComponent = __webpack_require__(73);
+var ReactHostComponent = __webpack_require__(75);
 
-var getNextDebugID = __webpack_require__(238);
+var getNextDebugID = __webpack_require__(247);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -10030,7 +11694,7 @@ module.exports = instantiateReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10086,7 +11750,7 @@ function isTextInputElement(elem) {
 module.exports = isTextInputElement;
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10103,8 +11767,8 @@ module.exports = isTextInputElement;
 
 
 var ExecutionEnvironment = __webpack_require__(7);
-var escapeTextContentForBrowser = __webpack_require__(35);
-var setInnerHTML = __webpack_require__(36);
+var escapeTextContentForBrowser = __webpack_require__(36);
+var setInnerHTML = __webpack_require__(37);
 
 /**
  * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -10143,7 +11807,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setTextContent;
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10159,14 +11823,14 @@ module.exports = setTextContent;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var ReactCurrentOwner = __webpack_require__(13);
-var REACT_ELEMENT_TYPE = __webpack_require__(165);
+var ReactCurrentOwner = __webpack_require__(14);
+var REACT_ELEMENT_TYPE = __webpack_require__(175);
 
-var getIteratorFn = __webpack_require__(199);
+var getIteratorFn = __webpack_require__(209);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(44);
+var KeyEscapeUtils = __webpack_require__(45);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -10325,11 +11989,11 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -10425,17 +12089,17 @@ Link.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Link);
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__matchPath__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__matchPath__ = __webpack_require__(58);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10569,7 +12233,7 @@ Route.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Route);
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10594,7 +12258,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10617,14 +12281,14 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var ReactCurrentOwner = __webpack_require__(13);
-var ReactComponentTreeHook = __webpack_require__(8);
-var ReactElement = __webpack_require__(18);
+var ReactCurrentOwner = __webpack_require__(14);
+var ReactComponentTreeHook = __webpack_require__(9);
+var ReactElement = __webpack_require__(19);
 
-var checkReactTypeSpec = __webpack_require__(237);
+var checkReactTypeSpec = __webpack_require__(246);
 
-var canDefineProperty = __webpack_require__(37);
-var getIteratorFn = __webpack_require__(93);
+var canDefineProperty = __webpack_require__(38);
+var getIteratorFn = __webpack_require__(94);
 var warning = __webpack_require__(2);
 
 function getDeclarationErrorAddendum() {
@@ -10853,7 +12517,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10884,7 +12548,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10930,7 +12594,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10942,11 +12606,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Intro = __webpack_require__(102);
+var _Intro = __webpack_require__(110);
 
 var _Intro2 = _interopRequireDefault(_Intro);
 
@@ -11013,26 +12677,26 @@ var FrameWork = function (_React$Component) {
 exports.default = FrameWork;
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(147);
+module.exports = __webpack_require__(157);
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(110);
+var content = __webpack_require__(120);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(242)(content, {});
+var update = __webpack_require__(251)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -11049,7 +12713,7 @@ if(false) {
 }
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11061,7 +12725,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -11229,7 +12893,7 @@ var Footer = function (_React$Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11241,7 +12905,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -11301,7 +12965,7 @@ var Header = function (_React$Component) {
 exports.default = Header;
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11313,15 +12977,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(215);
+var _reactRouterDom = __webpack_require__(224);
 
-var _routes = __webpack_require__(106);
+var _routes = __webpack_require__(116);
 
-var _reactSidebar = __webpack_require__(226);
+var _reactSidebar = __webpack_require__(235);
 
 var _reactSidebar2 = _interopRequireDefault(_reactSidebar);
 
@@ -11433,7 +13097,7 @@ var PageLoader = function (_React$Component) {
 exports.default = PageLoader;
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11445,27 +13109,27 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Header = __webpack_require__(98);
+var _Header = __webpack_require__(99);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(97);
+var _Footer = __webpack_require__(98);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _TopNav = __webpack_require__(250);
+var _TopNav = __webpack_require__(103);
 
 var _TopNav2 = _interopRequireDefault(_TopNav);
 
-var _PageLoader = __webpack_require__(99);
+var _PageLoader = __webpack_require__(100);
 
 var _PageLoader2 = _interopRequireDefault(_PageLoader);
 
-var _reactResponsive = __webpack_require__(204);
+var _reactResponsive = __webpack_require__(8);
 
 var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
@@ -11515,7 +13179,7 @@ var Shell = function (_React$Component) {
         onLoadNext: this.loadNext.bind(this),
         onLoadPrev: this.loadPrev.bind(this),
         onMenuClick: this.toggleMenu.bind(this),
-        totalPages: 13
+        totalPages: 11
       });
     }
   }, {
@@ -11532,7 +13196,7 @@ var Shell = function (_React$Component) {
             onLoadNext: this.loadNext.bind(this),
             onLoadPrev: this.loadPrev.bind(this),
             onMenuClick: this.toggleMenu.bind(this),
-            totalPages: 13
+            totalPages: 11
           })
         ),
         _react2.default.createElement(
@@ -11558,7 +13222,7 @@ var Shell = function (_React$Component) {
         onLoadNext: this.loadNext.bind(this),
         onLoadPrev: this.loadPrev.bind(this),
         onMenuClick: this.toggleMenu.bind(this),
-        totalPages: 13
+        totalPages: 11
       });
     }
   }, {
@@ -11584,7 +13248,7 @@ var Shell = function (_React$Component) {
 exports.default = Shell;
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11593,39 +13257,55 @@ exports.default = Shell;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.DragDrop1 = exports.Interactivity2 = exports.Interactivity1 = exports.StaticPage4 = exports.StaticPage3 = exports.StaticPage2 = exports.StaticPage1 = undefined;
+exports.Interactivity4 = exports.Interactivity3 = exports.DragDrop1 = exports.Interactivity2 = exports.Interactivity1 = exports.StaticPage5 = exports.DragDrop2 = exports.StaticPage4 = exports.StaticPage3 = exports.StaticPage2 = exports.StaticPage1 = undefined;
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _StaticPage = __webpack_require__(103);
+var _StaticPage = __webpack_require__(111);
 
 var _StaticPage2 = _interopRequireDefault(_StaticPage);
 
-var _StaticPage3 = __webpack_require__(104);
+var _StaticPage3 = __webpack_require__(112);
 
 var _StaticPage4 = _interopRequireDefault(_StaticPage3);
 
-var _StaticPage5 = __webpack_require__(105);
+var _StaticPage5 = __webpack_require__(113);
 
 var _StaticPage6 = _interopRequireDefault(_StaticPage5);
 
-var _StaticPage7 = __webpack_require__(246);
+var _StaticPage7 = __webpack_require__(114);
 
 var _StaticPage8 = _interopRequireDefault(_StaticPage7);
 
-var _Interactivity = __webpack_require__(247);
+var _DragDrop = __webpack_require__(105);
+
+var _DragDrop2 = _interopRequireDefault(_DragDrop);
+
+var _StaticPage9 = __webpack_require__(115);
+
+var _StaticPage10 = _interopRequireDefault(_StaticPage9);
+
+var _Interactivity = __webpack_require__(106);
 
 var _Interactivity2 = _interopRequireDefault(_Interactivity);
 
-var _Interactivity3 = __webpack_require__(248);
+var _Interactivity3 = __webpack_require__(107);
 
 var _Interactivity4 = _interopRequireDefault(_Interactivity3);
 
-var _DragDrop = __webpack_require__(249);
+var _DragDrop3 = __webpack_require__(104);
 
-var _DragDrop2 = _interopRequireDefault(_DragDrop);
+var _DragDrop4 = _interopRequireDefault(_DragDrop3);
+
+var _Interactivity5 = __webpack_require__(108);
+
+var _Interactivity6 = _interopRequireDefault(_Interactivity5);
+
+var _Interactivity7 = __webpack_require__(109);
+
+var _Interactivity8 = _interopRequireDefault(_Interactivity7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11633,12 +13313,16 @@ exports.StaticPage1 = _StaticPage2.default;
 exports.StaticPage2 = _StaticPage4.default;
 exports.StaticPage3 = _StaticPage6.default;
 exports.StaticPage4 = _StaticPage8.default;
+exports.DragDrop2 = _DragDrop2.default;
+exports.StaticPage5 = _StaticPage10.default;
 exports.Interactivity1 = _Interactivity2.default;
 exports.Interactivity2 = _Interactivity4.default;
-exports.DragDrop1 = _DragDrop2.default;
+exports.DragDrop1 = _DragDrop4.default;
+exports.Interactivity3 = _Interactivity6.default;
+exports.Interactivity4 = _Interactivity8.default;
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11650,15 +13334,2970 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Shell = __webpack_require__(100);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopNav = function (_React$Component) {
+  _inherits(TopNav, _React$Component);
+
+  function TopNav(props) {
+    _classCallCheck(this, TopNav);
+
+    var uagent = navigator.userAgent.toLowerCase();
+
+    var _this = _possibleConstructorReturn(this, (TopNav.__proto__ || Object.getPrototypeOf(TopNav)).call(this, props));
+
+    _this.state = {
+      isiPad: uagent.search("mobile") > -1
+    };
+    return _this;
+  }
+
+  _createClass(TopNav, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "header-nav" },
+        _react2.default.createElement(
+          "div",
+          { className: "button-container" },
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "menu", "aria-pressed": "false", href: "#", onClick: this.props.onMenuClick, role: "button" },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-tools" },
+                "\uE627"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "playPause", "aria-pressed": "false", href: "#", role: "button" },
+              _react2.default.createElement("span", { className: "icon-playPause" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "back", "aria-pressed": "false",
+                className: this.props.currentPageNumber !== 1 ? "tabindex" : "tabindex disabled", href: "#",
+                onClick: this.props.onLoadPrev.bind(null, this), role: "button" },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-back" },
+                "\uE607"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "nav-comp-container" },
+            _react2.default.createElement(
+              "div",
+              { className: "page-counter clearfix" },
+              _react2.default.createElement(
+                "span",
+                { className: "page-number" },
+                this.props.currentPageNumber
+              ),
+              _react2.default.createElement(
+                "span",
+                { className: "page-separator" },
+                "|"
+              ),
+              _react2.default.createElement(
+                "span",
+                { className: "total-pages" },
+                this.props.totalPages
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "next", "aria-pressed": "false",
+                className: this.props.currentPageNumber !== this.props.totalPages ? "tabindex" : "tabindex disabled", href: "#",
+                onClick: this.props.onLoadNext.bind(null, this), role: "button"
+              },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-next" },
+                "\uE617"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "transcript", "aria-pressed": "false", href: "#", role: "button" },
+              _react2.default.createElement("span", { className: "icon-transcript" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "button-box" },
+            _react2.default.createElement(
+              "a",
+              { "aria-disabled": "false", "aria-label": "menu", "aria-pressed": "false", href: "#", onClick: this.props.onMenuClick, role: "button" },
+              _react2.default.createElement(
+                "span",
+                { className: "icon-menu" },
+                "\uE616"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return TopNav;
+}(_react2.default.Component);
+
+exports.default = TopNav;
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var DragDrop1 = function (_React$Component) {
+  _inherits(DragDrop1, _React$Component);
+
+  function DragDrop1(props) {
+    _classCallCheck(this, DragDrop1);
+
+    return _possibleConstructorReturn(this, (DragDrop1.__proto__ || Object.getPrototypeOf(DragDrop1)).call(this, props));
+  }
+
+  _createClass(DragDrop1, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'dragdrop1' },
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'page_title' },
+                    _react2.default.createElement(
+                      'h1',
+                      null,
+                      'Tips on Active Listening'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'sub_heading' },
+                    'Here are some tips on how you can practice active listening'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'top' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'flex-container' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Face the speaker'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '01'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Sit/stand straight and lean slightly forword to show your attentiveness'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Respond appropriately'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '03'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Respond to the speaker by noddling your head occasionally. You can also use pharases like "I see or I understand"'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Do not interrupt'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '05'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'When the speaker speaks, listen to what he/she is saying and avoid interrupting them midway'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box4' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Even if the speaker is speaking against you, wait to defend yourself until the person finishes'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '07'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'If you interrupt, the speaker will feel as though his or her point has been made. That way you\'ll not know their entire argument, which can help you give a better response'
+                        )
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bottom' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'flex-container' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Maintain eye contact'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '02'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Look into the speaker\'s eyes and avoid getting distracted by people moving around'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Focus solely on what the speaker is saying '
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '04'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Try not to think about what you are going to say in response. The clarifications or questions can come after the speaker has finished'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Engage yourself'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '06'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'After the speaker has finished speaking, confirm your understanding by saying "So from what you saidm I understand that... Am I right?", or "when you said..., you meant... Is that correct?"'
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'page_title' },
+                    _react2.default.createElement(
+                      'h1',
+                      null,
+                      'Tips on Active Listening'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'sub_heading' },
+                    'Here are some tips on how you can practice active listening'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'top' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'flex-container' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Face the speaker'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '01'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Sit/stand straight and lean slightly forword to show your attentiveness'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Respond appropriately'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '03'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Respond to the speaker by noddling your head occasionally. You can also use pharases like "I see or I understand"'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Do not interrupt'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '05'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'When the speaker speaks, listen to what he/she is saying and avoid interrupting them midway'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box4' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Even if the speaker is speaking against you, wait to defend yourself until the person finishes'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '07'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'If you interrupt, the speaker will feel as though his or her point has been made. That way you\'ll not know their entire argument, which can help you give a better response'
+                        )
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bottom' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'flex-container' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Maintain eye contact'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '02'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Look into the speaker\'s eyes and avoid getting distracted by people moving around'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Focus solely on what the speaker is saying '
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '04'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'Try not to think about what you are going to say in response. The clarifications or questions can come after the speaker has finished'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_header' },
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'heading' },
+                            'Engage yourself'
+                          ),
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_no' },
+                            '06'
+                          )
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_content' },
+                          'After the speaker has finished speaking, confirm your understanding by saying "So from what you saidm I understand that... Am I right?", or "when you said..., you meant... Is that correct?"'
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'page_title' },
+                    _react2.default.createElement(
+                      'h1',
+                      null,
+                      'Tips on Active Listening'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'sub_heading' },
+                    'Here are some tips on how you can practice active listening'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'flex-container' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box1' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_header' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'heading' },
+                          'Face the speaker'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_no' },
+                          '01'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_content' },
+                        'Sit/stand straight and lean slightly forword to show your attentiveness'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_header' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'heading' },
+                          'Maintain eye contact'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_no' },
+                          '02'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_content' },
+                        'Look into the speaker\'s eyes and avoid getting distracted by people moving around'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_header' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'heading' },
+                          'Respond appropriately'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_no' },
+                          '03'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_content' },
+                        'Respond to the speaker by noddling your head occasionally. You can also use pharases like "I see or I understand"'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box4' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_header' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'heading' },
+                          'Focus solely on what the speaker is saying '
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_no' },
+                          '04'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_content' },
+                        'Try not to think about what you are going to say in response. The clarifications or questions can come after the speaker has finished'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box5' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_header' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'heading' },
+                          'Do not interrupt'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_no' },
+                          '05'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_content' },
+                        'When the speaker speaks, listen to what he/she is saying and avoid interrupting them midway'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box6' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_header' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'heading' },
+                          'Engage yourself'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_no' },
+                          '06'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_content' },
+                        'After the speaker has finished speaking, confirm your understanding by saying "So from what you saidm I understand that... Am I right?", or "when you said..., you meant... Is that correct?"'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box7' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_header' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'heading' },
+                          'Even if the speaker is speaking against you, wait to defend yourself until the person finishes'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_no' },
+                          '07'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_content' },
+                        'If you interrupt, the speaker will feel as though his or her point has been made. That way you\'ll not know their entire argument, which can help you give a better response'
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return DragDrop1;
+}(_react2.default.Component);
+
+exports.default = DragDrop1;
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Dragdrop2 = function (_React$Component) {
+  _inherits(Dragdrop2, _React$Component);
+
+  function Dragdrop2(props) {
+    _classCallCheck(this, Dragdrop2);
+
+    return _possibleConstructorReturn(this, (Dragdrop2.__proto__ || Object.getPrototypeOf(Dragdrop2)).call(this, props));
+  }
+
+  _createClass(Dragdrop2, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'Dragdrop2' },
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Active Listening Behaviour'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub-heading' },
+                  'What is considered an active listening behaviour?'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box1' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Listens without'
+                      ),
+                      ' interrupting '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/listening_01.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box2' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Attends to'
+                      ),
+                      ' non-verbal messages '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      '  ',
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/listening_02.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box3' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        ' Listens to the'
+                      ),
+                      ' context and probe '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/listening_03.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box4' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Uses words'
+                      ),
+                      ' and body language'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/listening_04.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box5' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        ' Responds to '
+                      ),
+                      ' words and feelings'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/listening_05.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box6' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Summarises'
+                      ),
+                      ' what is being said'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/listening_06.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box7' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Gives feedback'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/listening_07.png' })
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'container white' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: '' },
+                    'What is considered an ',
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'highlight' },
+                      'Active Listening Behaviour?'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Active Listening Behaviour'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub-heading' },
+                  'What is considered an active listening behaviour?'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box1' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Listens without'
+                      ),
+                      ' interrupting '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_01.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box2' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Attends to'
+                      ),
+                      ' non-verbal messages '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      '  ',
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_02.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box3' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        ' Listens to the'
+                      ),
+                      ' context and probe '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_03.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box4' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Uses words'
+                      ),
+                      ' and body language'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_04.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box5' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        ' Responds to '
+                      ),
+                      ' words and feelings'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_05.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box6' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Summarises'
+                      ),
+                      ' what is being said'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_06.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box7' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Gives feedback'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_07.png' })
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'container white' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: '' },
+                    'What is considered an ',
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'highlight' },
+                      'Active Listening Behaviour?'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title white' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Active Listening Behaviour'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub-heading white' },
+                  'Active listening behaviour gets displayed when one:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box1' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Listens without'
+                      ),
+                      ' interrupting '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_01.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box2' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Attends to'
+                      ),
+                      ' non-verbal messages '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      '  ',
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_02.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box3' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        ' Listens to the'
+                      ),
+                      ' context and probe '
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_03.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box4' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Uses words'
+                      ),
+                      ' and body language'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_04.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box5' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        ' Responds to '
+                      ),
+                      ' words and feelings'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_05.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box6' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Summarises'
+                      ),
+                      ' what is being said'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_06.png' })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box7' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      ' ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight_text' },
+                        'Gives feedback'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box_img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/act_07.png' })
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'container white' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: '' },
+                    'What is considered an ',
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'highlight' },
+                      'Active Listening Behaviour?'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Dragdrop2;
+}(_react2.default.Component);
+
+exports.default = Dragdrop2;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Interactivity1 = function (_React$Component) {
+  _inherits(Interactivity1, _React$Component);
+
+  function Interactivity1(props) {
+    _classCallCheck(this, Interactivity1);
+
+    return _possibleConstructorReturn(this, (Interactivity1.__proto__ || Object.getPrototypeOf(Interactivity1)).call(this, props));
+  }
+
+  _createClass(Interactivity1, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'interactivity1' },
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'page_title' },
+                _react2.default.createElement(
+                  'h1',
+                  null,
+                  'Barriers to Active Listening '
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'sub_heading' },
+                'There can also be barriers to active listening. They are: '
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'intro white' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box1' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Distractions'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-01.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Distractions can be due to physical noise or psychological problems.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box2' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Jargon/Vocabulary'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-02.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Some speaker use jargon or heavy vocabulary which cannot be understood by the listener.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box3' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Cultural Differences/ Speaker Accent'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-03.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Then there is a situation where the listener are unable to understand the speaker due to the accent.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box4' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Attitudes/Prejudices'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-04.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'There are also situations where the listeners are prejudiced by the speaker\'s culture or background and hence may not fully listen to what the speaker is saying.'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'page_title' },
+                _react2.default.createElement(
+                  'h1',
+                  null,
+                  'Barriers to Active Listening '
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'sub_heading' },
+                'There can also be barriers to active listening. They are: '
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'intro white' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box1' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Distractions'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-01.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Distractions can be due to physical noise or psychological problems.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box2' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Jargon/Vocabulary'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-02.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Some speaker use jargon or heavy vocabulary which cannot be understood by the listener.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box3' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Cultural Differences/ Speaker Accent'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-03.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Then there is a situation where the listener are unable to understand the speaker due to the accent.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box4' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Attitudes/Prejudices'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-04.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'There are also situations where the listeners are prejudiced by the speaker\'s culture or background and hence may not fully listen to what the speaker is saying.'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'page_title' },
+                _react2.default.createElement(
+                  'h1',
+                  null,
+                  'Barriers to Active Listening '
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'sub_heading' },
+                'There can also be barriers to active listening. They are: '
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'intro white' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box1' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Distractions'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-01.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Distractions can be due to physical noise or psychological problems.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box2' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Jargon/Vocabulary'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-02.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Some speaker use jargon or heavy vocabulary which cannot be understood by the listener.'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box3' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Cultural Differences/ Speaker Accent'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-03.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'Then there is a situation where the listener are unable to understand the speaker due to the accent.'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box4' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_heading' },
+                      'Attitudes/Prejudices'
+                    ),
+                    _react2.default.createElement('img', { src: '/app/assets/images/template/pic-04.png' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'img_caption' },
+                      'There are also situations where the listeners are prejudiced by the speaker\'s culture or background and hence may not fully listen to what the speaker is saying.'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Interactivity1;
+}(_react2.default.Component);
+
+exports.default = Interactivity1;
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Interactivity2 = function (_React$Component) {
+  _inherits(Interactivity2, _React$Component);
+
+  function Interactivity2(props) {
+    _classCallCheck(this, Interactivity2);
+
+    return _possibleConstructorReturn(this, (Interactivity2.__proto__ || Object.getPrototypeOf(Interactivity2)).call(this, props));
+  }
+
+  _createClass(Interactivity2, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'interactivity2' },
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Overcoming Barriers to Listening'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'The active listening technique can be used to overcome listening barriers.'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'You should:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box1' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/1.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Put personal emotions aside during the conversation'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        ' Ask the right questions  '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/3.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Paraphrases back to the speaker to clarify understanding'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box4' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/4.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Try to overcome all types of environment distractions'
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Overcoming Barriers to Listening'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'The active listening technique can be used to overcome listening barriers.'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'You should:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side white' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box1' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/1.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Put personal emotions aside during the conversation'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        ' Ask the right questions  '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/3.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Paraphrases back to the speaker to clarify understanding'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box4' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/4.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Try to overcome all types of environment distractions'
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Overcoming Barriers to Listening'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'The active listening technique can be used to overcome listening barriers.'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'You should:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box1' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/1.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Put personal emotions aside during the conversation'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        ' Ask the right questions  '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/3.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Paraphrases back to the speaker to clarify understanding'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box4' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'img-no' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/4.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Try to overcome all types of environment distractions'
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Interactivity2;
+}(_react2.default.Component);
+
+exports.default = Interactivity2;
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Interactivity3 = function (_React$Component) {
+  _inherits(Interactivity3, _React$Component);
+
+  function Interactivity3(props) {
+    _classCallCheck(this, Interactivity3);
+
+    return _possibleConstructorReturn(this, (Interactivity3.__proto__ || Object.getPrototypeOf(Interactivity3)).call(this, props));
+  }
+
+  _createClass(Interactivity3, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'interactivity3' },
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Summary'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'In this session, you have learnt that:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'ul',
+                      null,
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Listening actively '
+                            ),
+                            'is as important as asking the right questions'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening technique'
+                            ),
+                            'helps you understand, interpret and evaluate the information you receive'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Observing a person\u2019s body language'
+                            ),
+                            'to understand his or her feelings is also a part of active listening'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box4' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening ensures'
+                            ),
+                            'that you receive the communication properly'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box5' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening encourages'
+                            ),
+                            'the speaker to transmit the communication better'
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Summary'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'In this session, you have learnt that:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'ul',
+                      null,
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Listening actively '
+                            ),
+                            'is as important as asking the right questions'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening technique'
+                            ),
+                            'helps you understand, interpret and evaluate the information you receive'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Observing a person\u2019s body language'
+                            ),
+                            'to understand his or her feelings is also a part of active listening'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box4' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening ensures'
+                            ),
+                            'that you receive the communication properly'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box5' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening encourages'
+                            ),
+                            'the speaker to transmit the communication better'
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Summary'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub_heading' },
+                  'In this session, you have learnt that:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'ul',
+                      null,
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Listening actively '
+                            ),
+                            'is as important as asking the right questions'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening technique'
+                            ),
+                            'helps you understand, interpret and evaluate the information you receive'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Observing a person\u2019s body language'
+                            ),
+                            'to understand his or her feelings is also a part of active listening'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box4' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening ensures'
+                            ),
+                            'that you receive the communication properly'
+                          )
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box5' },
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          ' ',
+                          _react2.default.createElement(
+                            'div',
+                            { className: 'box_text' },
+                            _react2.default.createElement(
+                              'div',
+                              { className: 'highlight' },
+                              'Active listening encourages'
+                            ),
+                            'the speaker to transmit the communication better'
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Interactivity3;
+}(_react2.default.Component);
+
+exports.default = Interactivity3;
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Interactivity4 = function (_React$Component) {
+  _inherits(Interactivity4, _React$Component);
+
+  function Interactivity4(props) {
+    _classCallCheck(this, Interactivity4);
+
+    return _possibleConstructorReturn(this, (Interactivity4.__proto__ || Object.getPrototypeOf(Interactivity4)).call(this, props));
+  }
+
+  _createClass(Interactivity4, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'interactivity4' },
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title white' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Active Listening Behaviour'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'left_content' },
+                      'Active listening is paying attention to other people in a manner where they feel that you hear their message and that you fully understand them'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'right-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'sub-heading white' },
+                      'WHAT IS ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight' },
+                        'Active Listening?'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'right_content' },
+                      'Active listening involves:'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'container black' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/active_01.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_text' },
+                          'Hearing/Comprehending'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/active_02.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_text' },
+                          'Attending/Retaining'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/active_03.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_text' },
+                          'Responding'
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title white' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Active Listening Behaviour'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'pc-img' },
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/Pc-image.png' })
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'left_content' },
+                      'Active listening is paying attention to other people in a manner where they feel that you hear their message and that you fully understand them'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'right-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'sub-heading white' },
+                      'WHAT IS ',
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'highlight' },
+                        'Active Listening?'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'right_content' },
+                      'Active listening involves:'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'container black' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/active_01.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_text' },
+                          'Hearing/Comprehending'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/active_02.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_text' },
+                          'Attending/Retaining'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/active_03.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'box_text' },
+                          'Responding'
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'page_title white' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Active Listening Behaviour'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'sub-heading white' },
+                  'WHAT IS ',
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'highlight' },
+                    'Active Listening?'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left_content' },
+                    'Active listening is paying attention to other people in a manner where they feel that you hear their message and that you fully understand them'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'right_content' },
+                    'Active listening involves:'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'container black' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box1' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_img' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/active_01.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Hearing/Comprehending'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_img' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/active_02.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Attending/Retaining'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_img' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/active_03.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box_text' },
+                        'Responding'
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Interactivity4;
+}(_react2.default.Component);
+
+exports.default = Interactivity4;
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Shell = __webpack_require__(101);
 
 var _Shell2 = _interopRequireDefault(_Shell);
 
-var _reactResponsive = __webpack_require__(204);
+var _reactResponsive = __webpack_require__(8);
 
 var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
@@ -11737,54 +16376,48 @@ var Intro = function (_React$Component) {
                   'div',
                   { className: 'title welcome_text' },
                   _react2.default.createElement(
-                    'h1',
-                    { className: 'white' },
-                    'Welcome to the course,'
-                  ),
-                  _react2.default.createElement(
-                    'h1',
-                    { className: 'black' },
-                    'SEC Compliance Readiness'
-                  ),
-                  _react2.default.createElement(
                     'div',
                     { className: 'flex-container white' },
                     _react2.default.createElement(
                       'div',
-                      { className: 'left-side ' },
-                      'Standards ',
-                      _react2.default.createElement('br', null),
-                      'Rules ',
-                      _react2.default.createElement('br', null),
-                      'Regulations'
+                      { className: 'left-sidetext' },
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'Are you an Active Listener?'
+                      ),
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'What constitutes Active Listening?'
+                      )
                     ),
                     _react2.default.createElement(
                       'div',
-                      { className: 'right-side ' },
-                      'Strategy ',
-                      _react2.default.createElement('br', null),
-                      'Governance ',
-                      _react2.default.createElement('br', null),
-                      'Security'
-                    )
-                  )
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'btn white' },
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'instruction_text' },
-                    'Click Start to begin '
-                  ),
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'btn_text' },
-                      'Start'
+                      { className: 'right-sidetext ' },
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'Welcome to this course on'
+                      ),
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'ACTIVE LISTENING'
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'btn' },
+                        _react2.default.createElement(
+                          'a',
+                          { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'btn_text' },
+                            'Start'
+                          )
+                        )
+                      )
                     )
                   )
                 )
@@ -11793,7 +16426,7 @@ var Intro = function (_React$Component) {
           ),
           _react2.default.createElement(
             _reactResponsive2.default,
-            { query: '(orientation: portrait)' },
+            { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
             _react2.default.createElement(
               'div',
               { className: 'content' },
@@ -11810,54 +16443,115 @@ var Intro = function (_React$Component) {
                   'div',
                   { className: 'title welcome_text' },
                   _react2.default.createElement(
-                    'h1',
-                    { className: 'white' },
-                    'Welcome to the course,'
-                  ),
-                  _react2.default.createElement(
-                    'h1',
-                    { className: 'black' },
-                    'SEC Compliance Readiness'
-                  ),
+                    'div',
+                    { className: 'flex-container white' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'left-sidetext' },
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'Are you an Active Listener?'
+                      ),
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'What constitutes Active Listening?'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'right-sidetext ' },
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'Welcome to this course on'
+                      ),
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'ACTIVE LISTENING'
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'btn' },
+                        _react2.default.createElement(
+                          'a',
+                          { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'btn_text' },
+                            'Start'
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactResponsive2.default,
+            { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+            _react2.default.createElement(
+              'div',
+              { className: 'content' },
+              _react2.default.createElement(
+                'div',
+                { className: 'bg' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'logo' },
+                  ' ',
+                  _react2.default.createElement('img', { src: '/app/assets/images/template/logo.jpg' })
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'title welcome_text' },
                   _react2.default.createElement(
                     'div',
                     { className: 'flex-container white' },
                     _react2.default.createElement(
                       'div',
-                      { className: 'left-side ' },
-                      'Standards ',
-                      _react2.default.createElement('br', null),
-                      'Rules ',
-                      _react2.default.createElement('br', null),
-                      'Regulations'
+                      { className: 'left-sidetext' },
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'Are you an Active Listener?'
+                      ),
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'What constitutes Active Listening?'
+                      )
                     ),
                     _react2.default.createElement(
                       'div',
-                      { className: 'right-side ' },
-                      'Strategy ',
-                      _react2.default.createElement('br', null),
-                      'Governance ',
-                      _react2.default.createElement('br', null),
-                      'Security'
-                    )
-                  )
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'btn white' },
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'instruction_text' },
-                    'Click Start to begin '
-                  ),
-                  _react2.default.createElement(
-                    'a',
-                    { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'btn_text' },
-                      'Start'
+                      { className: 'right-sidetext ' },
+                      _react2.default.createElement(
+                        'p',
+                        null,
+                        'Welcome to this course on'
+                      ),
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'ACTIVE LISTENING'
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'btn' },
+                        _react2.default.createElement(
+                          'a',
+                          { href: '#', className: 'start-button', role: 'button', onClick: this.startCourse.bind(this) },
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'btn_text' },
+                            'Start'
+                          )
+                        )
+                      )
                     )
                   )
                 )
@@ -11875,7 +16569,7 @@ var Intro = function (_React$Component) {
 exports.default = Intro;
 
 /***/ }),
-/* 103 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11887,11 +16581,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactResponsive = __webpack_require__(204);
+var _reactResponsive = __webpack_require__(8);
 
 var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
@@ -11932,61 +16626,279 @@ var StaticPage1 = function (_React$Component) {
                 { className: 'intro white' },
                 _react2.default.createElement(
                   'div',
+                  { className: 'page_title black' },
+                  _react2.default.createElement(
+                    'h1',
+                    null,
+                    'Which of the following is active listening?'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'left-side' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box1' },
+                    _react2.default.createElement(
+                      'ul',
+                      null,
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'Listening attentively '
+                      ),
+                      ' ',
+                      _react2.default.createElement('br', null),
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'Listening to the speaker and noting down what the speaker said'
+                      ),
+                      _react2.default.createElement('br', null),
+                      _react2.default.createElement(
+                        'li',
+                        null,
+                        'Listening with full attention and rephrasing what the speaker said'
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box2' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'quotation_box' },
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'quotation' },
+                        ' ',
+                        _react2.default.createElement(
+                          'span',
+                          { className: 'quote_symbol1' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/08.png' })
+                        ),
+                        'There are many myths surrounding what constitutes active listening.',
+                        _react2.default.createElement(
+                          'span',
+                          { className: 'quote_symbol2' },
+                          ' ',
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/07.png' }),
+                          ' '
+                        )
+                      ),
+                      ' '
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'box3' },
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      _react2.default.createElement('img', { src: '/app/assets/images/template/icon.png', className: 'middle_align' })
+                    ),
+                    _react2.default.createElement(
+                      'p',
+                      { className: 'instruction_text' },
+                      'In this short course, you will learn more about active listening and its components.'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro white' },
+                _react2.default.createElement(
+                  'div',
                   { className: 'flex-container' },
                   _react2.default.createElement(
                     'div',
                     { className: 'left-side' },
                     _react2.default.createElement(
                       'div',
-                      { className: 'intro_heading' },
+                      { className: 'page_title black' },
                       _react2.default.createElement(
                         'h1',
                         null,
-                        'Introduction to SEC '
+                        'Which of the following is active listening?'
                       )
                     ),
                     _react2.default.createElement(
                       'div',
-                      { className: 'intro_para' },
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'As an investment adviser, you need to be aware of all the rules and laws pertaining to the United States securities regulation. '
-                      ),
-                      _react2.default.createElement(
-                        'span',
-                        null,
-                        'Securities and Exchange Commission (Sec):'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'intro_list' },
+                      { className: 'box1' },
                       _react2.default.createElement(
                         'ul',
                         null,
                         _react2.default.createElement(
                           'li',
                           null,
-                          'Makes the rules'
+                          'Listening attentively '
                         ),
+                        ' ',
+                        _react2.default.createElement('br', null),
                         _react2.default.createElement(
                           'li',
                           null,
-                          'Enforces policy'
+                          'Listening to the speaker and noting down what the speaker said'
                         ),
+                        _react2.default.createElement('br', null),
                         _react2.default.createElement(
                           'li',
                           null,
-                          'Oversees the markets'
+                          'Listening with full attention and rephrasing what the speaker said'
                         )
                       )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'quotation_box' },
+                        _react2.default.createElement(
+                          'span',
+                          { className: 'quotation' },
+                          ' ',
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'quote_symbol1' },
+                            _react2.default.createElement('img', { src: '/app/assets/images/template/08.png' })
+                          ),
+                          'There are many myths surrounding what constitutes active listening.',
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'quote_symbol2' },
+                            ' ',
+                            _react2.default.createElement('img', { src: '/app/assets/images/template/07.png' }),
+                            ' '
+                          )
+                        ),
+                        ' '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/icon.png', className: 'middle_align' })
+                      ),
+                      _react2.default.createElement(
+                        'p',
+                        { className: 'instruction_text' },
+                        'In this short course, you will learn more about active listening and its components.'
+                      )
                     )
-                  ),
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro white' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'right-side' },
-                    _react2.default.createElement('img', { src: '/app/assets/images/template/image1.jpg' })
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'page_title black' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'Which of the following is active listening?'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box1' },
+                      _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          'Listening attentively '
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          'Listening to the speaker and noting down what the speaker said'
+                        ),
+                        _react2.default.createElement(
+                          'li',
+                          null,
+                          'Listening with full attention and rephrasing what the speaker said'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'quotation_box' },
+                        _react2.default.createElement(
+                          'span',
+                          { className: 'quotation' },
+                          ' ',
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'quote_symbol1' },
+                            _react2.default.createElement('img', { src: '/app/assets/images/template/08.png', className: 'quote_symbol' })
+                          ),
+                          'There are many myths surrounding what constitutes active listening.',
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'quote_symbol2' },
+                            ' ',
+                            _react2.default.createElement('img', { src: '/app/assets/images/template/07.png', className: 'quote_symbol' }),
+                            ' '
+                          )
+                        ),
+                        ' '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/icon.png', className: 'middle_align' })
+                      ),
+                      _react2.default.createElement(
+                        'p',
+                        { className: 'instruction_text' },
+                        'In this short course, you will learn more about active listening and its components.'
+                      )
+                    )
                   )
                 )
               )
@@ -12003,7 +16915,7 @@ var StaticPage1 = function (_React$Component) {
 exports.default = StaticPage1;
 
 /***/ }),
-/* 104 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12015,9 +16927,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12033,91 +16949,222 @@ var StaticPage2 = function (_React$Component) {
   function StaticPage2(props) {
     _classCallCheck(this, StaticPage2);
 
-    return _possibleConstructorReturn(this, (StaticPage2.__proto__ || Object.getPrototypeOf(StaticPage2)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (StaticPage2.__proto__ || Object.getPrototypeOf(StaticPage2)).call(this, props));
+
+    _this.state = {
+      isPopupOpen: false,
+      currentPopup: 0
+    };
+
+    return _this;
   }
 
   _createClass(StaticPage2, [{
-    key: "render",
+    key: 'getPopupContent',
+    value: function getPopupContent() {
+      var currentPopup = this.state.currentPopup;
+      switch (parseInt(currentPopup)) {
+        case 1:
+          return _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'h1',
+              null,
+              'Benefits of this Course'
+            ),
+            _react2.default.createElement(
+              'ul',
+              null,
+              _react2.default.createElement(
+                'li',
+                null,
+                'Documentation Requests'
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                'On-Site Interviews'
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                'Exit Interviews'
+              ),
+              _react2.default.createElement(
+                'li',
+                null,
+                'Post-Examination Follow Up'
+              )
+            )
+          );
+          break;
+
+      }
+    }
+  }, {
+    key: 'displayPopup',
+    value: function displayPopup() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.state.isPopupOpen && _react2.default.createElement(
+          'div',
+          { className: 'popup-container' },
+          _react2.default.createElement(
+            'span',
+            { className: 'close-btn icon-close', onClick: this.closePopup.bind(this) },
+            '\uE60A'
+          ),
+          this.getPopupContent()
+        )
+      );
+    }
+  }, {
+    key: 'openPopup',
+    value: function openPopup(currentPopup) {
+      this.setState({ isPopupOpen: true, currentPopup: currentPopup });
+    }
+  }, {
+    key: 'closePopup',
+    value: function closePopup() {
+      this.setState({ isPopupOpen: false });
+    }
+  }, {
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "static-page2" },
+        'div',
+        { className: 'static-page2' },
         _react2.default.createElement(
-          "div",
-          { className: "content" },
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
           _react2.default.createElement(
-            "div",
-            { className: "bg" },
+            'div',
+            { className: 'content' },
             _react2.default.createElement(
-              "div",
-              { className: "intro white" },
+              'div',
+              { className: 'bg' },
               _react2.default.createElement(
-                "div",
-                { className: "flex-container" },
+                'div',
+                { className: 'intro' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "left-side" },
+                  'div',
+                  { className: 'page_title black' },
                   _react2.default.createElement(
-                    "div",
-                    { className: "intro_heading" },
+                    'h1',
+                    null,
+                    'Learning Objective'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'subHeading black' },
+                  'By the end of this lesson, you will be able to:'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'list black' },
+                  _react2.default.createElement(
+                    'ul',
+                    null,
                     _react2.default.createElement(
-                      "h1",
+                      'li',
                       null,
-                      "Course Objectives "
+                      'Identify active listening behaviours'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'left-side' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'page_title black' },
+                    _react2.default.createElement(
+                      'h1',
+                      null,
+                      'Learning Objective'
                     )
                   ),
                   _react2.default.createElement(
-                    "div",
-                    { className: "intro_para" },
-                    _react2.default.createElement(
-                      "span",
-                      null,
-                      "In this course, you will learn about:"
-                    )
+                    'div',
+                    { className: 'subHeading black' },
+                    'By the end of this lesson, you will be able to:'
                   ),
                   _react2.default.createElement(
-                    "div",
-                    { className: "intro_list" },
+                    'div',
+                    { className: 'list black' },
                     _react2.default.createElement(
-                      "ul",
+                      'ul',
                       null,
                       _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "Structure of the US Securities and Exchange Commission (SEC)"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Operations of SEC"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Initiatives of National Examination program for SEC registered investment Advisers"
+                        'Identify active listening behaviours'
                       )
                     )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'left-side' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'page_title black' },
+                    _react2.default.createElement(
+                      'h1',
+                      null,
+                      'Learning Objective'
+                    )
                   ),
                   _react2.default.createElement(
-                    "div",
-                    { className: "btn" },
+                    'div',
+                    { className: 'subHeading black' },
+                    'By the end of this lesson, you will be able to:'
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'list black' },
                     _react2.default.createElement(
-                      "span",
-                      { className: "instruction_text" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/hand_icon.png" }),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        "Click the button to know more."
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "span",
+                      'ul',
                       null,
                       _react2.default.createElement(
-                        "button",
-                        { id: "btn_01" },
-                        "Benefits of this Course"
+                        'li',
+                        null,
+                        'Identify active listening behaviours'
                       )
                     )
                   )
@@ -12136,7 +17183,7 @@ var StaticPage2 = function (_React$Component) {
 exports.default = StaticPage2;
 
 /***/ }),
-/* 105 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12148,9 +17195,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12170,42 +17221,947 @@ var StaticPage3 = function (_React$Component) {
   }
 
   _createClass(StaticPage3, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "static-page3" },
+        'div',
+        { className: 'static-page3' },
         _react2.default.createElement(
-          "div",
-          { className: "content" },
+          'div',
+          { className: 'content' },
           _react2.default.createElement(
-            "div",
-            { className: "bg" },
+            'div',
+            { className: 'bg' },
             _react2.default.createElement(
-              "div",
-              { className: "intro white" },
+              _reactResponsive2.default,
+              { query: '(min-device-width: 1224px)' },
               _react2.default.createElement(
-                "div",
-                { className: "flex-container" },
+                'div',
+                { className: 'intro' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "left-side" },
+                  'div',
+                  { className: 'left-side' },
                   _react2.default.createElement(
-                    "div",
-                    { className: "intro_heading" },
+                    'div',
+                    { className: 'container' },
                     _react2.default.createElement(
-                      "h1",
-                      null,
-                      "Our Goal"
+                      'div',
+                      { className: 'page_title' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'Importance of Good Listening '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'flex-container' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/Red-icon.png' }),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'At work, many people will give you instructions and share ideas or facts.'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/Red-icon.png' }),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'If you are not attentive, you may miss out on crucial details. This will in turn affect your performance.'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/Red-icon.png' }),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'However, If you are an active listener, you will not face any difficulty in understanding them.'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement('div', { className: 'blue_banner' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'btn_div' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'btn_container' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'instruction_text white' },
+                          'In this session, you will learn about active listening and the steps involved in active listening.'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'arrow_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/Arrow.png', className: 'middle_align' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'btn' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/btn_02.png', className: 'middle_align' }),
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'btn_text' },
+                            'What is active listening'
+                          )
+                        )
+                      )
+                    ),
+                    _react2.default.createElement('div', { className: 'blue_banner' })
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              _reactResponsive2.default,
+              { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'left-side' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'container' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'page_title' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'Importance of Good Listening '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'flex-container' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/Red-icon.png' }),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'At work, many people will give you instructions and share ideas or facts.'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/Red-icon.png' }),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'If you are not attentive, you may miss out on crucial details. This will in turn affect your performance.'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/Red-icon.png' }),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'However, If you are an active listener, you will not face any difficulty in understanding them.'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement('div', { className: 'blue_banner' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'btn_div' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'btn_container' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'instruction_text white' },
+                          'In this session, you will learn about active listening and the steps involved in active listening.'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'arrow_img' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/Arrow.png', className: 'middle_align' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'btn' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/btn_02.png', className: 'middle_align' }),
+                          _react2.default.createElement(
+                            'span',
+                            { className: 'btn_text' },
+                            'What is active listening'
+                          )
+                        )
+                      )
+                    ),
+                    _react2.default.createElement('div', { className: 'blue_banner' })
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              _reactResponsive2.default,
+              { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'left-side' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'container' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'page_title' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        'Importance of Good Listening '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box1' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'flex-container' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img_div' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/Red-icon.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'At work, many people will give you instructions and share ideas or facts.'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box2' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'flex-container' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img_div' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/Yellow-icon.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'If you are not attentive, you may miss out on crucial details. This will in turn affect your performance.'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'box3' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'flex-container' },
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img_div' },
+                          _react2.default.createElement('img', { src: '/app/assets/images/template/Green_icon.png' })
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          { className: 'img-caption' },
+                          'However, If you are an active listener, you will not face any difficulty in understanding them.'
+                        )
+                      )
                     )
                   ),
+                  _react2.default.createElement('div', { className: 'blue_banner' }),
                   _react2.default.createElement(
-                    "div",
-                    { className: "intro_para" },
+                    'div',
+                    { className: 'btn_div' },
                     _react2.default.createElement(
-                      "span",
-                      null,
-                      "Our goal is to help you be better prepared by knowing what to expect, which will make a positive impression with the SEC, and keep you focused on your work."
+                      'div',
+                      { className: 'btn_container' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'instruction_text white' },
+                        'In this session, you will learn about active listening and the steps involved in active listening.'
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'arrow_img' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/Arrow.png', className: 'middle_align' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'btn' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/btn_02.png', className: 'middle_align' }),
+                        _react2.default.createElement(
+                          'span',
+                          { className: 'btn_text' },
+                          'What is active listening'
+                        )
+                      )
+                    )
+                  ),
+                  _react2.default.createElement('div', { className: 'blue_banner' })
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return StaticPage3;
+}(_react2.default.Component);
+
+exports.default = StaticPage3;
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var StaticPage3 = function (_React$Component) {
+  _inherits(StaticPage3, _React$Component);
+
+  function StaticPage3(props) {
+    _classCallCheck(this, StaticPage3);
+
+    var _this = _possibleConstructorReturn(this, (StaticPage3.__proto__ || Object.getPrototypeOf(StaticPage3)).call(this, props));
+
+    _this.state = {
+      isPopupOpen1: false,
+      isPopupOpen2: false,
+      isPopupOpen3: false,
+      currentPopup: 0
+    };
+    return _this;
+  }
+
+  _createClass(StaticPage3, [{
+    key: 'getPopupContent1',
+    value: function getPopupContent1() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'pop_heading' },
+          'Repeating '
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'pop_content black' },
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Perceiving'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Paying Attention'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Remembering'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Repeating the message using ',
+              _react2.default.createElement(
+                'b',
+                null,
+                _react2.default.createElement(
+                  'i',
+                  null,
+                  'exactly the same '
+                )
+              ),
+              ' words used by the speaker'
+            )
+          )
+        )
+      );
+    }
+  }, {
+    key: 'getPopupContent2',
+    value: function getPopupContent2() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'pop_heading' },
+          'Paraphrasing '
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'pop_content black' },
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Perceiving'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Paying Attention'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Remembering'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Thinking and Reasoning  '
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Rendering the message using ',
+              _react2.default.createElement(
+                'b',
+                null,
+                _react2.default.createElement(
+                  'i',
+                  null,
+                  'similar'
+                )
+              ),
+              ' words and similar phrase arrangement to the ones used by the speaker '
+            )
+          )
+        )
+      );
+    }
+  }, {
+    key: 'getPopupContent3',
+    value: function getPopupContent3() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'pop_heading' },
+          'Reflecting '
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'pop_content black' },
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Perceiving'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Paying Attention'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Remembering'
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Thinking and Reasoning  '
+            )
+          ),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'li',
+              null,
+              'Rendering the message using ',
+              _react2.default.createElement(
+                'b',
+                null,
+                _react2.default.createElement(
+                  'i',
+                  null,
+                  'your own '
+                )
+              ),
+              ' words and sentence structure '
+            )
+          )
+        )
+      );
+    }
+  }, {
+    key: 'displayPopup1',
+    value: function displayPopup1() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.state.isPopupOpen1 && _react2.default.createElement(
+          'div',
+          { className: 'pop1' },
+          _react2.default.createElement(
+            'span',
+            { className: 'close-btn icon-close', onClick: this.closePopup1.bind(this) },
+            '\uE60A'
+          ),
+          this.getPopupContent1()
+        )
+      );
+    }
+  }, {
+    key: 'displayPopup2',
+    value: function displayPopup2() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.state.isPopupOpen2 && _react2.default.createElement(
+          'div',
+          { className: 'pop2' },
+          _react2.default.createElement(
+            'span',
+            { className: 'close-btn icon-close', onClick: this.closePopup2.bind(this) },
+            '\uE60A'
+          ),
+          this.getPopupContent2()
+        )
+      );
+    }
+  }, {
+    key: 'displayPopup3',
+    value: function displayPopup3() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.state.isPopupOpen3 && _react2.default.createElement(
+          'div',
+          { className: 'pop3' },
+          _react2.default.createElement(
+            'span',
+            { className: 'close-btn icon-close', onClick: this.closePopup3.bind(this) },
+            '\uE60A'
+          ),
+          this.getPopupContent3()
+        )
+      );
+    }
+  }, {
+    key: 'openPopup1',
+    value: function openPopup1() {
+      this.setState({ isPopupOpen1: true });
+    }
+  }, {
+    key: 'openPopup2',
+    value: function openPopup2() {
+      this.setState({ isPopupOpen2: true });
+    }
+  }, {
+    key: 'openPopup3',
+    value: function openPopup3() {
+      this.setState({ isPopupOpen3: true });
+    }
+  }, {
+    key: 'closePopup1',
+    value: function closePopup1() {
+      this.setState({ isPopupOpen1: false });
+    }
+  }, {
+    key: 'closePopup2',
+    value: function closePopup2() {
+      this.setState({ isPopupOpen2: false });
+    }
+  }, {
+    key: 'closePopup3',
+    value: function closePopup3() {
+      this.setState({ isPopupOpen3: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'static-page4' },
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 1224px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'page_title' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        ' Degree of Active Listening Behaviour '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'sub_title' },
+                      'Select each tab to know more.'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'container white' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_01 white', onClick: this.openPopup1.bind(this) },
+                          ' Repeating'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup1()
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'arrow' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/arrow-2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_02', onClick: this.openPopup2.bind(this) },
+                          ' Paraphrasing'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup2()
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'arrow' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/arrow-2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_03', onClick: this.openPopup3.bind(this) },
+                          ' Reflecting '
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup3()
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'page_title' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        ' Degree of Active Listening Behaviour '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'sub_title' },
+                      'Select each tab to know more.'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'container white' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_01 white', onClick: this.openPopup1.bind(this) },
+                          ' Repeating'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup1()
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'arrow' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/arrow-2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_02', onClick: this.openPopup2.bind(this) },
+                          ' Paraphrasing'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup2()
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'arrow' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/arrow-2.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_03', onClick: this.openPopup3.bind(this) },
+                          ' Reflecting '
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup3()
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactResponsive2.default,
+          { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+          _react2.default.createElement(
+            'div',
+            { className: 'content' },
+            _react2.default.createElement(
+              'div',
+              { className: 'bg' },
+              _react2.default.createElement(
+                'div',
+                { className: 'intro' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'flex-container' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'left-side' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'page_title' },
+                      _react2.default.createElement(
+                        'h1',
+                        null,
+                        ' Degree of Active Listening Behaviour '
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'sub_title' },
+                      'Select each tab to know more.'
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'container white' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box1' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_01 white', onClick: this.openPopup1.bind(this) },
+                          ' Repeating'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup1()
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'arrow' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/radio_over.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box2' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_02', onClick: this.openPopup2.bind(this) },
+                          ' Paraphrasing'
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup2()
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'arrow' },
+                        _react2.default.createElement('img', { src: '/app/assets/images/template/radio_over.png' })
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'box3' },
+                        _react2.default.createElement(
+                          'button',
+                          { className: 'button_03', onClick: this.openPopup3.bind(this) },
+                          ' Reflecting '
+                        ),
+                        _react2.default.createElement(
+                          'div',
+                          null,
+                          this.displayPopup3()
+                        )
+                      )
                     )
                   )
                 )
@@ -12223,13 +18179,427 @@ var StaticPage3 = function (_React$Component) {
 exports.default = StaticPage3;
 
 /***/ }),
-/* 106 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _Templates = __webpack_require__(101);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactResponsive = __webpack_require__(8);
+
+var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var StaticPage3 = function (_React$Component) {
+    _inherits(StaticPage3, _React$Component);
+
+    function StaticPage3(props) {
+        _classCallCheck(this, StaticPage3);
+
+        return _possibleConstructorReturn(this, (StaticPage3.__proto__ || Object.getPrototypeOf(StaticPage3)).call(this, props));
+    }
+
+    _createClass(StaticPage3, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'static-page5' },
+                _react2.default.createElement(
+                    _reactResponsive2.default,
+                    { query: '(min-device-width: 1224px)' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'content' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'bg' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'container' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'summary' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'page_title white' },
+                                        _react2.default.createElement(
+                                            'h1',
+                                            null,
+                                            'Active Listening '
+                                        ),
+                                        _react2.default.createElement(
+                                            'h1',
+                                            null,
+                                            ' Behaviour - Importance'
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'sub_heading ' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'big' },
+                                            'Why'
+                                        ),
+                                        ' is active listening ',
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'big' },
+                                            'behaviour'
+                                        ),
+                                        ' important?'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'flex-container' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'icons white' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box1' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-1.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Help the speaker know that you are listening'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box2' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-2.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Establish a good rapport with the speaker'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box3' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-3.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Ensure you receive the commnication properly'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box4' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-4.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Avoids confusion and misconfusion'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box5' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-5.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Convey the speaker that his ideas and views are important '
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box6' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-6.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Encourages the speaker to communicate better'
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactResponsive2.default,
+                    { query: '(min-device-width: 768px) and (max-device-width: 1024px)' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'content' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'bg' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'container' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'summary' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'page_title white' },
+                                        _react2.default.createElement(
+                                            'h1',
+                                            null,
+                                            'Active Listening '
+                                        ),
+                                        _react2.default.createElement(
+                                            'h1',
+                                            null,
+                                            ' Behaviour - Importance'
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'sub_heading' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'big' },
+                                            'Why'
+                                        ),
+                                        ' is active listening ',
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'big' },
+                                            'behaviour'
+                                        ),
+                                        ' important?'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'flex-container' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'icons white' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box1' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-1.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Help the speaker know that you are listening'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box2' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-2.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Establish a good rapport with the speaker'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box3' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-3.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Ensure you receive the commnication properly'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box4' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-4.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Avoids confusion and misconfusion'
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box5' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-5.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Convey the speaker that his ideas and views are important '
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'box6' },
+                                                _react2.default.createElement('img', { src: '/app/assets/images/template/icon-6.png' }),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'img_caption' },
+                                                    'Encourages the speaker to communicate better'
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    _reactResponsive2.default,
+                    { query: '(min-device-width: 320px) and (max-device-width: 736px)' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'content' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'bg' },
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'container' },
+                                _react2.default.createElement(
+                                    'div',
+                                    { className: 'summary' },
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'page_title' },
+                                        _react2.default.createElement(
+                                            'h1',
+                                            null,
+                                            'Active Listening Behaviour - Importance'
+                                        )
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'sub_heading' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'big' },
+                                            'Why'
+                                        ),
+                                        ' is active listening ',
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'big' },
+                                            'behaviour'
+                                        ),
+                                        ' important?'
+                                    ),
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'flex-container' },
+                                        _react2.default.createElement(
+                                            'div',
+                                            { className: 'icons white' },
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'flex' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'box1' },
+                                                    _react2.default.createElement('img', { src: '/app/assets/images/template/icon-1.png' }),
+                                                    _react2.default.createElement(
+                                                        'div',
+                                                        { className: 'img_caption' },
+                                                        'Help the speaker know that you are listening'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'box2' },
+                                                    _react2.default.createElement('img', { src: '/app/assets/images/template/icon-2.png' }),
+                                                    _react2.default.createElement(
+                                                        'div',
+                                                        { className: 'img_caption' },
+                                                        'Establish a good rapport with the speaker'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'flex' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'box3' },
+                                                    _react2.default.createElement('img', { src: '/app/assets/images/template/icon-3.png' }),
+                                                    _react2.default.createElement(
+                                                        'div',
+                                                        { className: 'img_caption' },
+                                                        'Ensure you receive the commnication properly'
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'box4' },
+                                                    _react2.default.createElement('img', { src: '/app/assets/images/template/icon-4.png' }),
+                                                    _react2.default.createElement(
+                                                        'div',
+                                                        { className: 'img_caption' },
+                                                        'Avoids confusion and misconfusion'
+                                                    )
+                                                )
+                                            ),
+                                            _react2.default.createElement(
+                                                'div',
+                                                { className: 'flex' },
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'box5' },
+                                                    _react2.default.createElement('img', { src: '/app/assets/images/template/icon-5.png' }),
+                                                    _react2.default.createElement(
+                                                        'div',
+                                                        { className: 'img_caption' },
+                                                        'Convey the speaker that his ideas and views are important '
+                                                    )
+                                                ),
+                                                _react2.default.createElement(
+                                                    'div',
+                                                    { className: 'box6' },
+                                                    _react2.default.createElement('img', { src: '/app/assets/images/template/icon-6.png' }),
+                                                    _react2.default.createElement(
+                                                        'div',
+                                                        { className: 'img_caption' },
+                                                        'Encourages the speaker to communicate better'
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return StaticPage3;
+}(_react2.default.Component);
+
+exports.default = StaticPage3;
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Templates = __webpack_require__(102);
 
 var routes = [{ path: '/page1',
   exact: true,
@@ -12239,13 +18609,21 @@ var routes = [{ path: '/page1',
 }, { path: '/page3',
   comp: _Templates.StaticPage3
 }, { path: '/page4',
-  comp: _Templates.StaticPage4
+  comp: _Templates.Interactivity4
 }, { path: '/page5',
+  comp: _Templates.DragDrop2
+}, { path: '/page6',
+  comp: _Templates.StaticPage4
+}, { path: '/page6',
+  comp: _Templates.StaticPage5
+}, { path: '/page7',
   comp: _Templates.Interactivity1
-}, { path: '/page6',
+}, { path: '/page8',
   comp: _Templates.Interactivity2
-}, { path: '/page6',
+}, { path: '/page9',
   comp: _Templates.DragDrop1
+}, { path: '/page10',
+  comp: _Templates.Interactivity3
 }];
 
 module.exports = {
@@ -12253,25 +18631,25 @@ module.exports = {
 };
 
 /***/ }),
-/* 107 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(95);
+var _reactDom = __webpack_require__(96);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _FrameWork = __webpack_require__(94);
+var _FrameWork = __webpack_require__(95);
 
 var _FrameWork2 = _interopRequireDefault(_FrameWork);
 
-var _application = __webpack_require__(96);
+var _application = __webpack_require__(97);
 
 var _application2 = _interopRequireDefault(_application);
 
@@ -12286,7 +18664,7 @@ var appData = {
 _reactDom2.default.render(_react2.default.createElement(_FrameWork2.default, { data: appData }), document.getElementById('container'));
 
 /***/ }),
-/* 108 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12407,7 +18785,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 109 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12421,9 +18799,9 @@ function fromByteArray (uint8) {
 
 
 
-var base64 = __webpack_require__(108)
-var ieee754 = __webpack_require__(130)
-var isArray = __webpack_require__(131)
+var base64 = __webpack_require__(118)
+var ieee754 = __webpack_require__(140)
+var isArray = __webpack_require__(141)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -14201,24 +20579,24 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(245)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(254)))
 
 /***/ }),
-/* 110 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(111)(undefined);
+exports = module.exports = __webpack_require__(121)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  color: #5e9f45;\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #ededed;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.player {\n  height: 100%; }\n\n.footer {\n  background-color: #ededed;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-bottom: none;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #e9eced;\n  /* Old browsers */\n  border-top: 1px solid #e9eced;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9eced), color-stop(44%, #e9eced), color-stop(50%, #e9eced), color-stop(57%, #e9eced), color-stop(100%, #e9eced));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$button-bg-hover, endColorstr=$button-bg-hover,GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  color: #5e9f45;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #ededed;\n  display: inline-block;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%; }\n\n.content {\n  background-color: #000;\n  height: 100%;\n  margin: auto;\n  overflow-x: hidden;\n  width: 100%; }\n\n.black {\n  color: #000000; }\n\n.white {\n  color: #FFFFFF; }\n\n.close-btn {\n  color: #5e9f45;\n  float: right;\n  font-weight: 700;\n  cursor: pointer; }\n\n.buttons button.selected {\n  background-color: #5e9f45;\n  color: #FFFFFF; }\n\n.intro-container .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 50%; }\n\n.intro-container .flex-container {\n  display: -webkit-flex; }\n\n.intro-container .left-side {\n  border-right: 1px solid #ccc;\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.intro-container .right-side {\n  border-left: 1px solid #ccc;\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.intro-container .bg {\n  background-image: url(\"/app/assets/images/template/intro.jpg\");\n  height: 100%; }\n\n.intro-container .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  position: relative;\n  top: 10px; }\n\n.intro-container .btn {\n  cursor: pointer;\n  text-align: right;\n  width: 80%; }\n\n.intro-container .btn .btn_text {\n  color: #5e9e44;\n  font-size: 1.25em;\n  left: -15px;\n  position: relative;\n  top: 10px; }\n\n.intro-container .start-button {\n  background-image: url(\"/app/assets/images/template/start-btn.jpg\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 45px;\n  text-align: center;\n  width: 112px; }\n\n.static-page1 .flex-container {\n  background-color: #5e9e44;\n  border-top: 4px solid #05A251;\n  display: -webkit-flex;\n  height: 270px;\n  margin-top: 28%;\n  opacity: 0.8; }\n\n.static-page1 .left-side {\n  width: 65%; }\n\n.static-page1 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/bg1.jpg\");\n  background-position: 20px;\n  height: 100%; }\n\n.static-page1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.static-page1 .intro {\n  border-top: 2px solid #ccc;\n  width: 100%; }\n\n.static-page1 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page1 .intro_para {\n  margin-left: 30px;\n  width: 80%; }\n\n.static-page1 .intro_list {\n  margin-left: 25px; }\n\n.static-page2 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.static-page2 .left-side {\n  width: 100%; }\n\n.static-page2 .right-side {\n  margin: auto;\n  width: 30%; }\n\n.static-page2 .bg {\n  background-image: url(\"/app/assets/images/template/bg2.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.static-page2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.static-page2 .intro {\n  background-color: #72A65C;\n  float: right;\n  height: 562px;\n  width: 50%;\n  opacity: 0.9; }\n\n.static-page2 .intro_heading {\n  margin-left: 3%;\n  margin-top: 25%; }\n\n.static-page2 .intro_para {\n  margin-left: 20px;\n  margin-top: 40px;\n  width: 80%; }\n\n.static-page2 .intro_list {\n  width: 70%; }\n\n.static-page2 .btn {\n  background-color: #50a82d;\n  width: 100%;\n  float: left;\n  margin-top: 8%; }\n\n.static-page2 button {\n  background-color: #f9f9f9;\n  color: #5e9e44;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 20px;\n  width: 200px; }\n\n.static-page3 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 30%;\n  height: 240px;\n  opacity: 0.8; }\n\n.static-page3 .left-side {\n  width: 65%; }\n\n.static-page3 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page3 .bg {\n  background-image: url(\"/app/assets/images/template/bg3.jpg\");\n  height: 100%; }\n\n.static-page3 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page3 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page3 .intro_heading {\n  margin-left: 30px;\n  margin-top: 40px; }\n\n.static-page3 .intro_para {\n  margin-left: 82px;\n  width: 688px;\n  margin-top: 24px; }\n\n.static-page3 .intro_list {\n  margin-left: 25px; }\n\n.static-page4 .flex-container {\n  display: -webkit-flex;\n  background-color: #5e9e44;\n  margin-top: 22%;\n  height: 335px;\n  opacity: 0.8; }\n\n.static-page4 .left-side {\n  width: 100%; }\n\n.static-page4 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.static-page4 .bg {\n  background-image: url(\"/app/assets/images/template/bg4.jpg\");\n  height: 100%;\n  background-position: 20px; }\n\n.static-page4 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page4 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page4 .intro_heading {\n  width: 100%;\n  margin-top: 55px;\n  text-align: center; }\n\n.static-page4 .box1, .static-page4 .box2, .static-page4 .box3, .static-page4 .box4 {\n  width: 25%; }\n\n.static-page4 .container {\n  display: -webkit-flex;\n  text-align: center;\n  width: 70%;\n  margin: auto;\n  margin-top: 5%; }\n\n.static-page4 .img_caption {\n  margin: auto;\n  text-align: center;\n  width: 70%;\n  margin-top: 5%; }\n\n.interactivity1 .flex-container {\n  display: -webkit-flex;\n  width: 100%; }\n\n.interactivity1 .left-side {\n  width: 100%; }\n\n.interactivity1 .right-side {\n  bottom: 60px;\n  right: 10px;\n  position: absolute; }\n\n.interactivity1 .bg {\n  background-image: url(\"/app/assets/images/template/bg5.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity1 .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  margin: 10px; }\n\n.interactivity1 .intro {\n  background-color: #72A65C;\n  float: left;\n  height: 562px;\n  opacity: 0.9;\n  width: 50%; }\n\n.interactivity1 .intro_heading {\n  margin-left: 5%;\n  margin-top: 10%;\n  width: 70%; }\n\n.interactivity1 .intro_para {\n  margin-left: 5%;\n  margin-top: 40px;\n  width: 80%; }\n\n.interactivity1 .btn_div {\n  float: left;\n  margin: 8% auto auto 3%;\n  width: 100%; }\n\n.interactivity1 .buttons {\n  display: flex;\n  margin-top: 10px; }\n\n.interactivity1 button {\n  color: #5e9e44;\n  cursor: pointer;\n  font-size: 1em;\n  font-weight: bold;\n  height: 55px;\n  margin-left: 10px;\n  width: 200px; }\n\n.interactivity1 .popup-container {\n  background: white;\n  color: #333;\n  padding: 10px;\n  width: 465px;\n  height: 250px; }\n\n.interactivity2 .flex-container {\n  background-color: #72A65C;\n  display: -webkit-flex;\n  height: 170px;\n  width: 100%; }\n\n.interactivity2 .left-side {\n  width: 100%; }\n\n.interactivity2 .right-side {\n  width: 30%;\n  margin: auto; }\n\n.interactivity2 .bg {\n  background-image: url(\"/app/assets/images/template/bg6.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.interactivity2 .intro {\n  float: left;\n  height: 450px;\n  width: 100%;\n  margin-top: 95px;\n  opacity: 0.9; }\n\n.interactivity2 .intro_heading {\n  margin-left: 66px; }\n\n.interactivity2 .intro_para {\n  margin-left: 69px; }\n\n.interactivity2 .btn_div {\n  width: 100%;\n  float: left;\n  margin-top: 13px;\n  margin-left: 54px; }\n\n.interactivity2 .container {\n  background-color: #335727;\n  height: 67px;\n  opacity: 0.9; }\n\n.interactivity2 .buttons {\n  margin-top: 72px;\n  margin-left: 60px; }\n\n.interactivity2 button {\n  cursor: pointer;\n  height: 67px;\n  width: 255px;\n  font-size: 1em;\n  color: #5e9e44;\n  font-weight: bold; }\n\n.interactivity2 .tab-container {\n  background-color: #FFFFFF;\n  color: #333;\n  height: 190px;\n  padding: 10px; }\n\n.dragdrop1 .bg {\n  background-image: url(\"/app/assets/images/template/bg9.jpg\");\n  background-position-y: -100px;\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.dragdrop1 .instruction_text {\n  color: #fff;\n  font-weight: bold; }\n\n.dragdrop1 .container {\n  background-color: #3A821F;\n  float: left;\n  height: 100%;\n  margin-top: 10%;\n  opacity: 0.9;\n  width: 100%; }\n\n.dragdrop1 .flex_container {\n  display: -webkit-flex; }\n\n.dragdrop1 .summary {\n  margin-left: 5%; }\n\n.dragdrop1 .drag_drop {\n  background-color: #3A821F;\n  float: left;\n  height: 180px;\n  width: 100%; }\n\n.dragdrop1 button {\n  color: #5e9e44;\n  font-size: 1em;\n  font-weight: bold;\n  height: 60px;\n  width: 100%; }\n\n.dragdrop1 .activity {\n  margin-top: 1%; }\n\n.dragdrop1 table {\n  background-color: #3A821F;\n  width: 90%;\n  margin: auto; }\n\n.dragdrop1 tr {\n  border-bottom: 1px solid #fff; }\n\n.dragdrop1 td {\n  padding: 10px; }\n\n.dragdrop1 .quiz {\n  width: 34%; }\n\n.dragdrop1 .drop_box {\n  background-color: #97BC89;\n  height: 60px; }\n\n.dragdrop1 .drop {\n  margin: 5px;\n  width: 25%; }\n\n.dragdrop1 .drag {\n  height: 60px;\n  margin: 5px;\n  width: 25%; }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'Lato';\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot\");\n  src: url(\"/app/assets/fonts/lato-regular-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/lato-regular-webfont.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/lato-regular-webfont.woff\") format(\"woff\"), url(\"/app/assets/fonts/lato-regular-webfont.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/lato-regular-webfont.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'Lato-Light';\n  src: url(\"/app/assets/fonts/Lato-Light.eot\");\n  src: url(\"/app/assets/fonts/Lato-Light.eot?#iefix\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/Lato-Light.woff2\") format(\"woff2\"), url(\"/app/assets/fonts/Lato-Light.woff\") format(\"woff\"), url(\"/app/assets/fonts/Lato-Light.ttf\") format(\"truetype\"), url(\"/app/assets/fonts/Lato-Light.svg#latoregular\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'icomoon';\n  src: url(\"/app/assets/fonts/icomoon.eot?c92yby\");\n  src: url(\"/app/assets/fonts/icomoon.eot?#iefixc92yby\") format(\"embedded-opentype\"), url(\"/app/assets/fonts/icomoon.woff?c92yby\") format(\"woff\"), url(\"/app/assets/fonts/icomoon.ttf?c92yby\") format(\"truetype\"), url(\"/app/assets/fonts/icomoon.svg?c92yby#icomoon\") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  color: #5e9f45;\n  font-family: 'icomoon';\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  letter-spacing: 0;\n  -webkit-font-feature-settings: \"liga\";\n  -moz-font-feature-settings: \"liga=1\";\n  -moz-font-feature-settings: \"liga\";\n  -ms-font-feature-settings: \"liga\" 1;\n  font-feature-settings: \"liga\";\n  -webkit-font-variant-ligatures: discretionary-ligatures;\n  font-variant-ligatures: discretionary-ligatures;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  background-color: #FFFFFF;\n  color: #FFFFFF;\n  font-family: \"Arial\";\n  font-size: 1em;\n  font-weight: 300;\n  margin: 0 auto;\n  overflow: hidden; }\n\nhtml, body {\n  width: 100%;\n  height: 100%; }\n\n.shell-conatiner {\n  height: 100%;\n  width: 100%; }\n\n.player > div {\n  overflow: auto; }\n\na {\n  color: #FFFFFF; }\n\n.fontBold {\n  font-weight: 700; }\n\n.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.page-loader {\n  background-color: #ededed;\n  display: table;\n  height: 100%;\n  overflow: auto;\n  position: relative;\n  width: 100%; }\n\n.player {\n  height: 100%;\n  overflow: auto; }\n\n.footer {\n  background-color: #ededed;\n  bottom: 0px;\n  height: 46px;\n  position: absolute;\n  width: 100%;\n  z-index: 99; }\n\n.button-container {\n  display: flex;\n  float: right; }\n\n.button-box a {\n  background-color: #C1C6C9;\n  border: 1px solid #C1C6C9;\n  border-bottom: none;\n  border-left: none;\n  color: #5C6670;\n  cursor: pointer;\n  display: block;\n  height: 44px;\n  line-height: 42px;\n  text-align: center;\n  text-decoration: none;\n  width: 40px; }\n\n.button-box a.disabled {\n  color: #AAB1B9;\n  cursor: default;\n  pointer-events: none; }\n\n.footer .button-box a, .footer .nav-comp-container .page-counter, .footer .button-box a.disabled, .footer .button-box a.selected {\n  background: #ffffff;\n  /* Old browsers */\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2VkZWJlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZGViZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(51%, #edebec), color-stop(100%, #edebec));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #edebec 51%, #edebec 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#edebec',GradientType=0 );\n  /* IE6-8 */ }\n\n.footer .button-box a:hover {\n  color: #fff !important;\n  background: #e9eced;\n  /* Old browsers */\n  border-top: 1px solid #e9eced;\n  /* IE9 SVG, needs conditional override of 'filter' to 'none' */\n  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ0JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU3JSIgc3RvcC1jb2xvcj0iI2VlMzEyNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTMxMjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);\n  background: -moz-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9eced), color-stop(44%, #e9eced), color-stop(50%, #e9eced), color-stop(57%, #e9eced), color-stop(100%, #e9eced));\n  /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* IE10+ */\n  background: linear-gradient(to bottom, #e9eced 0%, #e9eced 44%, #e9eced 50%, #e9eced 57%, #e9eced 100%);\n  /* W3C */\n  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$button-bg-hover, endColorstr=$button-bg-hover,GradientType=0 );\n  /* IE6-8 */ }\n\n.nav-comp-container {\n  background-color: #C1C6C9;\n  color: #5e9f45;\n  display: inline-block;\n  font-size: 1em;\n  height: 44px;\n  line-height: 44px;\n  padding: 1px 1px 0 0;\n  vertical-align: top; }\n\n.nav-comp-container .page-counter {\n  padding: 0 10px; }\n\n.icon-transcript::before {\n  content: \"\\E629\"; }\n\n.icon-audio:before {\n  content: \"\\E606\"; }\n\n.icon-playPause:before {\n  content: \"\\E619\"; }\n\n.selected .icon-transcript:before {\n  content: \"\\E628\"; }\n\n.selected .icon-audio:before {\n  content: \"\\E605\"; }\n\n.selected .icon-playPause:before {\n  content: \"\\E61B\"; }\n\n.header {\n  background-color: #ededed;\n  display: inline-block;\n  max-height: 61px;\n  position: relative;\n  width: 100%;\n  z-index: 100; }\n\n.course-logo {\n  float: left; }\n\n.title-holder {\n  color: #5C6670;\n  display: table;\n  font-size: 1em;\n  font-weight: 700;\n  height: 100%; }\n\n.title-holder > div {\n  margin-top: 25px;\n  padding: 0 10px;\n  vertical-align: middle; }\n\n.course-progress {\n  background: #c5cdcf;\n  height: 4px;\n  position: relative;\n  top: 2px;\n  width: 100%; }\n\n.course-progress span {\n  background: #ee3124;\n  color: #000000;\n  display: block;\n  height: 4px;\n  text-align: center;\n  width: 0%; }\n\n/* Intro page */\nbody {\n  font-weight: 200; }\n\n.intro-container {\n  background-color: #0A4166;\n  height: 100%;\n  width: 100%;\n  font-size: 1em;\n  font-weight: normal; }\n\nh1 {\n  font-size: 1em; }\n\n.bg {\n  height: 540px; }\n\n.page_title {\n  margin-top: 3%;\n  margin-left: 8%;\n  text-transform: uppercase; }\n\n.middle_align {\n  vertical-align: middle; }\n\n.page_title h1 {\n  font-weight: 900;\n  text-transform: uppercase; }\n\n.content {\n  background-color: #000;\n  color: #000000;\n  font-family: Arial;\n  height: 100%;\n  margin: auto;\n  width: 100%; }\n\n.page_heading {\n  font-size: 1em;\n  font-weight: bold; }\n\n.flex-container {\n  display: flex;\n  display: -webkit-flex; }\n\n.black {\n  color: #000000; }\n\n.white {\n  color: #FFFFFF; }\n\n.close-btn {\n  color: #FFFFFF;\n  float: right;\n  font-weight: 700;\n  cursor: pointer;\n  margin-right: 10px;\n  margin-top: 10px; }\n\n.buttons button.selected {\n  background-color: #5e9f45;\n  color: #FFFFFF; }\n\n.intro-container h1 {\n  font-size: 2em;\n  font-weight: normal; }\n\n.intro-container body {\n  font-size: 16px; }\n\n.intro-container .logo {\n  display: none; }\n\n.intro-container .content .welcome_text {\n  margin: 20% auto auto auto;\n  text-align: center;\n  width: 100%;\n  float: left; }\n\n.intro-container .flex-container {\n  display: flex;\n  display: -webkit-flex;\n  background-color: #1673ba;\n  width: 100%;\n  height: 216px;\n  margin-top: 23%; }\n\n.intro-container .left-sidetext {\n  margin-left: 40px;\n  text-align: left;\n  margin-top: 70px;\n  line-height: 12px;\n  width: 50%;\n  font-size: 1.5em; }\n\n.intro-container .right-sidetext {\n  text-align: left;\n  margin-top: 12px;\n  line-height: 19px;\n  width: 56%;\n  font-size: 1.5em; }\n\n.intro-container .left-side {\n  text-align: right;\n  text-transform: uppercase;\n  padding-right: 10px;\n  width: 50%; }\n\n.intro-container .right-side {\n  text-align: left;\n  text-transform: uppercase;\n  padding-left: 10px;\n  width: 50%; }\n\n.intro-container .bg {\n  background-image: url(\"/app/assets/images/template/intro.jpg\");\n  height: 100%;\n  background-repeat: no-repeat; }\n\n@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {\n  .intro-container .bg {\n    background-position-x: -10px; }\n  .intro-container .left-sidetext {\n    margin-left: 40px;\n    text-align: left;\n    margin-top: 70px;\n    line-height: 12px;\n    width: 50%;\n    font-size: 1.5em; }\n  .intro-container .right-sidetext {\n    text-align: left;\n    margin-top: 12px;\n    line-height: 19px;\n    width: 56%;\n    font-size: 1.5em; } }\n\n.intro-container .instruction_text {\n  color: #fff;\n  font-weight: bold;\n  position: relative;\n  top: 10px; }\n\n.intro-container .btn {\n  margin-top: 9%;\n  margin-left: 286px; }\n\n.intro-container .btn .btn_text {\n  color: #5e9e44;\n  left: -20px;\n  position: relative;\n  top: 8px; }\n\n.intro-container .start-button {\n  background-image: url(\"/app/assets/images/template/start-btn.jpg\");\n  background-repeat: no-repeat;\n  display: inline-block;\n  height: 45px;\n  text-align: center;\n  width: 150px; }\n\n@media only screen and (max-device-width: 1024px) {\n  .intro-container .flex-container {\n    margin-top: 28%; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .intro-container .right-sidetext {\n    line-height: inherit; }\n  .intro-container .left-sidetext {\n    line-height: inherit; }\n  .intro-container .flex-container {\n    height: 380px;\n    margin-top: 64%; }\n  .intro-container .btn {\n    margin-left: 30%; }\n  .intro-container .btn .btn_text {\n    top: 4px; } }\n\n@media only screen and (max-device-width: 700px) {\n  .intro-container h1 {\n    font-size: 1.5em; }\n  .intro-container .flex-container {\n    display: block;\n    height: 285px;\n    margin-top: 15%; }\n  .intro-container .content {\n    font-size: 0.875em; }\n  .intro-container .bg {\n    background-size: 100%;\n    background-position-x: 0px; }\n  .intro-container .content .welcome_text {\n    margin: 25% auto auto auto;\n    width: 100%; }\n  .intro-container .btn {\n    cursor: pointer;\n    text-align: center;\n    width: 100%;\n    margin-left: 0px; }\n  .intro-container .btn .btn_text {\n    top: 12px; }\n  .intro-container .instruction_text {\n    font-size: 14px; }\n  .intro-container .left-sidetext {\n    margin-left: 0px;\n    text-align: center;\n    margin-top: 15%;\n    line-height: 12px;\n    width: 100%;\n    font-size: 1.3em;\n    padding-top: 2%; }\n  .intro-container .left-sidetext p {\n    line-height: 0; }\n  .intro-container .right-sidetext {\n    text-align: center;\n    margin-top: 10%;\n    line-height: 0.5;\n    width: 100%;\n    font-size: 1.5em; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .intro-container h1 {\n    font-size: 1.5em; }\n  .intro-container .flex-container {\n    display: block;\n    height: 340px;\n    margin-top: 18%; }\n  .intro-container .content {\n    font-size: 0.875em; }\n  .intro-container .bg {\n    background-size: contain;\n    background-position-x: 0x; }\n  .intro-container .content .welcome_text {\n    margin: 25% auto auto auto;\n    width: 100%; }\n  .intro-container .btn {\n    cursor: pointer;\n    text-align: center;\n    width: 100%;\n    margin-left: 0px; }\n  .intro-container .btn .btn_text {\n    top: 12px; }\n  .intro-container .instruction_text {\n    font-size: 14px; }\n  .intro-container .left-sidetext {\n    margin-left: 0px;\n    text-align: center;\n    margin-top: 36%;\n    line-height: 12px;\n    width: 100%;\n    font-size: 1.3em;\n    padding-top: 10%; }\n  .intro-container .left-sidetext p {\n    line-height: 0; }\n  .intro-container .right-sidetext {\n    text-align: center;\n    margin-top: 20%;\n    line-height: 0.5;\n    width: 100%;\n    font-size: 1.5em; } }\n\n.static-page1 body {\n  font-size: 1em; }\n\n.static-page1 .flex-container {\n  display: block;\n  width: 50%;\n  height: 530px;\n  opacity: 0.9; }\n\n.static-page1 .left-side {\n  width: 50%; }\n\n.static-page1 .bg {\n  background-image: url(\"/app/assets/images/template/Bg2.jpg\");\n  background-repeat: no-repeat;\n  background-size: 100% 100%; }\n\n.static-page1 .instruction_text {\n  color: #FFFFFF;\n  margin-left: 2%; }\n\n.static-page1 .intro {\n  border-top: 2px solid #ccc;\n  width: 100%;\n  height: 100%; }\n\n.static-page1 .intro_heading {\n  margin-left: 30px;\n  text-transform: uppercase; }\n\n.static-page1 .box1 {\n  background-color: #51AE3C;\n  margin-left: 15%;\n  padding-top: 2%;\n  padding-bottom: 2%;\n  width: 90%; }\n\n.static-page1 .box2 {\n  background-color: #1384C6;\n  margin-left: 15%;\n  width: 90%;\n  padding-top: 5%;\n  padding-bottom: 5%;\n  text-align: center; }\n\n.static-page1 .box3 {\n  margin-left: 15%;\n  margin-top: 5%;\n  background-color: #DF9E10;\n  padding-top: 1%;\n  padding-bottom: 1%;\n  width: 90%; }\n\n.static-page1 q {\n  font-size: 30px;\n  color: #0469a5; }\n\n.static-page1 .quotation {\n  color: #fff;\n  font-size: 0.875em; }\n\n.static-page1 .middle_align {\n  margin-left: 2%;\n  vertical-align: middle; }\n\n.static-page1 .quotation_box {\n  width: 45%;\n  margin: auto; }\n\n.static-page1 .quote_symbol1 {\n  margin-left: -70px;\n  margin-top: -15px;\n  position: absolute; }\n\n.static-page1 .quote_symbol2 {\n  position: absolute;\n  margin-left: 20px; }\n\n.static-page1 .instruction_text {\n  display: inline-block;\n  width: 80%; }\n\n.static-page1 .intro_list {\n  margin-left: 25px; }\n\n@media only screen and (max-device-width: 1024px) {\n  .static-page1 .bg {\n    height: 600px; }\n  .static-page1 .flex-container {\n    width: 90%;\n    margin-top: 3%; }\n  .static-page1 .left-side {\n    width: 100%; } }\n\n@media only screen and (max-device-width: 700px) {\n  .static-page1 .quote_symbol {\n    width: 50%; }\n  .static-page1 .quote_symbol1 {\n    margin-top: 0; }\n  .static-page1 .box1 {\n    margin-left: 0px;\n    width: 100%;\n    padding-top: 1%;\n    padding-bottom: 1%; }\n  .static-page1 .box2 {\n    margin-left: 0px;\n    width: 100%;\n    padding-top: 1%;\n    padding-bottom: 1%; }\n  .static-page1 .box3 {\n    margin-left: 0px;\n    width: 100%;\n    margin-top: 0px; }\n  .static-page1 .bg {\n    background-size: 100% 100%;\n    height: 340px; }\n  .static-page1 .intro {\n    height: 320px; }\n  .static-page1 .flex-container {\n    margin-top: 0%;\n    height: 100%;\n    width: 100%; }\n  .static-page1 .left-side {\n    width: 100%;\n    height: 100%; }\n  .static-page1 .right-side {\n    width: 30%; }\n  .static-page1 .right-side img {\n    width: 90%; }\n  .static-page1 .intro_para {\n    width: 90%; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .static-page1 .bg {\n    /* background-image: url('/app/assets/images/template/');*/\n    background-size: 100% 100%;\n    background-repeat: no-repeat;\n    height: 520px; }\n  .static-page1 .instruction_text {\n    width: 70%; }\n  .static-page1 .flex-container {\n    display: block;\n    height: 100%;\n    margin-top: 20%;\n    width: 100%;\n    margin-top: 0px; }\n  .static-page1 .quotation_box {\n    width: 53%; }\n  .static-page1 .quote_symbol1 {\n    margin-top: 0px; }\n  .static-page1 .quote_symbol2 {\n    position: absolute;\n    margin-left: 30px;\n    margin-top: 0px; }\n  .static-page1 .box1 {\n    margin: auto; }\n  .static-page1 .box2 {\n    margin: auto; }\n  .static-page1 .box3 {\n    margin: auto;\n    margin-top: 5%; }\n  .static-page1 .box3 img {\n    position: relative;\n    top: -15px; }\n  .static-page1 .intro {\n    height: 470px; }\n  .static-page1 .intro_heading {\n    margin-top: 0px; }\n  .static-page1 .left-side {\n    width: 100%; }\n  .static-page1 .right-side {\n    width: 80%;\n    margin-bottom: 5%; }\n  .static-page1 .right-side img {\n    width: 45%;\n    vertical-align: middle; } }\n\n.static-page2 .bg {\n  background-image: url(\"/app/assets/images/template/Bg3.jpg\");\n  display: inline-block;\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  width: 100%; }\n\n.static-page2 .intro {\n  float: right;\n  height: 562px;\n  width: 100%;\n  opacity: 0.9; }\n\n.static-page2 .subHeading {\n  font-weight: 600;\n  margin-left: 8%;\n  font-size: 1em; }\n\n.static-page2 .list {\n  margin-left: 10%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .static-page2 .bg {\n    height: 620px; } }\n\n@media only screen and (max-device-width: 700px) {\n  .static-page2 .left-side {\n    width: 100%; }\n  .static-page2 .bg {\n    background-image: url(\"/app/assets/images/template/Bg3.jpg\");\n    display: inline-block;\n    height: 100%;\n    width: 100%;\n    background-size: contain;\n    background-size: 100% 100%; }\n  .static-page2 .intro {\n    float: right;\n    height: 562px;\n    width: 100%;\n    opacity: 0.9; }\n  .static-page2 .subHeading {\n    font-weight: 600;\n    margin-left: 8%;\n    font-size: 1em; }\n  .static-page2 .list {\n    margin-left: 10%; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .static-page2 .left-side {\n    width: 100%; }\n  .static-page2 .bg {\n    background-image: url(\"/app/assets/images/template/Bg3.jpg\");\n    background-position-x: -400px;\n    background-size: cover;\n    width: 100%; }\n  .static-page2 .intro {\n    float: right;\n    height: 562px;\n    width: 100%;\n    opacity: 0.9; }\n  .static-page2 .subHeading {\n    font-weight: 600;\n    margin-left: 8%;\n    font-size: 1em; }\n  .static-page2 .list {\n    margin-left: 5%; } }\n\n.static-page3 .content {\n  height: 550px; }\n\n.static-page3 .container {\n  height: 100%; }\n\n.static-page3 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page3 .bg {\n  background-image: url(\"/app/assets/images/template/bg4.jpg\");\n  background-size: 100%; }\n\n.static-page3 .black {\n  color: #000; }\n\n.static-page3 .white {\n  color: #FFFFFF; }\n\n.static-page3 .flex-container {\n  width: 90%;\n  margin: auto;\n  margin-top: 2%; }\n\n.static-page3 .img-caption {\n  text-align: center;\n  width: 85%;\n  margin: auto;\n  margin-top: 10px; }\n\n.static-page3 .box1, .static-page3 .box2, .static-page3 .box3 {\n  margin: 2%;\n  text-align: center; }\n\n.static-page3 .blue_banner {\n  background-color: #1673ba;\n  display: block;\n  height: 30px;\n  width: 100%; }\n\n.static-page3 .btn_div {\n  background-color: #0d5c98;\n  display: block;\n  height: 70px;\n  width: 100%; }\n\n.static-page3 .btn_container {\n  margin: auto;\n  width: 80%; }\n\n.static-page3 .instruction_text {\n  display: inline-grid;\n  width: 40%;\n  font-size: 0.875em;\n  vertical-align: middle; }\n\n.static-page3 .btn {\n  display: inline-grid;\n  width: 30%;\n  text-align: center;\n  position: relative;\n  top: 15px; }\n\n.static-page3 .arrow_img {\n  display: inline-block;\n  width: 20%;\n  text-align: center; }\n\n.static-page3 .btn_text {\n  color: #1673ba;\n  font-weight: bold;\n  position: relative;\n  top: -30px;\n  left: -20px; }\n\n@media only screen and (max-device-width: 1024px) {\n  .static-page3 .bg {\n    height: 600px;\n    background-repeat: no-repeat;\n    background-size: cover; }\n  .static-page3 .flex-container {\n    margin-top: 7%; }\n  .static-page3 .btn_container {\n    width: 90%; }\n  .static-page3 .instruction_text {\n    display: inline-block;\n    margin-top: -30px; }\n  .static-page3 .middle_align {\n    vertical-align: initial; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .static-page3 .instruction_text {\n    width: 45%; } }\n\n@media only screen and (max-device-width: 700px) {\n  .static-page3 .bg {\n    height: 550px; }\n  .static-page3 .intro {\n    width: 100%;\n    border-top: 2px solid #ccc;\n    height: 550px; }\n  .static-page3 .intro_para {\n    margin-left: 46px;\n    width: 408px;\n    margin-top: 24px; }\n  .static-page3 .box1, .static-page3 .box2, .static-page3 .box3 {\n    width: 100%;\n    margin: 0; }\n  .static-page3 .btn img {\n    width: 100%; }\n  .static-page3 .box1 img, .static-page3 .box2 img, .static-page3 .box3 img {\n    width: 60%; }\n  .static-page3 .img_div {\n    display: inline-block;\n    width: 20%;\n    text-align: center; }\n  .static-page3 .img-caption {\n    display: inline-block;\n    text-align: left;\n    font-size: 0.875em;\n    width: 70%; }\n  .static-page3 .btn_text {\n    top: -26px;\n    left: -14px;\n    font-size: 0.675em; }\n  .static-page3 .instruction_text {\n    display: inline-block;\n    width: 45%;\n    font-size: 0.7em;\n    vertical-align: baseline; }\n  .static-page3 .btn {\n    width: 45%;\n    top: 10px;\n    left: 10px; }\n  .static-page3 .arrow_img {\n    display: none; }\n  .static-page3 .blue_banner {\n    display: none; }\n  .static-page3 .btn_div {\n    margin-top: 8%; } }\n\n@media only screen and (max-device-width: 480px) and (orientation: landscape) {\n  .static-page3 .bg {\n    height: 600px;\n    background-repeat: no-repeat;\n    background-size: cover; }\n  .static-page3 .content {\n    height: 600px; }\n  .static-page3 .img_div {\n    width: 25%; }\n  .static-page3 .btn_text {\n    top: -20px; }\n  .static-page3 .instruction_text {\n    vertical-align: middle;\n    margin-top: 15px; }\n  .static-page3 .btn {\n    top: 15px; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .static-page3 .flex-container {\n    display: block; }\n  .static-page3 .intro {\n    width: 100%;\n    border-top: 2px solid #ccc;\n    height: 550px; }\n  .static-page3 .intro_para {\n    margin-left: 11px;\n    width: 306px;\n    margin-top: 0px; }\n  .static-page3 .intro_heading {\n    margin-left: 12px;\n    margin-top: 20px; }\n  .static-page3 .bg {\n    background-position-x: 0px; }\n  .static-page3 .box1 img, .static-page3 .box2 img, .static-page3 .box3 img {\n    width: 25%;\n    margin: auto; }\n  .static-page3 .img_div {\n    width: 100%; }\n  .static-page3 .instruction_text {\n    display: block;\n    width: 90%;\n    margin: auto;\n    text-align: center;\n    font-size: 0.7em;\n    position: relative;\n    top: 8px; }\n  .static-page3 .arrow_img {\n    display: none; }\n  .static-page3 .img-caption {\n    margin-top: 0px;\n    font-size: 0.8em;\n    text-align: center; }\n  .static-page3 .btn_div {\n    margin-top: 7%; }\n  .static-page3 .blue_banner {\n    display: none; }\n  .static-page3 .btn_contaienr {\n    position: relative;\n    top: 5px; }\n  .static-page3 .btn {\n    display: block;\n    width: 50%;\n    margin: auto;\n    top: 15px; }\n  .static-page3 .btn img {\n    width: 100%; }\n  .static-page3 .btn_text {\n    font-size: 0.5em;\n    top: -30px;\n    left: -12px; } }\n\n.static-page4 .left-side {\n  width: 100%; }\n\n.static-page4 .flex-container {\n  display: -webkit-flex;\n  display: flex;\n  opacity: 0.9; }\n\n.static-page4 .intro {\n  height: 560px; }\n\n.static-page4 .bg {\n  background-image: url(\"/app/assets/images/template/bg5.jpg\");\n  height: 100%; }\n\n.static-page4 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page4 .intro {\n  width: 100%;\n  border-top: 2px solid #ccc; }\n\n.static-page4 .container {\n  width: 100%;\n  text-align: center;\n  margin: auto;\n  margin-top: 15%; }\n\n.static-page4 .sub_title {\n  margin-left: 8%;\n  margin-top: 5%; }\n\n.static-page4 .box1, .static-page4 .box2, .static-page4 .box3 {\n  display: inline-block;\n  width: 32%; }\n\n.static-page4 .arrow img {\n  vertical-align: bottom; }\n\n.static-page4 .button_01, .static-page4 .button_02, .static-page4 .button_03 {\n  display: inline-block;\n  font-weight: bold;\n  height: 40px;\n  width: 200px;\n  border: 1px solid transparent;\n  border-radius: 5px;\n  text-align: center;\n  color: white; }\n\n.static-page4 .pop1 {\n  background-color: #fff;\n  border: 1px solid transparent;\n  border-radius: 10px;\n  width: 22%;\n  height: 350px;\n  position: absolute;\n  top: 25%;\n  left: 6%;\n  border-bottom: 10px solid #F3962A; }\n\n.static-page4 .pop1 .pop_heading {\n  background-color: #F3962A;\n  border-radius: 10px 10px 0px 0px;\n  padding: 10px; }\n\n.static-page4 .pop1 hr {\n  color: #F3962A;\n  border: 1px solid #F3962A;\n  width: 90%; }\n\n.static-page4 .pop1 li {\n  text-align: left; }\n\n.static-page4 .pop2 {\n  background-color: #fff;\n  border: 1px solid transparent;\n  border-radius: 10px;\n  width: 22%;\n  height: 350px;\n  position: absolute;\n  top: 25%;\n  left: 40%;\n  border-bottom: 10px solid #13B093; }\n\n.static-page4 .pop2 .pop_heading {\n  background-color: #13B093;\n  border-radius: 10px 10px 0px 0px;\n  padding: 10px; }\n\n.static-page4 .pop2 hr {\n  color: #13B093;\n  border: 1px solid #13B093;\n  width: 90%; }\n\n.static-page4 .pop2 li {\n  text-align: left; }\n\n.static-page4 .pop3 {\n  background-color: #fff;\n  border: 1px solid transparent;\n  border-radius: 10px;\n  width: 22%;\n  height: 350px;\n  position: absolute;\n  top: 25%;\n  left: 73%;\n  border-bottom: 10px solid #D74554; }\n\n.static-page4 .pop3 .pop_heading {\n  background-color: #D74554;\n  border-radius: 10px 10px 0px 0px;\n  padding: 10px; }\n\n.static-page4 .arrow {\n  display: inline-block; }\n\n.static-page4 .pop3 li {\n  text-align: left; }\n\n.static-page4 .pop3 hr {\n  border: 1px solid #D74554;\n  width: 90%; }\n\n.static-page4 .button_01 {\n  background-color: #F3962A; }\n\n.static-page4 .button_02 {\n  background-color: #13B093; }\n\n.static-page4 .button_03 {\n  background-color: #D74554; }\n\n.static-page4 .img_caption {\n  margin: auto;\n  text-align: center;\n  width: 80%;\n  margin-top: 5%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .static-page4 .bg {\n    height: 600px; }\n  .static-page4 buttton {\n    width: 160px; }\n  .static-page4 .box1, .static-page4 .box2, .static-page4 .box3 {\n    width: 30%; }\n  .static-page4 .pop1 {\n    top: 13%;\n    left: 2%;\n    height: 370px;\n    width: 30%; }\n  .static-page4 .pop2 {\n    width: 30%;\n    height: 370px;\n    top: 13%;\n    left: 35%; }\n  .static-page4 .pop3 {\n    width: 30%;\n    height: 370px;\n    position: absolute;\n    top: 13%;\n    left: 68%; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .static-page4 .pop1, .static-page4 .pop2, .static-page4 .pop3 {\n    height: 380px; } }\n\n@media only screen and (max-device-width: 700px) {\n  .static-page4 .bg {\n    height: 330px; }\n  .static-page4 .intro {\n    height: 300px; }\n  .static-page4 ul {\n    margin: 0; }\n  .static-page4 h1 {\n    font-size: 1em; }\n  .static-page4 .flex-container {\n    margin-top: 0%; }\n  .static-page4 .intro_heading {\n    width: 100%;\n    margin-top: 2%; }\n  .static-page4 .container {\n    display: inline-block;\n    width: 90%; }\n  .static-page4 .img_caption {\n    width: 100%; }\n  .static-page4 .page_title {\n    margin-top: 3%;\n    margin-left: 5%; }\n  .static-page4 .sub_title {\n    margin-left: 5%;\n    margin-top: 2%; }\n  .static-page4 .box1, .static-page4 .box2, .static-page4 .box3 {\n    display: block;\n    width: 100%;\n    text-align: center;\n    height: 50px; }\n  .static-page4 .container {\n    display: block;\n    width: 100%;\n    margin-top: 5%; }\n  .static-page4 .arrow {\n    display: none; }\n  .static-page4 .pop1 {\n    width: 90%;\n    height: 250px;\n    position: absolute;\n    top: 14%;\n    left: 5%; }\n  .static-page4 .pop2 {\n    width: 90%;\n    height: 250px;\n    position: absolute;\n    top: 14%;\n    left: 5%; }\n  .static-page4 .pop3 {\n    width: 90%;\n    height: 250px;\n    position: absolute;\n    top: 14%;\n    left: 5%; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .static-page4 .intro {\n    height: 100%; }\n  .static-page4 .bg {\n    background-repeat: no-repeat;\n    background-size: cover;\n    height: 550px; }\n  .static-page4 h1 {\n    font-size: 1.5em; }\n  .static-page4 .content {\n    font-size: 0.875em; }\n  .static-page4 .container {\n    text-align: center;\n    width: 100%;\n    margin: auto; }\n  .static-page4 .flex-container {\n    height: 500px;\n    margin-top: 0%;\n    width: 100%; }\n  .static-page4 .container {\n    margin-top: 5%; }\n  .static-page4 .pop1 {\n    background-color: #fff;\n    border: 1px solid transparent;\n    border-radius: 10px;\n    width: 80%;\n    height: 270px;\n    position: absolute;\n    top: 17%;\n    left: 10%;\n    border-bottom: 10px solid #F3962A; }\n  .static-page4 .pop2 {\n    background-color: #fff;\n    border: 1px solid transparent;\n    border-radius: 10px;\n    width: 80%;\n    height: 290px;\n    position: absolute;\n    top: 17%;\n    left: 10%;\n    border-bottom: 10px solid #23B59D; }\n  .static-page4 .pop3 {\n    background-color: #fff;\n    border: 1px solid transparent;\n    border-radius: 10px;\n    width: 80%;\n    height: 280px;\n    position: absolute;\n    top: 17%;\n    left: 10%;\n    border-bottom: 10px solid #D25464; }\n  .static-page4 .box1, .static-page4 .box2, .static-page4 .box3, .static-page4 .box4 {\n    width: 100%;\n    height: 60px;\n    margin-top: 5%; }\n  .static-page4 .img_caption {\n    width: 80%; } }\n\n.interactivity1 .content {\n  height: 560px; }\n\n.interactivity1 .flex-container {\n  display: -webkit-flex;\n  display: flex;\n  position: absolute;\n  top: 20%;\n  left: 2%; }\n\n.interactivity1 .page_title {\n  margin-left: 5%; }\n\n.interactivity1 .sub_heading {\n  margin-left: 5%;\n  margin-top: 2%; }\n\n.interactivity1 .left-side {\n  width: 100%; }\n\n.interactivity1 .middle_align {\n  vertical-align: middle; }\n\n.interactivity1 .img_caption {\n  text-align: left;\n  font-weight: bold; }\n\n.interactivity1 .bg {\n  background-image: url(\"/app/assets/images/template/bg7.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%;\n  background-position-y: -50px; }\n\n.interactivity1 .box1, .interactivity1 .box2, .interactivity1 .box3, .interactivity1 .box4 {\n  margin: 2%;\n  text-align: center; }\n\n.interactivity1 .img_heading {\n  font-weight: bold;\n  color: #000;\n  height: 60px;\n  display: table-cell;\n  vertical-align: bottom;\n  text-align: left;\n  padding: 5px; }\n\n.interactivity1 .intro {\n  background-color: #1F73BA;\n  float: left;\n  height: 230px;\n  width: 100%;\n  margin-top: 23%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .interactivity1 .bg {\n    height: 600px; }\n  .interactivity1 .intro {\n    margin-top: 27%; }\n  .interactivity1 .flex-container {\n    margin-top: 10%;\n    margin-top: 2%; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .interactivity1 .flex-container {\n    width: 100%;\n    margin-top: -7%; }\n  .interactivity1 .box1, .interactivity1 .box2, .interactivity1 .box3, .interactivity1 .box4 {\n    width: 100%;\n    text-align: left; }\n  .interactivity1 .intro img {\n    width: 80%; }\n  .interactivity1 .intro {\n    height: 52%; } }\n\n@media only screen and (max-device-width: 700px) {\n  .interactivity1 .bg {\n    background-image: none;\n    background-color: #E8EBF0; }\n  .interactivity1 .content {\n    height: 100%; }\n  .interactivity1 .intro {\n    width: 100%;\n    background-color: #1E2E3D;\n    margin-top: 2%;\n    height: 100%; }\n  .interactivity1 .flex-container {\n    display: flex;\n    width: 100%;\n    position: static; }\n  .interactivity1 .img_heading {\n    display: block;\n    height: auto;\n    text-align: left;\n    color: #fff;\n    width: 80%;\n    margin: auto; }\n  .interactivity1 .box1, .interactivity1 .box2, .interactivity1 .box3, .interactivity1 .box4 {\n    width: 50%;\n    margin: auto; }\n  .interactivity1 .box1 img, .interactivity1 .box2 img, .interactivity1 .box3 img, .interactivity1 .box4 img {\n    width: 80%; }\n  .interactivity1 .img_caption {\n    width: 90%;\n    margin: auto;\n    margin-left: 10%;\n    font-weight: normal;\n    margin-bottom: 2%; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .interactivity1 .bg {\n    background-image: none;\n    background-color: #E8EBF0; }\n  .interactivity1 .content {\n    height: 100%; }\n  .interactivity1 .intro {\n    width: 100%;\n    background-color: #1E2E3D;\n    margin-top: 2%;\n    height: 100%; }\n  .interactivity1 .flex-container {\n    display: block;\n    width: 90%;\n    margin: auto;\n    position: static;\n    height: 300px; }\n  .interactivity1 .img_heading {\n    display: block;\n    height: auto;\n    text-align: left;\n    color: #fff;\n    width: 80%;\n    margin: auto; }\n  .interactivity1 .box1, .interactivity1 .box2, .interactivity1 .box3, .interactivity1 .box4 {\n    width: 80%;\n    margin: auto; }\n  .interactivity1 .box1 img, .interactivity1 .box2 img, .interactivity1 .box3 img, .interactivity1 .box4 img {\n    width: 80%; }\n  .interactivity1 .img_caption {\n    width: 90%;\n    margin: auto;\n    margin-left: 10%;\n    font-weight: normal; } }\n\n.interactivity2 .flex-container {\n  background-color: #1485C7;\n  height: 110px;\n  width: 100%;\n  margin-top: 30%;\n  color: #fff; }\n\n.interactivity2 .box1, .interactivity2 .box2, .interactivity2 .box3, .interactivity2 .box4 {\n  width: 25%; }\n\n.interactivity2 .left-side {\n  width: 90%;\n  display: flex;\n  margin: auto; }\n\n.interactivity2 .img-no {\n  display: inline-block;\n  width: 30%;\n  height: 100%; }\n\n.interactivity2 .box_text {\n  display: inline-block;\n  width: 63%;\n  text-align: left; }\n\n.interactivity2 .box1, .interactivity2 .box2, .interactivity2 .box3, .interactivity2 .box4 {\n  margin: auto;\n  text-align: center;\n  font-size: 0.875em; }\n\n.interactivity2 .bg {\n  background-image: url(\"/app/assets/images/template/bg8.jpg\");\n  background-image: url(\"/app/assets/images/template/bg8.jpg\");\n  background-position-y: -70px;\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity2 .box1, .interactivity2 .box2, .interactivity2 .box3, .interactivity2 .box4 {\n  border-right: 1px solid #bbb; }\n\n.interactivity2 .sub_heading {\n  margin-left: 8%;\n  margin-top: 2%; }\n\n.interactivity2 .box4 {\n  border-right: none; }\n\n.interactivity2 .instruction_text {\n  font-weight: bold;\n  color: #fff;\n  margin: 10px; }\n\n.interactivity2 .intro {\n  float: left;\n  height: 450px;\n  width: 100%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .interactivity2 .bg {\n    height: 600px; }\n  .interactivity2 .flex-container {\n    margin-top: 35%; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .interactivity2 .flex-container {\n    margin-top: 50%; } }\n\n@media only screen and (max-device-width: 700px) {\n  .interactivity2 .flex-container {\n    background-color: #1485C7;\n    height: 100%;\n    width: 100%;\n    margin-top: 5%;\n    color: #fff; }\n  .interactivity2 .left-side {\n    width: 90%;\n    display: block;\n    margin-top: 2%; }\n  .interactivity2 .img-no {\n    display: inline-block;\n    width: 30%;\n    height: 100%;\n    vertical-align: text-top; }\n  .interactivity2 .box_text {\n    display: inline-block;\n    width: 63%;\n    text-align: left; }\n  .interactivity2 .box1, .interactivity2 .box2, .interactivity2 .box3, .interactivity2 .box4 {\n    margin: auto;\n    text-align: center;\n    font-size: 0.875em;\n    width: 100%; }\n  .interactivity2 .bg {\n    background-image: none;\n    background-color: #E8EBF0; }\n  .interactivity2 .box1, .interactivity2 .box2, .interactivity2 .box3, .interactivity2 .box4 {\n    border-bottom: 1px solid #bbb;\n    border-right: none;\n    height: 90px;\n    margin-top: 2%; }\n  .interactivity2 .sub_heading {\n    margin-left: 8%;\n    margin-top: 2%; }\n  .interactivity2 .bottom {\n    margin-top: 20%; }\n  .interactivity2 .box4 {\n    border-bottom: none; }\n  .interactivity2 .instruction_text {\n    font-weight: bold;\n    color: #fff;\n    margin: 10px; }\n  .interactivity2 .intro {\n    margin-top: 0; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .interactivity2 .flex-container {\n    background-color: #1485C7;\n    height: 100%;\n    width: 100%;\n    margin-top: 12%;\n    color: #fff; }\n  .interactivity2 .bg {\n    height: 550px; }\n  .interactivity2 .left-side {\n    width: 90%;\n    display: block;\n    margin-top: 5%; }\n  .interactivity2 .img-no {\n    display: inline-block;\n    width: 30%;\n    height: 100%; }\n  .interactivity2 .box_text {\n    display: inline-block;\n    width: 63%;\n    text-align: left;\n    position: relative;\n    top: 25px; }\n  .interactivity2 .box1, .interactivity2 .box2, .interactivity2 .box3, .interactivity2 .box4 {\n    margin: auto;\n    text-align: center;\n    font-size: 0.875em;\n    width: 100%; }\n  .interactivity2 .bg {\n    background-image: none;\n    background-color: #E8EBF0; }\n  .interactivity2 .box1, .interactivity2 .box2, .interactivity2 .box3, .interactivity2 .box4 {\n    border-bottom: 1px solid #bbb;\n    border-right: none;\n    height: 90px;\n    margin-top: 5%; }\n  .interactivity2 .sub_heading {\n    margin-left: 8%;\n    margin-top: 2%; }\n  .interactivity2 .bottom {\n    margin-top: 20%; }\n  .interactivity2 .box4 {\n    border-bottom: none; }\n  .interactivity2 .instruction_text {\n    font-weight: bold;\n    color: #fff;\n    margin: 10px; }\n  .interactivity2 .intro {\n    margin-top: 0; } }\n\n.dragdrop1 .bg {\n  background-image: url(\"/app/assets/images/template/bg4.jpg\");\n  background-position-y: -100px;\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.dragdrop1 .content {\n  height: 550px; }\n\n.dragdrop1 .sub_heading {\n  margin-left: 8%;\n  margin-top: 2%; }\n\n.dragdrop1 .heading {\n  display: inline-block;\n  width: 75%;\n  margin: auto;\n  margin-left: 5%; }\n\n.dragdrop1 .box_no {\n  display: inline-block;\n  width: 15%;\n  margin: auto;\n  float: right; }\n\n.dragdrop1 .box_no img {\n  width: 30%; }\n\n.dragdrop1 .box_content {\n  width: 90%;\n  margin: auto;\n  padding: 2%; }\n\n.dragdrop1 .container {\n  float: left;\n  height: 100%;\n  width: 100%; }\n\n.dragdrop1 .flex_container {\n  display: -webkit-flex;\n  display: flex; }\n\n.dragdrop1 .summary {\n  margin-left: 5%; }\n\n.dragdrop1 .top .box1 {\n  background-color: #fff;\n  height: auto;\n  width: 20%;\n  margin: auto; }\n\n.dragdrop1 .top .box2 {\n  background-color: #fff;\n  height: auto;\n  width: 23%;\n  margin: auto; }\n\n.dragdrop1 .top .box3 {\n  background-color: #fff;\n  height: auto;\n  width: 18%;\n  margin: auto; }\n\n.dragdrop1 .top .box4 {\n  background-color: #fff;\n  height: auto;\n  width: 30%;\n  margin: auto; }\n\n.dragdrop1 .top .box1, .dragdrop1 .top .box2, .dragdrop1 .top .box3, .dragdrop1 .top .box4 {\n  margin-bottom: 0px; }\n\n.dragdrop1 .bottom .box1 {\n  background-color: #fff;\n  height: auto;\n  width: 25%;\n  margin: auto;\n  margin-top: 0px; }\n\n.dragdrop1 .bottom .box2 {\n  background-color: #fff;\n  height: auto;\n  width: 30%;\n  margin: auto; }\n\n.dragdrop1 .bottom .box3 {\n  background-color: #fff;\n  height: auto;\n  width: 35%;\n  margin: auto; }\n\n.dragdrop1 .box_header {\n  background-color: #1D86D7;\n  color: #fff;\n  margin: auto;\n  padding: 2%;\n  font-weight: bold; }\n\n.dragdrop1 .bottom {\n  margin-top: 5%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .dragdrop1 .bg {\n    height: 600px;\n    background-position-y: 0px; } }\n\n@media only screen and (max-device-width: 700px) {\n  .dragdrop1 .content {\n    height: 100%; }\n  .dragdrop1 .bg {\n    background-image: none;\n    background-color: #E8EBF0;\n    height: 100%; }\n  .dragdrop1 .flex-container {\n    display: block;\n    width: 100%;\n    margin: auto; }\n  .dragdrop1 .box1, .dragdrop1 .box2, .dragdrop1 .box3, .dragdrop1 .box4, .dragdrop1 .box5, .dragdrop1 .box6, .dragdrop1 .box7 {\n    width: 90%;\n    margin: auto;\n    background-color: #fff;\n    height: auto;\n    margin-top: 3%;\n    margin-bottom: 4%; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .dragdrop1 .content {\n    height: 100%; }\n  .dragdrop1 .bg {\n    background-image: none;\n    background-color: #E8EBF0;\n    height: 100%; }\n  .dragdrop1 .flex-container {\n    display: block;\n    width: 100%;\n    margin: auto; }\n  .dragdrop1 .box1, .dragdrop1 .box2, .dragdrop1 .box3, .dragdrop1 .box4, .dragdrop1 .box5, .dragdrop1 .box6, .dragdrop1 .box7 {\n    width: 90%;\n    margin: auto;\n    background-color: #fff;\n    height: auto;\n    margin-top: 3%;\n    margin-bottom: 3%; } }\n\n.static-page5 .header {\n  margin: auto;\n  background-color: #ddd;\n  width: 1024px;\n  height: 100px; }\n\n.static-page5 .flex-container {\n  background-color: #1F2E3C;\n  height: 210px;\n  width: 100%;\n  text-align: center;\n  margin-top: 13%; }\n\n.static-page5 .box1, .static-page5 .box2, .static-page5 .box3, .static-page5 .box4, .static-page5 .box5, .static-page5 .box6 {\n  width: 15%;\n  margin: auto; }\n\n.static-page5 .icons {\n  display: flex;\n  width: 90%;\n  margin: auto;\n  position: absolute;\n  top: 46%;\n  left: 5%; }\n\n.static-page5 .img_caption {\n  width: 90%;\n  margin-top: 5%;\n  font-weight: 600; }\n\n.static-page5 .content {\n  margin: auto;\n  width: 100%;\n  height: 630px;\n  background-color: #000; }\n\n.static-page5 .icons img {\n  width: 100%; }\n\n.static-page5 .black {\n  color: #000; }\n\n.static-page5 .white {\n  color: #fff; }\n\n.static-page5 .big {\n  font-size: 3em;\n  font-weight: 700; }\n\n.static-page5 .sub_heading {\n  font-weight: bold;\n  width: 30%;\n  margin: auto; }\n\n.static-page5 .footer {\n  margin: auto;\n  background-color: #ddd;\n  width: 1024px;\n  height: 100px; }\n\n.static-page5 .line_height {\n  line-height: 38px; }\n\n.static-page5 .bg {\n  background-image: url(\"/app/assets/images/template/bg6.jpg\");\n  background-position-y: -50px;\n  height: 100%; }\n\n.static-page5 .instruction_text {\n  font-weight: bold;\n  color: #fff; }\n\n.static-page5 .container {\n  float: left;\n  height: 350px;\n  width: 100%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .static-page5 .box1, .static-page5 .box2, .static-page5 .box3, .static-page5 .box4, .static-page5 .box5, .static-page5 .box6 {\n    width: 15%;\n    margin: 1%; }\n  .static-page5 .flex-container {\n    margin-top: 17%; }\n  .static-page5 .icons {\n    top: 52%;\n    left: 5%; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .static-page5 .box1, .static-page5 .box2, .static-page5 .box3, .static-page5 .box4, .static-page5 .box5, .static-page5 .box6 {\n    width: 15%;\n    margin: 1%; }\n  .static-page5 .flex-container {\n    margin-top: 24%; }\n  .static-page5 .icons {\n    width: 95%;\n    margin: auto;\n    position: absolute;\n    top: 40%;\n    left: 3%; } }\n\n@media only screen and (max-device-width: 700px) {\n  .static-page5 .bg {\n    background-image: none;\n    background-color: #E8EBF0;\n    background-size: contain;\n    background-repeat: no-repeat; }\n  .static-page5 .line_height {\n    line-height: 20px; }\n  .static-page5 .flex-container {\n    height: 500px;\n    margin-top: 10%; }\n  .static-page5 .container {\n    height: 100%;\n    width: 100%;\n    margin-top: 0px; }\n  .static-page5 .summary {\n    margin-left: 0%; }\n  .static-page5 .flex {\n    display: -webkit-flex;\n    display: flex; }\n  .static-page5 .sub_heading {\n    width: 90%;\n    margin-left: 8%; }\n  .static-page5 .icons {\n    display: block;\n    position: static; }\n  .static-page5 .img_caption {\n    font-size: 0.7em;\n    margin-top: 0; }\n  .static-page5 .big {\n    display: inline;\n    font-size: 1.7em; }\n  .static-page5 .box1, .static-page5 .box2, .static-page5 .box3, .static-page5 .box4, .static-page5 .box5, .static-page5 .box6 {\n    width: 90%; }\n  .static-page5 .box1 img, .static-page5 .box2 img, .static-page5 .box3 img, .static-page5 .box4 img, .static-page5 .box5 img, .static-page5 .box6 img {\n    width: 40%; } }\n\n@media only screen and (max-device-width: 480px) and (orientation: landscape) {\n  .static-page5 .content {\n    height: 550px; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .static-page5 .content {\n    height: 520px; }\n  .static-page5 .bg {\n    background-position: 0;\n    background-size: contain;\n    background-repeat: no-repeat;\n    height: 500px; }\n  .static-page5 .line_height {\n    line-height: 20px; }\n  .static-page5 .flex-container {\n    height: 400px; }\n  .static-page5 .container {\n    height: 100%;\n    width: 100%;\n    margin-top: 0px; }\n  .static-page5 .summary {\n    margin-left: 0%; }\n  .static-page5 .sub_heading {\n    width: 90%; }\n  .static-page5 .icons {\n    display: block; }\n  .static-page5 .flex {\n    display: -webkit-flex;\n    display: flex; }\n  .static-page5 .img_caption {\n    font-size: 0.7em;\n    margin-top: 0; }\n  .static-page5 .big {\n    font-size: 1.7em; }\n  .static-page5 .box1, .static-page5 .box2, .static-page5 .box3, .static-page5 .box4, .static-page5 .box5, .static-page5 .box6 {\n    width: 90%; }\n  .static-page5 .box1 img, .static-page5 .box2 img, .static-page5 .box3 img, .static-page5 .box4 img, .static-page5 .box5 img, .static-page5 .box6 img {\n    width: 40%; } }\n\n.interactivity3 .content {\n  height: 540px; }\n\n.interactivity3 .flex-container {\n  display: block;\n  height: 110px;\n  width: 100%;\n  margin-top: 5%; }\n\n.interactivity3 .left-side {\n  width: 90%;\n  margin: auto; }\n\n.interactivity3 .box_text {\n  display: inline-block;\n  width: 100%;\n  text-align: left; }\n\n.interactivity3 li {\n  list-style-type: none; }\n\n.interactivity3 .bg {\n  background-image: url(\"/app/assets/images/template/bg9.jpg\");\n  background-position-y: -70px;\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity3 .highlight {\n  color: #1485C7;\n  font-weight: bold; }\n\n.interactivity3 .box1, .interactivity3 .box2, .interactivity3 .box3, .interactivity3 .box4, .interactivity3 .box5 {\n  background-color: #F7F7F4;\n  border-left: 5px solid #1485C7;\n  margin-top: 1%;\n  width: 40%;\n  height: auto;\n  padding: 1%; }\n\n.interactivity3 .sub_heading {\n  margin-left: 8%;\n  margin-top: 2%;\n  font-weight: bold; }\n\n.interactivity3 .intro {\n  float: left;\n  height: 450px;\n  width: 100%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .interactivity3 .bg {\n    height: 600px; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .interactivity3 .bg {\n    background-position-x: -180px; } }\n\n@media only screen and (max-device-width: 700px) {\n  .interactivity3 .flex-container {\n    height: 100%;\n    width: 100%;\n    margin-top: 5%; }\n  .interactivity3 .left-side {\n    width: 90%;\n    display: block;\n    margin-top: 2%;\n    margin: inherit; }\n  .interactivity3 .img-no {\n    display: inline-block;\n    width: 30%;\n    height: 100%;\n    vertical-align: text-top; }\n  .interactivity3 .box_text {\n    display: inline-block;\n    width: 63%;\n    text-align: left; }\n  .interactivity3 .box1, .interactivity3 .box2, .interactivity3 .box3, .interactivity3 .box4, .interactivity3 .box5 {\n    margin: auto;\n    width: 100%; }\n  .interactivity3 .bg {\n    background-image: none;\n    background-color: #E8EBF0; }\n  .interactivity3 .box1, .interactivity3 .box2, .interactivity3 .box3, .interactivity3 .box4, .interactivity3 .box5 {\n    border-bottom: 1px solid #bbb;\n    border-right: none;\n    height: auto;\n    margin-top: 2%;\n    padding: 2%; }\n  .interactivity3 .sub_heading {\n    margin-left: 8%;\n    margin-top: 2%; }\n  .interactivity3 .bottom {\n    margin-top: 20%; }\n  .interactivity3 .box4 {\n    border-bottom: none; }\n  .interactivity3 .instruction_text {\n    font-weight: bold;\n    color: #fff;\n    margin: 10px; }\n  .interactivity3 .intro {\n    margin-top: 0; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .interactivity3 .flex-container {\n    height: 100%;\n    width: 100%;\n    margin-top: 5%; }\n  .interactivity3 .left-side {\n    width: 90%;\n    display: block;\n    margin: inherit;\n    margin-top: 5%; }\n  .interactivity3 .img-no {\n    display: inline-block;\n    width: 30%;\n    height: 100%; }\n  .interactivity3 .box_text {\n    display: inline-block;\n    width: 100%;\n    text-align: left; }\n  .interactivity3 .box1, .interactivity3 .box2, .interactivity3 .box3, .interactivity3 .box4, .interactivity3 .box5 {\n    margin: auto;\n    width: 100%; }\n  .interactivity3 .bg {\n    background-image: none;\n    background-color: #E8EBF0; }\n  .interactivity3 .box1, .interactivity3 .box2, .interactivity3 .box3, .interactivity3 .box4, .interactivity3 .box5 {\n    border-bottom: 1px solid #bbb;\n    border-right: none;\n    height: auto;\n    margin-top: 5%;\n    padding: 2%; }\n  .interactivity3 .sub_heading {\n    margin-left: 8%;\n    margin-top: 2%; }\n  .interactivity3 .bottom {\n    margin-top: 20%; }\n  .interactivity3 .box4 {\n    border-bottom: none; }\n  .interactivity3 .instruction_text {\n    font-weight: bold;\n    color: #fff;\n    margin: 10px; }\n  .interactivity3 .intro {\n    margin-top: 0; } }\n\n.interactivity4 .content {\n  height: 540px; }\n\n.interactivity4 .flex-container {\n  display: block;\n  height: 110px;\n  width: 100%;\n  margin-top: 5%; }\n\n.interactivity4 .left-side {\n  width: 60%;\n  display: inline-block;\n  margin: inherit; }\n\n.interactivity4 .right-side {\n  display: inline-block;\n  width: 30%; }\n\n.interactivity4 .sub-heading {\n  font-size: 1.5em; }\n\n.interactivity4 .sub-heading .highlight {\n  font-size: 2.5em;\n  font-weight: bold; }\n\n.interactivity4 .bg {\n  background-image: url(\"/app/assets/images/template/bg10.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.interactivity4 .box1, .interactivity4 .box2, .interactivity4 .box3 {\n  width: 100%;\n  margin-top: 2%; }\n\n.interactivity4 .box_img img {\n  vertical-align: middle;\n  width: 70%; }\n\n.interactivity4 .left_content {\n  text-align: center;\n  width: 55%;\n  margin-left: 16%;\n  font-weight: bold; }\n\n.interactivity4 .box_img {\n  display: inline-block;\n  width: 25%; }\n\n.interactivity4 .container {\n  font-weight: bold; }\n\n.interactivity4 .box_text {\n  display: inline-block;\n  width: 60%; }\n\n.interactivity4 .intro {\n  float: left;\n  height: 450px;\n  width: 100%; }\n\n.interactivity4 .right_content {\n  font-weight: bold;\n  margin-top: 20%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .interactivity4 .bg {\n    height: 600px; }\n  .interactivity4 .pc-img {\n    display: none; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .interactivity4 .bg {\n    background-image: none;\n    background-color: #187CC8;\n    height: 100%;\n    width: 100%; }\n  .interactivity4 .flex-container {\n    margin-top: 2%; }\n  .interactivity4 .pc-img {\n    width: 90%;\n    margin: auto;\n    display: block; } }\n\n@media only screen and (max-device-width: 700px) {\n  .interactivity4 .content {\n    height: 540px; }\n  .interactivity4 .flex-container {\n    display: block;\n    height: 100%;\n    width: 100%;\n    margin-top: 5%;\n    background-color: #E8EBF0; }\n  .interactivity4 .left-side {\n    text-align: center;\n    width: 80%;\n    margin-left: 0%;\n    margin: auto; }\n  .interactivity4 .right-side {\n    display: inline-block;\n    width: 30%; }\n  .interactivity4 .sub-heading {\n    font-size: 1.5em;\n    width: 80%;\n    margin: auto;\n    margin-top: 5%; }\n  .interactivity4 .sub-heading .highlight {\n    font-size: 2em;\n    font-weight: bold; }\n  .interactivity4 .bg {\n    background-image: none;\n    background-color: #187CC8;\n    height: 100%;\n    width: 100%; }\n  .interactivity4 .box1, .interactivity4 .box2, .interactivity4 .box3 {\n    width: 100%;\n    margin-top: 2%; }\n  .interactivity4 .box_img img {\n    vertical-align: middle;\n    width: 70%; }\n  .interactivity4 .left_content {\n    text-align: left;\n    width: 90%;\n    margin-left: 0%;\n    margin: auto;\n    font-weight: bold;\n    padding-top: 2%; }\n  .interactivity4 .box_img {\n    display: inline-block;\n    width: 15%; }\n  .interactivity4 .container {\n    font-weight: bold;\n    width: 90%;\n    margin: auto; }\n  .interactivity4 .intro {\n    float: left;\n    height: 450px;\n    width: 100%; }\n  .interactivity4 .right_content {\n    width: 90%;\n    margin: auto;\n    margin-top: 5%; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .interactivity4 .content {\n    height: 540px; }\n  .interactivity4 .flex-container {\n    display: block;\n    height: 100%;\n    width: 100%;\n    margin-top: 5%;\n    background-color: #E8EBF0; }\n  .interactivity4 .left-side {\n    width: 60%;\n    display: inline-block;\n    margin: inherit; }\n  .interactivity4 .right-side {\n    display: inline-block;\n    width: 30%; }\n  .interactivity4 .sub-heading {\n    font-size: 1.5em; }\n  .interactivity4 .sub-heading .highlight {\n    font-size: 2.5em;\n    font-weight: bold; }\n  .interactivity4 .bg {\n    background-image: none;\n    height: 100%;\n    width: 100%; }\n  .interactivity4 .box1, .interactivity4 .box2, .interactivity4 .box3 {\n    width: 100%;\n    margin-top: 2%; }\n  .interactivity4 .box_img img {\n    vertical-align: middle;\n    width: 70%; }\n  .interactivity4 .left_content {\n    text-align: center;\n    width: 85%;\n    margin: auto;\n    font-weight: bold;\n    padding-top: 10%; }\n  .interactivity4 .box_img {\n    display: inline-block;\n    width: 25%; }\n  .interactivity4 .container {\n    font-weight: bold;\n    width: 80%;\n    margin: auto; }\n  .interactivity4 .box_text {\n    display: inline-block;\n    width: 60%; }\n  .interactivity4 .intro {\n    float: left;\n    height: 450px;\n    width: 100%; }\n  .interactivity4 .right_content {\n    font-weight: bold;\n    width: 80%;\n    margin: auto;\n    margin-top: 10%; } }\n\n.Dragdrop2 .content {\n  height: 540px; }\n\n.Dragdrop2 .flex-container {\n  display: flex;\n  height: 110px;\n  width: 90%;\n  margin: auto;\n  margin-top: 3%; }\n\n.Dragdrop2 .highlight {\n  font-size: 2em; }\n\n.Dragdrop2 .sub-heading {\n  margin-left: 8%; }\n\n.Dragdrop2 .bg {\n  background-image: url(\"/app/assets/images/template/bg4.jpg\");\n  display: inline-block;\n  height: 100%;\n  width: 100%; }\n\n.Dragdrop2 .box_img img {\n  vertical-align: middle;\n  width: 70%; }\n\n.Dragdrop2 .left_content {\n  text-align: center;\n  width: 55%;\n  margin-left: 16%;\n  font-weight: bold; }\n\n.Dragdrop2 .box_img {\n  display: inline-block;\n  width: 100%; }\n\n.Dragdrop2 .box1 {\n  position: relative;\n  top: 29%; }\n\n.Dragdrop2 .box2 {\n  position: relative;\n  top: 97%; }\n\n.Dragdrop2 .box3 {\n  position: relative;\n  top: 8%; }\n\n.Dragdrop2 .box4 {\n  position: relative;\n  top: 80%; }\n\n.Dragdrop2 .box5 {\n  position: relative;\n  top: 108%; }\n\n.Dragdrop2 .box6 {\n  position: relative;\n  top: 29%; }\n\n.Dragdrop2 .box7 {\n  position: relative;\n  top: 142%; }\n\n.Dragdrop2 .box1 .highlight_text {\n  color: #13B093;\n  font-weight: bold; }\n\n.Dragdrop2 .box2 .highlight_text {\n  color: #F3962A;\n  font-weight: bold; }\n\n.Dragdrop2 .box3 .highlight_text {\n  color: #1385C7;\n  font-weight: bold; }\n\n.Dragdrop2 .box4 .highlight_text {\n  color: #75616D;\n  font-weight: bold; }\n\n.Dragdrop2 .box5 .highlight_text {\n  color: #A5AEB5;\n  font-weight: bold; }\n\n.Dragdrop2 .box6 .highlight_text {\n  color: #D74554;\n  font-weight: bold; }\n\n.Dragdrop2 .box7 .highlight_text {\n  color: #88BB2E;\n  font-weight: bold; }\n\n.Dragdrop2 .img_caption {\n  text-align: center;\n  margin: auto;\n  width: 100%;\n  position: relative;\n  left: -8%;\n  bottom: 5%; }\n\n.Dragdrop2 .container {\n  background-color: #187CC8;\n  font-weight: bold;\n  text-align: center;\n  margin-top: 22%;\n  padding-top: 3%;\n  padding-bottom: 3%; }\n\n.Dragdrop2 .box1, .Dragdrop2 .box2, .Dragdrop2 .box3, .Dragdrop2 .box4, .Dragdrop2 .box5, .Dragdrop2 .box6, .Dragdrop2 .box7 {\n  width: 100%; }\n\n.Dragdrop2 .intro {\n  float: left;\n  height: 450px;\n  width: 100%; }\n\n.Dragdrop2 .right_content {\n  font-weight: bold;\n  margin-top: 20%; }\n\n@media only screen and (max-device-width: 1024px) {\n  .Dragdrop2 .bg {\n    height: 600px; }\n  .Dragdrop2 .container {\n    margin-top: 26%;\n    height: 90px; }\n  .Dragdrop2 .box1 {\n    position: relative;\n    top: 76%; }\n  .Dragdrop2 .box2 {\n    position: relative;\n    top: 159%; }\n  .Dragdrop2 .box3 {\n    position: relative;\n    top: 63%; }\n  .Dragdrop2 .box4 {\n    position: relative;\n    top: 137%; }\n  .Dragdrop2 .box5 {\n    position: relative;\n    top: 177%; }\n  .Dragdrop2 .box6 {\n    position: relative;\n    top: 60%; }\n  .Dragdrop2 .box7 {\n    position: relative;\n    top: 196%; } }\n\n@media only screen and (max-device-width: 768px) and (orientation: portrait) {\n  .Dragdrop2 .container {\n    margin-top: 40%; }\n  .Dragdrop2 .box1 {\n    position: relative;\n    top: 155%; }\n  .Dragdrop2 .box2 {\n    position: relative;\n    top: 228%; }\n  .Dragdrop2 .box3 {\n    position: relative;\n    top: 125%; }\n  .Dragdrop2 .box4 {\n    position: relative;\n    top: 211%; }\n  .Dragdrop2 .box5 {\n    position: relative;\n    top: 241%; }\n  .Dragdrop2 .box6 {\n    position: relative;\n    top: 140%; }\n  .Dragdrop2 .box7 {\n    position: relative;\n    top: 248%; } }\n\n@media only screen and (max-device-width: 700px) {\n  .Dragdrop2 .content {\n    height: 100%; }\n  .Dragdrop2 .flex-container {\n    display: flex;\n    height: 110px;\n    width: 90%;\n    margin: auto;\n    margin-top: 3%; }\n  .Dragdrop2 .highlight {\n    font-size: 2em; }\n  .Dragdrop2 .sub-heading {\n    margin-left: 8%; }\n  .Dragdrop2 .bg {\n    background-image: url(\"/app/assets/images/template/bg4.jpg\");\n    display: inline-block;\n    height: 100%;\n    width: 100%; }\n  .Dragdrop2 .box_img img {\n    vertical-align: middle;\n    width: 70%; }\n  .Dragdrop2 .left_content {\n    text-align: center;\n    width: 55%;\n    margin-left: 16%;\n    font-weight: bold; }\n  .Dragdrop2 .box_img {\n    display: inline-block;\n    width: 100%; }\n  .Dragdrop2 .box1 {\n    position: relative;\n    top: 16%; }\n  .Dragdrop2 .box2 {\n    position: relative;\n    top: 50%; }\n  .Dragdrop2 .box3 {\n    position: relative;\n    top: 18%; }\n  .Dragdrop2 .box4 {\n    position: relative;\n    top: 62%; }\n  .Dragdrop2 .box5 {\n    position: relative;\n    top: 72%; }\n  .Dragdrop2 .box6 {\n    position: relative;\n    top: -23%; }\n  .Dragdrop2 .box7 {\n    position: relative;\n    top: 103%; }\n  .Dragdrop2 .box1 .highlight_text {\n    color: #13B093;\n    font-weight: bold; }\n  .Dragdrop2 .box2 .highlight_text {\n    color: #F3962A;\n    font-weight: bold; }\n  .Dragdrop2 .box3 .highlight_text {\n    color: #1385C7;\n    font-weight: bold; }\n  .Dragdrop2 .box4 .highlight_text {\n    color: #75616D;\n    font-weight: bold; }\n  .Dragdrop2 .box5 .highlight_text {\n    color: #A5AEB5;\n    font-weight: bold; }\n  .Dragdrop2 .box6 .highlight_text {\n    color: #D74554;\n    font-weight: bold; }\n  .Dragdrop2 .box7 .highlight_text {\n    color: #88BB2E;\n    font-weight: bold; }\n  .Dragdrop2 .img_caption {\n    text-align: center;\n    margin: auto;\n    width: 100%;\n    position: relative;\n    left: -8%;\n    bottom: 5%; }\n  .Dragdrop2 .container {\n    background-color: #187CC8;\n    font-weight: bold;\n    text-align: center;\n    margin-top: 22%;\n    padding-top: 3%;\n    padding-bottom: 3%; }\n  .Dragdrop2 .box1, .Dragdrop2 .box2, .Dragdrop2 .box3, .Dragdrop2 .box4, .Dragdrop2 .box5, .Dragdrop2 .box6, .Dragdrop2 .box7 {\n    width: 100%; }\n  .Dragdrop2 .intro {\n    float: left;\n    height: 450px;\n    width: 100%; }\n  .Dragdrop2 .right_content {\n    font-weight: bold;\n    margin-top: 20%; } }\n\n@media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and (orientation: portrait) {\n  .Dragdrop2 .content {\n    height: 540px; }\n  .Dragdrop2 .flex-container {\n    display: block;\n    height: 100%;\n    width: 100%;\n    margin-top: 5%;\n    background-color: #E8EBF0; }\n  .Dragdrop2 .left-side {\n    width: 60%;\n    display: inline-block;\n    margin: inherit; }\n  .Dragdrop2 .right-side {\n    display: inline-block;\n    width: 30%; }\n  .Dragdrop2 .sub-heading {\n    font-size: 1.5em;\n    width: 100%;\n    margin-left: 8%; }\n  .Dragdrop2 .sub-heading .highlight {\n    font-size: 2.5em;\n    font-weight: bold; }\n  .Dragdrop2 .bg {\n    background-image: none;\n    height: 100%;\n    width: 100%; }\n  .Dragdrop2 .box1, .Dragdrop2 .box2, .Dragdrop2 .box3, .Dragdrop2 .box4, .Dragdrop2 .box5, .Dragdrop2 .box6, .Dragdrop2 .box7 {\n    width: 100%;\n    margin-top: 2%;\n    transform: rotate(90deg); }\n  .Dragdrop2 .box_img img {\n    vertical-align: middle;\n    width: 70%; }\n  .Dragdrop2 .left_content {\n    text-align: center;\n    width: 85%;\n    margin: auto;\n    font-weight: bold;\n    padding-top: 10%; }\n  .Dragdrop2 .box_img {\n    display: inline-block;\n    width: 25%; }\n  .Dragdrop2 .container {\n    font-weight: bold;\n    width: 100%;\n    margin: auto;\n    margin-top: -110%;\n    background-color: #1E2E3B; }\n  .Dragdrop2 .box_text {\n    display: inline-block;\n    width: 60%; }\n  .Dragdrop2 .intro {\n    float: left;\n    height: 450px;\n    width: 100%; }\n  .Dragdrop2 .right_content {\n    font-weight: bold;\n    width: 80%;\n    margin: auto;\n    margin-top: 10%; } }\n\n.menu-content-container {\n  overflow-y: hidden !important; }\n\n.menu-overlay-style {\n  position: absolute !important; }\n\n.menu-style {\n  width: 350px; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 111 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -14297,10 +20675,10 @@ function toComment(sourceMap) {
   return '/*# ' + data + ' */';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(109).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(119).Buffer))
 
 /***/ }),
-/* 112 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14337,7 +20715,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 113 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14354,7 +20732,7 @@ module.exports = camelize;
 
 
 
-var camelize = __webpack_require__(112);
+var camelize = __webpack_require__(122);
 
 var msPattern = /^-ms-/;
 
@@ -14382,7 +20760,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 114 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14399,7 +20777,7 @@ module.exports = camelizeStyleName;
  * 
  */
 
-var isTextNode = __webpack_require__(122);
+var isTextNode = __webpack_require__(132);
 
 /*eslint-disable no-bitwise */
 
@@ -14427,7 +20805,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 115 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14560,7 +20938,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 116 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14581,8 +20959,8 @@ module.exports = createArrayFromMixed;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createArrayFromMixed = __webpack_require__(115);
-var getMarkupWrap = __webpack_require__(117);
+var createArrayFromMixed = __webpack_require__(125);
+var getMarkupWrap = __webpack_require__(127);
 var invariant = __webpack_require__(1);
 
 /**
@@ -14650,7 +21028,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 117 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14751,7 +21129,7 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 118 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14795,7 +21173,7 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ }),
-/* 119 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14833,7 +21211,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 120 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14850,7 +21228,7 @@ module.exports = hyphenate;
 
 
 
-var hyphenate = __webpack_require__(119);
+var hyphenate = __webpack_require__(129);
 
 var msPattern = /^ms-/;
 
@@ -14877,7 +21255,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 121 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14907,7 +21285,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 122 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14924,7 +21302,7 @@ module.exports = isNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(121);
+var isNode = __webpack_require__(131);
 
 /**
  * @param {*} object The object to check.
@@ -14937,7 +21315,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 123 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14972,7 +21350,7 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ }),
-/* 124 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15000,7 +21378,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 125 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15017,7 +21395,7 @@ module.exports = performance || {};
  * @typechecks
  */
 
-var performance = __webpack_require__(124);
+var performance = __webpack_require__(134);
 
 var performanceNow;
 
@@ -15039,7 +21417,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 126 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15051,23 +21429,23 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _warning = __webpack_require__(20);
+var _warning = __webpack_require__(21);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _invariant = __webpack_require__(30);
+var _invariant = __webpack_require__(31);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(39);
+var _LocationUtils = __webpack_require__(40);
 
-var _PathUtils = __webpack_require__(25);
+var _PathUtils = __webpack_require__(26);
 
-var _createTransitionManager = __webpack_require__(40);
+var _createTransitionManager = __webpack_require__(41);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(63);
+var _DOMUtils = __webpack_require__(64);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15353,7 +21731,7 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 
 /***/ }),
-/* 127 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15363,23 +21741,23 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _warning = __webpack_require__(20);
+var _warning = __webpack_require__(21);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _invariant = __webpack_require__(30);
+var _invariant = __webpack_require__(31);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(39);
+var _LocationUtils = __webpack_require__(40);
 
-var _PathUtils = __webpack_require__(25);
+var _PathUtils = __webpack_require__(26);
 
-var _createTransitionManager = __webpack_require__(40);
+var _createTransitionManager = __webpack_require__(41);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _DOMUtils = __webpack_require__(63);
+var _DOMUtils = __webpack_require__(64);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15681,7 +22059,7 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 
 /***/ }),
-/* 128 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15693,15 +22071,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _warning = __webpack_require__(20);
+var _warning = __webpack_require__(21);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _PathUtils = __webpack_require__(25);
+var _PathUtils = __webpack_require__(26);
 
-var _LocationUtils = __webpack_require__(39);
+var _LocationUtils = __webpack_require__(40);
 
-var _createTransitionManager = __webpack_require__(40);
+var _createTransitionManager = __webpack_require__(41);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -15857,7 +22235,7 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 129 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15914,7 +22292,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 130 */
+/* 140 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -16004,7 +22382,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 131 */
+/* 141 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -16015,7 +22393,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 132 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16033,7 +22411,7 @@ module.exports = Array.isArray || function (arr) {
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(1);
   var warning = __webpack_require__(2);
-  var ReactPropTypesSecret = __webpack_require__(66);
+  var ReactPropTypesSecret = __webpack_require__(67);
   var loggedTypeFailures = {};
 }
 
@@ -16084,7 +22462,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 133 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16099,7 +22477,7 @@ module.exports = checkPropTypes;
 
 
 
-var emptyFunction = __webpack_require__(9);
+var emptyFunction = __webpack_require__(10);
 var invariant = __webpack_require__(1);
 
 module.exports = function() {
@@ -16145,7 +22523,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 134 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16224,7 +22602,7 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 135 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16242,7 +22620,7 @@ module.exports = ARIADOMPropertyConfig;
 
 var ReactDOMComponentTree = __webpack_require__(6);
 
-var focusNode = __webpack_require__(61);
+var focusNode = __webpack_require__(62);
 
 var AutoFocusUtils = {
   focusDOMComponent: function () {
@@ -16253,7 +22631,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 136 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16269,11 +22647,11 @@ module.exports = AutoFocusUtils;
 
 
 
-var EventPropagators = __webpack_require__(27);
+var EventPropagators = __webpack_require__(28);
 var ExecutionEnvironment = __webpack_require__(7);
-var FallbackCompositionState = __webpack_require__(142);
-var SyntheticCompositionEvent = __webpack_require__(185);
-var SyntheticInputEvent = __webpack_require__(188);
+var FallbackCompositionState = __webpack_require__(152);
+var SyntheticCompositionEvent = __webpack_require__(195);
+var SyntheticInputEvent = __webpack_require__(198);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -16643,7 +23021,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 137 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16659,14 +23037,14 @@ module.exports = BeforeInputEventPlugin;
 
 
 
-var CSSProperty = __webpack_require__(67);
+var CSSProperty = __webpack_require__(68);
 var ExecutionEnvironment = __webpack_require__(7);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactInstrumentation = __webpack_require__(11);
 
-var camelizeStyleName = __webpack_require__(113);
-var dangerousStyleValue = __webpack_require__(195);
-var hyphenateStyleName = __webpack_require__(120);
-var memoizeStringOnly = __webpack_require__(123);
+var camelizeStyleName = __webpack_require__(123);
+var dangerousStyleValue = __webpack_require__(205);
+var hyphenateStyleName = __webpack_require__(130);
+var memoizeStringOnly = __webpack_require__(133);
 var warning = __webpack_require__(2);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -16858,7 +23236,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 138 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16874,16 +23252,16 @@ module.exports = CSSPropertyOperations;
 
 
 
-var EventPluginHub = __webpack_require__(26);
-var EventPropagators = __webpack_require__(27);
+var EventPluginHub = __webpack_require__(27);
+var EventPropagators = __webpack_require__(28);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(12);
-var SyntheticEvent = __webpack_require__(15);
+var ReactUpdates = __webpack_require__(13);
+var SyntheticEvent = __webpack_require__(16);
 
-var getEventTarget = __webpack_require__(52);
-var isEventSupported = __webpack_require__(53);
-var isTextInputElement = __webpack_require__(85);
+var getEventTarget = __webpack_require__(53);
+var isEventSupported = __webpack_require__(54);
+var isTextInputElement = __webpack_require__(86);
 
 var eventTypes = {
   change: {
@@ -17209,7 +23587,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 139 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17225,13 +23603,13 @@ module.exports = ChangeEventPlugin;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var DOMLazyTree = __webpack_require__(21);
+var DOMLazyTree = __webpack_require__(22);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createNodesFromMarkup = __webpack_require__(116);
-var emptyFunction = __webpack_require__(9);
+var createNodesFromMarkup = __webpack_require__(126);
+var emptyFunction = __webpack_require__(10);
 var invariant = __webpack_require__(1);
 
 var Danger = {
@@ -17263,7 +23641,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 140 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17294,7 +23672,7 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 141 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17310,9 +23688,9 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(27);
+var EventPropagators = __webpack_require__(28);
 var ReactDOMComponentTree = __webpack_require__(6);
-var SyntheticMouseEvent = __webpack_require__(33);
+var SyntheticMouseEvent = __webpack_require__(34);
 
 var eventTypes = {
   mouseEnter: {
@@ -17399,7 +23777,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 142 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17417,9 +23795,9 @@ module.exports = EnterLeaveEventPlugin;
 
 var _assign = __webpack_require__(5);
 
-var PooledClass = __webpack_require__(17);
+var PooledClass = __webpack_require__(18);
 
-var getTextContentAccessor = __webpack_require__(83);
+var getTextContentAccessor = __webpack_require__(84);
 
 /**
  * This helper class stores information about text content of a target node,
@@ -17499,7 +23877,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 143 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17515,7 +23893,7 @@ module.exports = FallbackCompositionState;
 
 
 
-var DOMProperty = __webpack_require__(16);
+var DOMProperty = __webpack_require__(17);
 
 var MUST_USE_PROPERTY = DOMProperty.injection.MUST_USE_PROPERTY;
 var HAS_BOOLEAN_VALUE = DOMProperty.injection.HAS_BOOLEAN_VALUE;
@@ -17740,7 +24118,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 144 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17756,12 +24134,12 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 
-var ReactReconciler = __webpack_require__(22);
+var ReactReconciler = __webpack_require__(23);
 
-var instantiateReactComponent = __webpack_require__(84);
-var KeyEscapeUtils = __webpack_require__(44);
-var shouldUpdateReactComponent = __webpack_require__(54);
-var traverseAllChildren = __webpack_require__(87);
+var instantiateReactComponent = __webpack_require__(85);
+var KeyEscapeUtils = __webpack_require__(45);
+var shouldUpdateReactComponent = __webpack_require__(55);
+var traverseAllChildren = __webpack_require__(88);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -17772,7 +24150,7 @@ if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 't
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 function instantiateChild(childInstances, child, name, selfDebugID) {
@@ -17780,7 +24158,7 @@ function instantiateChild(childInstances, child, name, selfDebugID) {
   var keyUnique = childInstances[name] === undefined;
   if (process.env.NODE_ENV !== 'production') {
     if (!ReactComponentTreeHook) {
-      ReactComponentTreeHook = __webpack_require__(8);
+      ReactComponentTreeHook = __webpack_require__(9);
     }
     if (!keyUnique) {
       process.env.NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
@@ -17900,7 +24278,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 145 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17916,8 +24294,8 @@ module.exports = ReactChildReconciler;
 
 
 
-var DOMChildrenOperations = __webpack_require__(41);
-var ReactDOMIDOperations = __webpack_require__(152);
+var DOMChildrenOperations = __webpack_require__(42);
+var ReactDOMIDOperations = __webpack_require__(162);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -17935,7 +24313,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 146 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17951,26 +24329,26 @@ module.exports = ReactComponentBrowserEnvironment;
 
 
 
-var _prodInvariant = __webpack_require__(3),
+var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(5);
 
-var React = __webpack_require__(23);
-var ReactComponentEnvironment = __webpack_require__(46);
-var ReactCurrentOwner = __webpack_require__(13);
-var ReactErrorUtils = __webpack_require__(47);
-var ReactInstanceMap = __webpack_require__(28);
-var ReactInstrumentation = __webpack_require__(10);
-var ReactNodeTypes = __webpack_require__(77);
-var ReactReconciler = __webpack_require__(22);
+var React = __webpack_require__(24);
+var ReactComponentEnvironment = __webpack_require__(47);
+var ReactCurrentOwner = __webpack_require__(14);
+var ReactErrorUtils = __webpack_require__(48);
+var ReactInstanceMap = __webpack_require__(29);
+var ReactInstrumentation = __webpack_require__(11);
+var ReactNodeTypes = __webpack_require__(78);
+var ReactReconciler = __webpack_require__(23);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(194);
+  var checkReactTypeSpec = __webpack_require__(204);
 }
 
-var emptyObject = __webpack_require__(24);
+var emptyObject = __webpack_require__(25);
 var invariant = __webpack_require__(1);
-var shallowEqual = __webpack_require__(38);
-var shouldUpdateReactComponent = __webpack_require__(54);
+var shallowEqual = __webpack_require__(39);
+var shouldUpdateReactComponent = __webpack_require__(55);
 var warning = __webpack_require__(2);
 
 var CompositeTypes = {
@@ -18843,7 +25221,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 147 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18862,15 +25240,15 @@ module.exports = ReactCompositeComponent;
 
 
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDefaultInjection = __webpack_require__(164);
-var ReactMount = __webpack_require__(76);
-var ReactReconciler = __webpack_require__(22);
-var ReactUpdates = __webpack_require__(12);
-var ReactVersion = __webpack_require__(179);
+var ReactDefaultInjection = __webpack_require__(174);
+var ReactMount = __webpack_require__(77);
+var ReactReconciler = __webpack_require__(23);
+var ReactUpdates = __webpack_require__(13);
+var ReactVersion = __webpack_require__(189);
 
-var findDOMNode = __webpack_require__(196);
-var getHostComponentFromComposite = __webpack_require__(82);
-var renderSubtreeIntoContainer = __webpack_require__(203);
+var findDOMNode = __webpack_require__(206);
+var getHostComponentFromComposite = __webpack_require__(83);
+var renderSubtreeIntoContainer = __webpack_require__(213);
 var warning = __webpack_require__(2);
 
 ReactDefaultInjection.inject();
@@ -18946,10 +25324,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactInstrumentation = __webpack_require__(10);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(161);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(155);
-  var ReactDOMInvalidARIAHook = __webpack_require__(154);
+  var ReactInstrumentation = __webpack_require__(11);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(171);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(165);
+  var ReactDOMInvalidARIAHook = __webpack_require__(164);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -18960,7 +25338,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 148 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18978,34 +25356,34 @@ module.exports = ReactDOM;
 
 
 
-var _prodInvariant = __webpack_require__(3),
+var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(5);
 
-var AutoFocusUtils = __webpack_require__(135);
-var CSSPropertyOperations = __webpack_require__(137);
-var DOMLazyTree = __webpack_require__(21);
-var DOMNamespaces = __webpack_require__(42);
-var DOMProperty = __webpack_require__(16);
-var DOMPropertyOperations = __webpack_require__(69);
-var EventPluginHub = __webpack_require__(26);
-var EventPluginRegistry = __webpack_require__(31);
-var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactDOMComponentFlags = __webpack_require__(70);
+var AutoFocusUtils = __webpack_require__(145);
+var CSSPropertyOperations = __webpack_require__(147);
+var DOMLazyTree = __webpack_require__(22);
+var DOMNamespaces = __webpack_require__(43);
+var DOMProperty = __webpack_require__(17);
+var DOMPropertyOperations = __webpack_require__(70);
+var EventPluginHub = __webpack_require__(27);
+var EventPluginRegistry = __webpack_require__(32);
+var ReactBrowserEventEmitter = __webpack_require__(33);
+var ReactDOMComponentFlags = __webpack_require__(71);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMInput = __webpack_require__(153);
-var ReactDOMOption = __webpack_require__(156);
-var ReactDOMSelect = __webpack_require__(71);
-var ReactDOMTextarea = __webpack_require__(159);
-var ReactInstrumentation = __webpack_require__(10);
-var ReactMultiChild = __webpack_require__(172);
-var ReactServerRenderingTransaction = __webpack_require__(177);
+var ReactDOMInput = __webpack_require__(163);
+var ReactDOMOption = __webpack_require__(166);
+var ReactDOMSelect = __webpack_require__(72);
+var ReactDOMTextarea = __webpack_require__(169);
+var ReactInstrumentation = __webpack_require__(11);
+var ReactMultiChild = __webpack_require__(182);
+var ReactServerRenderingTransaction = __webpack_require__(187);
 
-var emptyFunction = __webpack_require__(9);
-var escapeTextContentForBrowser = __webpack_require__(35);
+var emptyFunction = __webpack_require__(10);
+var escapeTextContentForBrowser = __webpack_require__(36);
 var invariant = __webpack_require__(1);
-var isEventSupported = __webpack_require__(53);
-var shallowEqual = __webpack_require__(38);
-var validateDOMNesting = __webpack_require__(55);
+var isEventSupported = __webpack_require__(54);
+var shallowEqual = __webpack_require__(39);
+var validateDOMNesting = __webpack_require__(56);
 var warning = __webpack_require__(2);
 
 var Flags = ReactDOMComponentFlags;
@@ -19967,7 +26345,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 149 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19983,7 +26361,7 @@ module.exports = ReactDOMComponent;
 
 
 
-var validateDOMNesting = __webpack_require__(55);
+var validateDOMNesting = __webpack_require__(56);
 
 var DOC_NODE_TYPE = 9;
 
@@ -20006,7 +26384,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 150 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20024,7 +26402,7 @@ module.exports = ReactDOMContainerInfo;
 
 var _assign = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(21);
+var DOMLazyTree = __webpack_require__(22);
 var ReactDOMComponentTree = __webpack_require__(6);
 
 var ReactDOMEmptyComponent = function (instantiate) {
@@ -20071,7 +26449,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 151 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20095,7 +26473,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 152 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20111,7 +26489,7 @@ module.exports = ReactDOMFeatureFlags;
 
 
 
-var DOMChildrenOperations = __webpack_require__(41);
+var DOMChildrenOperations = __webpack_require__(42);
 var ReactDOMComponentTree = __webpack_require__(6);
 
 /**
@@ -20134,7 +26512,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 153 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20150,13 +26528,13 @@ module.exports = ReactDOMIDOperations;
 
 
 
-var _prodInvariant = __webpack_require__(3),
+var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(5);
 
-var DOMPropertyOperations = __webpack_require__(69);
-var LinkedValueUtils = __webpack_require__(45);
+var DOMPropertyOperations = __webpack_require__(70);
+var LinkedValueUtils = __webpack_require__(46);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(12);
+var ReactUpdates = __webpack_require__(13);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -20425,7 +26803,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 154 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20441,8 +26819,8 @@ module.exports = ReactDOMInput;
 
 
 
-var DOMProperty = __webpack_require__(16);
-var ReactComponentTreeHook = __webpack_require__(8);
+var DOMProperty = __webpack_require__(17);
+var ReactComponentTreeHook = __webpack_require__(9);
 
 var warning = __webpack_require__(2);
 
@@ -20524,7 +26902,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 155 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20540,7 +26918,7 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 
-var ReactComponentTreeHook = __webpack_require__(8);
+var ReactComponentTreeHook = __webpack_require__(9);
 
 var warning = __webpack_require__(2);
 
@@ -20573,7 +26951,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 156 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20591,9 +26969,9 @@ module.exports = ReactDOMNullInputValuePropHook;
 
 var _assign = __webpack_require__(5);
 
-var React = __webpack_require__(23);
+var React = __webpack_require__(24);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMSelect = __webpack_require__(71);
+var ReactDOMSelect = __webpack_require__(72);
 
 var warning = __webpack_require__(2);
 var didWarnInvalidOptionChildren = false;
@@ -20702,7 +27080,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 157 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20720,8 +27098,8 @@ module.exports = ReactDOMOption;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var getNodeForCharacterOffset = __webpack_require__(200);
-var getTextContentAccessor = __webpack_require__(83);
+var getNodeForCharacterOffset = __webpack_require__(210);
+var getTextContentAccessor = __webpack_require__(84);
 
 /**
  * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -20919,7 +27297,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 158 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20935,16 +27313,16 @@ module.exports = ReactDOMSelection;
 
 
 
-var _prodInvariant = __webpack_require__(3),
+var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(5);
 
-var DOMChildrenOperations = __webpack_require__(41);
-var DOMLazyTree = __webpack_require__(21);
+var DOMChildrenOperations = __webpack_require__(42);
+var DOMLazyTree = __webpack_require__(22);
 var ReactDOMComponentTree = __webpack_require__(6);
 
-var escapeTextContentForBrowser = __webpack_require__(35);
+var escapeTextContentForBrowser = __webpack_require__(36);
 var invariant = __webpack_require__(1);
-var validateDOMNesting = __webpack_require__(55);
+var validateDOMNesting = __webpack_require__(56);
 
 /**
  * Text nodes violate a couple assumptions that React makes about components:
@@ -21089,7 +27467,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 159 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21105,12 +27483,12 @@ module.exports = ReactDOMTextComponent;
 
 
 
-var _prodInvariant = __webpack_require__(3),
+var _prodInvariant = __webpack_require__(4),
     _assign = __webpack_require__(5);
 
-var LinkedValueUtils = __webpack_require__(45);
+var LinkedValueUtils = __webpack_require__(46);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(12);
+var ReactUpdates = __webpack_require__(13);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -21255,7 +27633,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 160 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21271,7 +27649,7 @@ module.exports = ReactDOMTextarea;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -21397,7 +27775,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 161 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21413,9 +27791,9 @@ module.exports = {
 
 
 
-var DOMProperty = __webpack_require__(16);
-var EventPluginRegistry = __webpack_require__(31);
-var ReactComponentTreeHook = __webpack_require__(8);
+var DOMProperty = __webpack_require__(17);
+var EventPluginRegistry = __webpack_require__(32);
+var ReactComponentTreeHook = __webpack_require__(9);
 
 var warning = __webpack_require__(2);
 
@@ -21515,7 +27893,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 162 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21532,12 +27910,12 @@ module.exports = ReactDOMUnknownPropertyHook;
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(170);
-var ReactHostOperationHistoryHook = __webpack_require__(168);
-var ReactComponentTreeHook = __webpack_require__(8);
+var ReactInvalidSetStateWarningHook = __webpack_require__(180);
+var ReactHostOperationHistoryHook = __webpack_require__(178);
+var ReactComponentTreeHook = __webpack_require__(9);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var performanceNow = __webpack_require__(125);
+var performanceNow = __webpack_require__(135);
 var warning = __webpack_require__(2);
 
 var hooks = [];
@@ -21880,7 +28258,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 163 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21898,10 +28276,10 @@ module.exports = ReactDebugTool;
 
 var _assign = __webpack_require__(5);
 
-var ReactUpdates = __webpack_require__(12);
-var Transaction = __webpack_require__(34);
+var ReactUpdates = __webpack_require__(13);
+var Transaction = __webpack_require__(35);
 
-var emptyFunction = __webpack_require__(9);
+var emptyFunction = __webpack_require__(10);
 
 var RESET_BATCHED_UPDATES = {
   initialize: emptyFunction,
@@ -21953,7 +28331,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 164 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21969,25 +28347,25 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(134);
-var BeforeInputEventPlugin = __webpack_require__(136);
-var ChangeEventPlugin = __webpack_require__(138);
-var DefaultEventPluginOrder = __webpack_require__(140);
-var EnterLeaveEventPlugin = __webpack_require__(141);
-var HTMLDOMPropertyConfig = __webpack_require__(143);
-var ReactComponentBrowserEnvironment = __webpack_require__(145);
-var ReactDOMComponent = __webpack_require__(148);
+var ARIADOMPropertyConfig = __webpack_require__(144);
+var BeforeInputEventPlugin = __webpack_require__(146);
+var ChangeEventPlugin = __webpack_require__(148);
+var DefaultEventPluginOrder = __webpack_require__(150);
+var EnterLeaveEventPlugin = __webpack_require__(151);
+var HTMLDOMPropertyConfig = __webpack_require__(153);
+var ReactComponentBrowserEnvironment = __webpack_require__(155);
+var ReactDOMComponent = __webpack_require__(158);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMEmptyComponent = __webpack_require__(150);
-var ReactDOMTreeTraversal = __webpack_require__(160);
-var ReactDOMTextComponent = __webpack_require__(158);
-var ReactDefaultBatchingStrategy = __webpack_require__(163);
-var ReactEventListener = __webpack_require__(167);
-var ReactInjection = __webpack_require__(169);
-var ReactReconcileTransaction = __webpack_require__(175);
-var SVGDOMPropertyConfig = __webpack_require__(180);
-var SelectEventPlugin = __webpack_require__(181);
-var SimpleEventPlugin = __webpack_require__(182);
+var ReactDOMEmptyComponent = __webpack_require__(160);
+var ReactDOMTreeTraversal = __webpack_require__(170);
+var ReactDOMTextComponent = __webpack_require__(168);
+var ReactDefaultBatchingStrategy = __webpack_require__(173);
+var ReactEventListener = __webpack_require__(177);
+var ReactInjection = __webpack_require__(179);
+var ReactReconcileTransaction = __webpack_require__(185);
+var SVGDOMPropertyConfig = __webpack_require__(190);
+var SelectEventPlugin = __webpack_require__(191);
+var SimpleEventPlugin = __webpack_require__(192);
 
 var alreadyInjected = false;
 
@@ -22044,7 +28422,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 165 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22069,7 +28447,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 166 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22085,7 +28463,7 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var EventPluginHub = __webpack_require__(26);
+var EventPluginHub = __webpack_require__(27);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -22107,7 +28485,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 167 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22125,14 +28503,14 @@ module.exports = ReactEventEmitterMixin;
 
 var _assign = __webpack_require__(5);
 
-var EventListener = __webpack_require__(60);
+var EventListener = __webpack_require__(61);
 var ExecutionEnvironment = __webpack_require__(7);
-var PooledClass = __webpack_require__(17);
+var PooledClass = __webpack_require__(18);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactUpdates = __webpack_require__(12);
+var ReactUpdates = __webpack_require__(13);
 
-var getEventTarget = __webpack_require__(52);
-var getUnboundedScrollPosition = __webpack_require__(118);
+var getEventTarget = __webpack_require__(53);
+var getUnboundedScrollPosition = __webpack_require__(128);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -22267,7 +28645,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 168 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22306,7 +28684,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 169 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22322,14 +28700,14 @@ module.exports = ReactHostOperationHistoryHook;
 
 
 
-var DOMProperty = __webpack_require__(16);
-var EventPluginHub = __webpack_require__(26);
-var EventPluginUtils = __webpack_require__(43);
-var ReactComponentEnvironment = __webpack_require__(46);
-var ReactEmptyComponent = __webpack_require__(72);
-var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactHostComponent = __webpack_require__(74);
-var ReactUpdates = __webpack_require__(12);
+var DOMProperty = __webpack_require__(17);
+var EventPluginHub = __webpack_require__(27);
+var EventPluginUtils = __webpack_require__(44);
+var ReactComponentEnvironment = __webpack_require__(47);
+var ReactEmptyComponent = __webpack_require__(73);
+var ReactBrowserEventEmitter = __webpack_require__(33);
+var ReactHostComponent = __webpack_require__(75);
+var ReactUpdates = __webpack_require__(13);
 
 var ReactInjection = {
   Component: ReactComponentEnvironment.injection,
@@ -22345,7 +28723,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 170 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22388,7 +28766,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 171 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22404,7 +28782,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 
 
 
-var adler32 = __webpack_require__(193);
+var adler32 = __webpack_require__(203);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -22443,7 +28821,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 172 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22459,18 +28837,18 @@ module.exports = ReactMarkupChecksum;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var ReactComponentEnvironment = __webpack_require__(46);
-var ReactInstanceMap = __webpack_require__(28);
-var ReactInstrumentation = __webpack_require__(10);
+var ReactComponentEnvironment = __webpack_require__(47);
+var ReactInstanceMap = __webpack_require__(29);
+var ReactInstrumentation = __webpack_require__(11);
 
-var ReactCurrentOwner = __webpack_require__(13);
-var ReactReconciler = __webpack_require__(22);
-var ReactChildReconciler = __webpack_require__(144);
+var ReactCurrentOwner = __webpack_require__(14);
+var ReactReconciler = __webpack_require__(23);
+var ReactChildReconciler = __webpack_require__(154);
 
-var emptyFunction = __webpack_require__(9);
-var flattenChildren = __webpack_require__(197);
+var emptyFunction = __webpack_require__(10);
+var flattenChildren = __webpack_require__(207);
 var invariant = __webpack_require__(1);
 
 /**
@@ -22899,7 +29277,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 173 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22916,7 +29294,7 @@ module.exports = ReactMultiChild;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
 var invariant = __webpack_require__(1);
 
@@ -22999,7 +29377,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 174 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23030,7 +29408,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 175 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23048,13 +29426,13 @@ module.exports = ReactPropTypeLocationNames;
 
 var _assign = __webpack_require__(5);
 
-var CallbackQueue = __webpack_require__(68);
-var PooledClass = __webpack_require__(17);
-var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactInputSelection = __webpack_require__(75);
-var ReactInstrumentation = __webpack_require__(10);
-var Transaction = __webpack_require__(34);
-var ReactUpdateQueue = __webpack_require__(48);
+var CallbackQueue = __webpack_require__(69);
+var PooledClass = __webpack_require__(18);
+var ReactBrowserEventEmitter = __webpack_require__(33);
+var ReactInputSelection = __webpack_require__(76);
+var ReactInstrumentation = __webpack_require__(11);
+var Transaction = __webpack_require__(35);
+var ReactUpdateQueue = __webpack_require__(49);
 
 /**
  * Ensures that, when possible, the selection range (currently selected text
@@ -23214,7 +29592,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 176 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23231,7 +29609,7 @@ module.exports = ReactReconcileTransaction;
 
 
 
-var ReactOwner = __webpack_require__(173);
+var ReactOwner = __webpack_require__(183);
 
 var ReactRef = {};
 
@@ -23308,7 +29686,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 177 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23326,10 +29704,10 @@ module.exports = ReactRef;
 
 var _assign = __webpack_require__(5);
 
-var PooledClass = __webpack_require__(17);
-var Transaction = __webpack_require__(34);
-var ReactInstrumentation = __webpack_require__(10);
-var ReactServerUpdateQueue = __webpack_require__(178);
+var PooledClass = __webpack_require__(18);
+var Transaction = __webpack_require__(35);
+var ReactInstrumentation = __webpack_require__(11);
+var ReactServerUpdateQueue = __webpack_require__(188);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -23404,7 +29782,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 178 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23423,7 +29801,7 @@ module.exports = ReactServerRenderingTransaction;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ReactUpdateQueue = __webpack_require__(48);
+var ReactUpdateQueue = __webpack_require__(49);
 
 var warning = __webpack_require__(2);
 
@@ -23549,7 +29927,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 179 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23568,7 +29946,7 @@ module.exports = ReactServerUpdateQueue;
 module.exports = '15.5.4';
 
 /***/ }),
-/* 180 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23875,7 +30253,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 181 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23891,15 +30269,15 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(27);
+var EventPropagators = __webpack_require__(28);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInputSelection = __webpack_require__(75);
-var SyntheticEvent = __webpack_require__(15);
+var ReactInputSelection = __webpack_require__(76);
+var SyntheticEvent = __webpack_require__(16);
 
-var getActiveElement = __webpack_require__(62);
-var isTextInputElement = __webpack_require__(85);
-var shallowEqual = __webpack_require__(38);
+var getActiveElement = __webpack_require__(63);
+var isTextInputElement = __webpack_require__(86);
+var shallowEqual = __webpack_require__(39);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 
@@ -24071,7 +30449,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 182 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24088,25 +30466,25 @@ module.exports = SelectEventPlugin;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var EventListener = __webpack_require__(60);
-var EventPropagators = __webpack_require__(27);
+var EventListener = __webpack_require__(61);
+var EventPropagators = __webpack_require__(28);
 var ReactDOMComponentTree = __webpack_require__(6);
-var SyntheticAnimationEvent = __webpack_require__(183);
-var SyntheticClipboardEvent = __webpack_require__(184);
-var SyntheticEvent = __webpack_require__(15);
-var SyntheticFocusEvent = __webpack_require__(187);
-var SyntheticKeyboardEvent = __webpack_require__(189);
-var SyntheticMouseEvent = __webpack_require__(33);
-var SyntheticDragEvent = __webpack_require__(186);
-var SyntheticTouchEvent = __webpack_require__(190);
-var SyntheticTransitionEvent = __webpack_require__(191);
-var SyntheticUIEvent = __webpack_require__(29);
-var SyntheticWheelEvent = __webpack_require__(192);
+var SyntheticAnimationEvent = __webpack_require__(193);
+var SyntheticClipboardEvent = __webpack_require__(194);
+var SyntheticEvent = __webpack_require__(16);
+var SyntheticFocusEvent = __webpack_require__(197);
+var SyntheticKeyboardEvent = __webpack_require__(199);
+var SyntheticMouseEvent = __webpack_require__(34);
+var SyntheticDragEvent = __webpack_require__(196);
+var SyntheticTouchEvent = __webpack_require__(200);
+var SyntheticTransitionEvent = __webpack_require__(201);
+var SyntheticUIEvent = __webpack_require__(30);
+var SyntheticWheelEvent = __webpack_require__(202);
 
-var emptyFunction = __webpack_require__(9);
-var getEventCharCode = __webpack_require__(50);
+var emptyFunction = __webpack_require__(10);
+var getEventCharCode = __webpack_require__(51);
 var invariant = __webpack_require__(1);
 
 /**
@@ -24305,7 +30683,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 183 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24321,7 +30699,7 @@ module.exports = SimpleEventPlugin;
 
 
 
-var SyntheticEvent = __webpack_require__(15);
+var SyntheticEvent = __webpack_require__(16);
 
 /**
  * @interface Event
@@ -24349,7 +30727,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 184 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24365,7 +30743,7 @@ module.exports = SyntheticAnimationEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(15);
+var SyntheticEvent = __webpack_require__(16);
 
 /**
  * @interface Event
@@ -24392,7 +30770,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 185 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24408,7 +30786,7 @@ module.exports = SyntheticClipboardEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(15);
+var SyntheticEvent = __webpack_require__(16);
 
 /**
  * @interface Event
@@ -24433,7 +30811,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 186 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24449,7 +30827,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(33);
+var SyntheticMouseEvent = __webpack_require__(34);
 
 /**
  * @interface DragEvent
@@ -24474,7 +30852,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 187 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24490,7 +30868,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(29);
+var SyntheticUIEvent = __webpack_require__(30);
 
 /**
  * @interface FocusEvent
@@ -24515,7 +30893,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 188 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24531,7 +30909,7 @@ module.exports = SyntheticFocusEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(15);
+var SyntheticEvent = __webpack_require__(16);
 
 /**
  * @interface Event
@@ -24557,7 +30935,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 189 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24573,11 +30951,11 @@ module.exports = SyntheticInputEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(29);
+var SyntheticUIEvent = __webpack_require__(30);
 
-var getEventCharCode = __webpack_require__(50);
-var getEventKey = __webpack_require__(198);
-var getEventModifierState = __webpack_require__(51);
+var getEventCharCode = __webpack_require__(51);
+var getEventKey = __webpack_require__(208);
+var getEventModifierState = __webpack_require__(52);
 
 /**
  * @interface KeyboardEvent
@@ -24646,7 +31024,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 190 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24662,9 +31040,9 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(29);
+var SyntheticUIEvent = __webpack_require__(30);
 
-var getEventModifierState = __webpack_require__(51);
+var getEventModifierState = __webpack_require__(52);
 
 /**
  * @interface TouchEvent
@@ -24696,7 +31074,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 191 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24712,7 +31090,7 @@ module.exports = SyntheticTouchEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(15);
+var SyntheticEvent = __webpack_require__(16);
 
 /**
  * @interface Event
@@ -24740,7 +31118,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 192 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24756,7 +31134,7 @@ module.exports = SyntheticTransitionEvent;
 
 
 
-var SyntheticMouseEvent = __webpack_require__(33);
+var SyntheticMouseEvent = __webpack_require__(34);
 
 /**
  * @interface WheelEvent
@@ -24799,7 +31177,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 193 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24848,7 +31226,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 194 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24864,10 +31242,10 @@ module.exports = adler32;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var ReactPropTypeLocationNames = __webpack_require__(174);
-var ReactPropTypesSecret = __webpack_require__(78);
+var ReactPropTypeLocationNames = __webpack_require__(184);
+var ReactPropTypesSecret = __webpack_require__(79);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -24880,7 +31258,7 @@ if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 't
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 var loggedTypeFailures = {};
@@ -24922,7 +31300,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
         if (process.env.NODE_ENV !== 'production') {
           if (!ReactComponentTreeHook) {
-            ReactComponentTreeHook = __webpack_require__(8);
+            ReactComponentTreeHook = __webpack_require__(9);
           }
           if (debugID !== null) {
             componentStackInfo = ReactComponentTreeHook.getStackAddendumByID(debugID);
@@ -24941,7 +31319,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 195 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24957,7 +31335,7 @@ module.exports = checkReactTypeSpec;
 
 
 
-var CSSProperty = __webpack_require__(67);
+var CSSProperty = __webpack_require__(68);
 var warning = __webpack_require__(2);
 
 var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -25026,7 +31404,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 196 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25042,13 +31420,13 @@ module.exports = dangerousStyleValue;
 
 
 
-var _prodInvariant = __webpack_require__(3);
+var _prodInvariant = __webpack_require__(4);
 
-var ReactCurrentOwner = __webpack_require__(13);
+var ReactCurrentOwner = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstanceMap = __webpack_require__(28);
+var ReactInstanceMap = __webpack_require__(29);
 
-var getHostComponentFromComposite = __webpack_require__(82);
+var getHostComponentFromComposite = __webpack_require__(83);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -25092,7 +31470,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 197 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25109,8 +31487,8 @@ module.exports = findDOMNode;
 
 
 
-var KeyEscapeUtils = __webpack_require__(44);
-var traverseAllChildren = __webpack_require__(87);
+var KeyEscapeUtils = __webpack_require__(45);
+var traverseAllChildren = __webpack_require__(88);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -25121,7 +31499,7 @@ if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 't
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 /**
@@ -25137,7 +31515,7 @@ function flattenSingleChildIntoContext(traverseContext, child, name, selfDebugID
     var keyUnique = result[name] === undefined;
     if (process.env.NODE_ENV !== 'production') {
       if (!ReactComponentTreeHook) {
-        ReactComponentTreeHook = __webpack_require__(8);
+        ReactComponentTreeHook = __webpack_require__(9);
       }
       if (!keyUnique) {
         process.env.NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
@@ -25174,7 +31552,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 198 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25190,7 +31568,7 @@ module.exports = flattenChildren;
 
 
 
-var getEventCharCode = __webpack_require__(50);
+var getEventCharCode = __webpack_require__(51);
 
 /**
  * Normalization of deprecated HTML5 `key` values
@@ -25281,7 +31659,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 199 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25327,7 +31705,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 200 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25406,7 +31784,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 201 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25512,7 +31890,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 202 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25528,7 +31906,7 @@ module.exports = getVendorPrefixedEventName;
 
 
 
-var escapeTextContentForBrowser = __webpack_require__(35);
+var escapeTextContentForBrowser = __webpack_require__(36);
 
 /**
  * Escapes attribute value to prevent scripting attacks.
@@ -25543,7 +31921,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 203 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25559,1684 +31937,20 @@ module.exports = quoteAttributeValueForBrowser;
 
 
 
-var ReactMount = __webpack_require__(76);
+var ReactMount = __webpack_require__(77);
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 204 */
-/***/ (function(module, exports, __webpack_require__) {
-
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(true)
-		module.exports = factory(__webpack_require__(4));
-	else if(typeof define === 'function' && define.amd)
-		define(["react"], factory);
-	else if(typeof exports === 'object')
-		exports["MediaQuery"] = factory(require("react"));
-	else
-		root["MediaQuery"] = factory(root["react"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_15__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-/******/
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	var _react = __webpack_require__(15);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _propTypes = __webpack_require__(7);
-	
-	var _propTypes2 = _interopRequireDefault(_propTypes);
-	
-	var _matchmedia = __webpack_require__(11);
-	
-	var _matchmedia2 = _interopRequireDefault(_matchmedia);
-	
-	var _hyphenateStyleName = __webpack_require__(6);
-	
-	var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
-	
-	var _mediaQuery = __webpack_require__(4);
-	
-	var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
-	
-	var _toQuery = __webpack_require__(9);
-	
-	var _toQuery2 = _interopRequireDefault(_toQuery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var defaultTypes = {
-	  component: _propTypes2.default.node,
-	  query: _propTypes2.default.string,
-	  values: _propTypes2.default.shape(_mediaQuery2.default.matchers),
-	  children: _propTypes2.default.oneOfType([_propTypes2.default.node, _propTypes2.default.function])
-	};
-	var mediaKeys = Object.keys(_mediaQuery2.default.all);
-	var excludedQueryKeys = Object.keys(defaultTypes);
-	var excludedPropKeys = excludedQueryKeys.concat(mediaKeys);
-	
-	function omit(object, keys) {
-	  var newObject = _extends({}, object);
-	  keys.forEach(function (key) {
-	    return delete newObject[key];
-	  });
-	  return newObject;
-	}
-	
-	var MediaQuery = function (_React$Component) {
-	  _inherits(MediaQuery, _React$Component);
-	
-	  function MediaQuery() {
-	    var _ref;
-	
-	    var _temp, _this, _ret;
-	
-	    _classCallCheck(this, MediaQuery);
-	
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
-	
-	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MediaQuery.__proto__ || Object.getPrototypeOf(MediaQuery)).call.apply(_ref, [this].concat(args))), _this), _this.state = { matches: false }, _this.updateMatches = function () {
-	      if (_this._mql.matches === _this.state.matches) {
-	        return;
-	      }
-	      _this.setState({
-	        matches: _this._mql.matches
-	      });
-	    }, _temp), _possibleConstructorReturn(_this, _ret);
-	  }
-	
-	  _createClass(MediaQuery, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.updateQuery(this.props);
-	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps(nextProps) {
-	      this.updateQuery(nextProps);
-	    }
-	  }, {
-	    key: 'updateQuery',
-	    value: function updateQuery(props) {
-	      var values = void 0;
-	      if (props.query) {
-	        this.query = props.query;
-	      } else {
-	        this.query = (0, _toQuery2.default)(omit(props, excludedQueryKeys));
-	      }
-	
-	      if (!this.query) {
-	        throw new Error('Invalid or missing MediaQuery!');
-	      }
-	
-	      if (props.values) {
-	        values = Object.keys(props.values).reduce(function (result, key) {
-	          result[(0, _hyphenateStyleName2.default)(key)] = props.values[key];
-	          return result;
-	        }, {});
-	      }
-	
-	      if (this._mql) {
-	        this._mql.removeListener(this.updateMatches);
-	      }
-	
-	      this._mql = (0, _matchmedia2.default)(this.query, values);
-	      this._mql.addListener(this.updateMatches);
-	      this.updateMatches();
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      this._mql.removeListener(this.updateMatches);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      if (typeof this.props.children === 'function') {
-	        return this.props.children(this.state.matches);
-	      }
-	
-	      if (this.state.matches === false) {
-	        return null;
-	      }
-	      var props = omit(this.props, excludedPropKeys);
-	      var hasMergeProps = Object.keys(props).length > 0;
-	      var childrenCount = _react2.default.Children.count(this.props.children);
-	      var wrapChildren = this.props.component || childrenCount > 1 || typeof this.props.children === 'string' || Array.isArray(this.props.children) && childrenCount == 1 || this.props.children === undefined;
-	      if (wrapChildren) {
-	        return _react2.default.createElement(this.props.component || 'div', props, this.props.children);
-	      } else if (hasMergeProps) {
-	        return _react2.default.cloneElement(this.props.children, props);
-	      } else if (childrenCount) {
-	        return this.props.children;
-	      } else {
-	        return null;
-	      }
-	    }
-	  }]);
-	
-	  return MediaQuery;
-	}(_react2.default.Component);
-	
-	MediaQuery.displayName = 'MediaQuery';
-	MediaQuery.defaultProps = {
-	  values: {}
-	};
-	exports.default = MediaQuery;
-	module.exports = exports['default'];
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-	// shim for using process in browser
-	var process = module.exports = {};
-	
-	// cached from whatever global is present so that test runners that stub it
-	// don't break things.  But we need to wrap it in a try catch in case it is
-	// wrapped in strict mode code which doesn't define any globals.  It's inside a
-	// function because try/catches deoptimize in certain engines.
-	
-	var cachedSetTimeout;
-	var cachedClearTimeout;
-	
-	function defaultSetTimout() {
-	    throw new Error('setTimeout has not been defined');
-	}
-	function defaultClearTimeout () {
-	    throw new Error('clearTimeout has not been defined');
-	}
-	(function () {
-	    try {
-	        if (typeof setTimeout === 'function') {
-	            cachedSetTimeout = setTimeout;
-	        } else {
-	            cachedSetTimeout = defaultSetTimout;
-	        }
-	    } catch (e) {
-	        cachedSetTimeout = defaultSetTimout;
-	    }
-	    try {
-	        if (typeof clearTimeout === 'function') {
-	            cachedClearTimeout = clearTimeout;
-	        } else {
-	            cachedClearTimeout = defaultClearTimeout;
-	        }
-	    } catch (e) {
-	        cachedClearTimeout = defaultClearTimeout;
-	    }
-	} ())
-	function runTimeout(fun) {
-	    if (cachedSetTimeout === setTimeout) {
-	        //normal enviroments in sane situations
-	        return setTimeout(fun, 0);
-	    }
-	    // if setTimeout wasn't available but was latter defined
-	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-	        cachedSetTimeout = setTimeout;
-	        return setTimeout(fun, 0);
-	    }
-	    try {
-	        // when when somebody has screwed with setTimeout but no I.E. maddness
-	        return cachedSetTimeout(fun, 0);
-	    } catch(e){
-	        try {
-	            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-	            return cachedSetTimeout.call(null, fun, 0);
-	        } catch(e){
-	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-	            return cachedSetTimeout.call(this, fun, 0);
-	        }
-	    }
-	
-	
-	}
-	function runClearTimeout(marker) {
-	    if (cachedClearTimeout === clearTimeout) {
-	        //normal enviroments in sane situations
-	        return clearTimeout(marker);
-	    }
-	    // if clearTimeout wasn't available but was latter defined
-	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-	        cachedClearTimeout = clearTimeout;
-	        return clearTimeout(marker);
-	    }
-	    try {
-	        // when when somebody has screwed with setTimeout but no I.E. maddness
-	        return cachedClearTimeout(marker);
-	    } catch (e){
-	        try {
-	            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-	            return cachedClearTimeout.call(null, marker);
-	        } catch (e){
-	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-	            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-	            return cachedClearTimeout.call(this, marker);
-	        }
-	    }
-	
-	
-	
-	}
-	var queue = [];
-	var draining = false;
-	var currentQueue;
-	var queueIndex = -1;
-	
-	function cleanUpNextTick() {
-	    if (!draining || !currentQueue) {
-	        return;
-	    }
-	    draining = false;
-	    if (currentQueue.length) {
-	        queue = currentQueue.concat(queue);
-	    } else {
-	        queueIndex = -1;
-	    }
-	    if (queue.length) {
-	        drainQueue();
-	    }
-	}
-	
-	function drainQueue() {
-	    if (draining) {
-	        return;
-	    }
-	    var timeout = runTimeout(cleanUpNextTick);
-	    draining = true;
-	
-	    var len = queue.length;
-	    while(len) {
-	        currentQueue = queue;
-	        queue = [];
-	        while (++queueIndex < len) {
-	            if (currentQueue) {
-	                currentQueue[queueIndex].run();
-	            }
-	        }
-	        queueIndex = -1;
-	        len = queue.length;
-	    }
-	    currentQueue = null;
-	    draining = false;
-	    runClearTimeout(timeout);
-	}
-	
-	process.nextTick = function (fun) {
-	    var args = new Array(arguments.length - 1);
-	    if (arguments.length > 1) {
-	        for (var i = 1; i < arguments.length; i++) {
-	            args[i - 1] = arguments[i];
-	        }
-	    }
-	    queue.push(new Item(fun, args));
-	    if (queue.length === 1 && !draining) {
-	        runTimeout(drainQueue);
-	    }
-	};
-	
-	// v8 likes predictible objects
-	function Item(fun, array) {
-	    this.fun = fun;
-	    this.array = array;
-	}
-	Item.prototype.run = function () {
-	    this.fun.apply(null, this.array);
-	};
-	process.title = 'browser';
-	process.browser = true;
-	process.env = {};
-	process.argv = [];
-	process.version = ''; // empty string to avoid regexp issues
-	process.versions = {};
-	
-	function noop() {}
-	
-	process.on = noop;
-	process.addListener = noop;
-	process.once = noop;
-	process.off = noop;
-	process.removeListener = noop;
-	process.removeAllListeners = noop;
-	process.emit = noop;
-	
-	process.binding = function (name) {
-	    throw new Error('process.binding is not supported');
-	};
-	
-	process.cwd = function () { return '/' };
-	process.chdir = function (dir) {
-	    throw new Error('process.chdir is not supported');
-	};
-	process.umask = function() { return 0; };
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-	"use strict";
-	
-	/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * 
-	 */
-	
-	function makeEmptyFunction(arg) {
-	  return function () {
-	    return arg;
-	  };
-	}
-	
-	/**
-	 * This function accepts and discards inputs; it has no side effects. This is
-	 * primarily useful idiomatically for overridable function endpoints which
-	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
-	 */
-	var emptyFunction = function emptyFunction() {};
-	
-	emptyFunction.thatReturns = makeEmptyFunction;
-	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-	emptyFunction.thatReturnsThis = function () {
-	  return this;
-	};
-	emptyFunction.thatReturnsArgument = function (arg) {
-	  return arg;
-	};
-	
-	module.exports = emptyFunction;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
-	
-	'use strict';
-	
-	/**
-	 * Use invariant() to assert state which your program assumes to be true.
-	 *
-	 * Provide sprintf-style format (only %s is supported) and arguments
-	 * to provide information about what broke and what you were
-	 * expecting.
-	 *
-	 * The invariant message will be stripped in production, but the invariant
-	 * will remain to ensure logic does not differ in production.
-	 */
-	
-	var validateFormat = function validateFormat(format) {};
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  validateFormat = function validateFormat(format) {
-	    if (format === undefined) {
-	      throw new Error('invariant requires an error message argument');
-	    }
-	  };
-	}
-	
-	function invariant(condition, format, a, b, c, d, e, f) {
-	  validateFormat(format);
-	
-	  if (!condition) {
-	    var error;
-	    if (format === undefined) {
-	      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
-	    } else {
-	      var args = [a, b, c, d, e, f];
-	      var argIndex = 0;
-	      error = new Error(format.replace(/%s/g, function () {
-	        return args[argIndex++];
-	      }));
-	      error.name = 'Invariant Violation';
-	    }
-	
-	    error.framesToPop = 1; // we don't care about invariant's own frame
-	    throw error;
-	  }
-	}
-	
-	module.exports = invariant;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	var _propTypes = __webpack_require__(7);
-	
-	var _propTypes2 = _interopRequireDefault(_propTypes);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var stringOrNumber = _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]);
-	
-	// properties that match media queries
-	var matchers = {
-	  orientation: _propTypes2.default.oneOf(['portrait', 'landscape']),
-	
-	  scan: _propTypes2.default.oneOf(['progressive', 'interlace']),
-	
-	  aspectRatio: _propTypes2.default.string,
-	  deviceAspectRatio: _propTypes2.default.string,
-	
-	  height: stringOrNumber,
-	  deviceHeight: stringOrNumber,
-	
-	  width: stringOrNumber,
-	  deviceWidth: stringOrNumber,
-	
-	  color: _propTypes2.default.bool,
-	
-	  colorIndex: _propTypes2.default.bool,
-	
-	  monochrome: _propTypes2.default.bool,
-	  resolution: stringOrNumber
-	};
-	
-	// media features
-	var features = _extends({
-	  minAspectRatio: _propTypes2.default.string,
-	  maxAspectRatio: _propTypes2.default.string,
-	  minDeviceAspectRatio: _propTypes2.default.string,
-	  maxDeviceAspectRatio: _propTypes2.default.string,
-	
-	  minHeight: stringOrNumber,
-	  maxHeight: stringOrNumber,
-	  minDeviceHeight: stringOrNumber,
-	  maxDeviceHeight: stringOrNumber,
-	
-	  minWidth: stringOrNumber,
-	  maxWidth: stringOrNumber,
-	  minDeviceWidth: stringOrNumber,
-	  maxDeviceWidth: stringOrNumber,
-	
-	  minColor: _propTypes2.default.number,
-	  maxColor: _propTypes2.default.number,
-	
-	  minColorIndex: _propTypes2.default.number,
-	  maxColorIndex: _propTypes2.default.number,
-	
-	  minMonochrome: _propTypes2.default.number,
-	  maxMonochrome: _propTypes2.default.number,
-	
-	  minResolution: stringOrNumber,
-	  maxResolution: stringOrNumber
-	
-	}, matchers);
-	
-	// media types
-	var types = {
-	  all: _propTypes2.default.bool,
-	  grid: _propTypes2.default.bool,
-	  aural: _propTypes2.default.bool,
-	  braille: _propTypes2.default.bool,
-	  handheld: _propTypes2.default.bool,
-	  print: _propTypes2.default.bool,
-	  projection: _propTypes2.default.bool,
-	  screen: _propTypes2.default.bool,
-	  tty: _propTypes2.default.bool,
-	  tv: _propTypes2.default.bool,
-	  embossed: _propTypes2.default.bool
-	};
-	
-	var all = _extends({}, types, features);
-	
-	// add the type property
-	matchers.type = Object.keys(types);
-	
-	exports.default = {
-	  all: all,
-	  types: types,
-	  matchers: matchers,
-	  features: features
-	};
-	module.exports = exports['default'];
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
-	
-	'use strict';
-	
-	var emptyFunction = __webpack_require__(2);
-	
-	/**
-	 * Similar to invariant but only logs a warning if the condition is not met.
-	 * This can be used to log issues in development environments in critical
-	 * paths. Removing the logging code for production environments will keep the
-	 * same logic and follow the same code paths.
-	 */
-	
-	var warning = emptyFunction;
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  (function () {
-	    var printWarning = function printWarning(format) {
-	      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	        args[_key - 1] = arguments[_key];
-	      }
-	
-	      var argIndex = 0;
-	      var message = 'Warning: ' + format.replace(/%s/g, function () {
-	        return args[argIndex++];
-	      });
-	      if (typeof console !== 'undefined') {
-	        console.error(message);
-	      }
-	      try {
-	        // --- Welcome to debugging React ---
-	        // This error was thrown as a convenience so that you can use this stack
-	        // to find the callsite that caused this warning to fire.
-	        throw new Error(message);
-	      } catch (x) {}
-	    };
-	
-	    warning = function warning(condition, format) {
-	      if (format === undefined) {
-	        throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-	      }
-	
-	      if (format.indexOf('Failed Composite propType: ') === 0) {
-	        return; // Ignore CompositeComponent proptype check.
-	      }
-	
-	      if (!condition) {
-	        for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-	          args[_key2 - 2] = arguments[_key2];
-	        }
-	
-	        printWarning.apply(undefined, [format].concat(args));
-	      }
-	    };
-	  })();
-	}
-	
-	module.exports = warning;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-	'use strict';
-	
-	var uppercasePattern = /[A-Z]/g;
-	var msPattern = /^ms-/;
-	var cache = {};
-	
-	function hyphenateStyleName(string) {
-	    return string in cache
-	    ? cache[string]
-	    : cache[string] = string
-	      .replace(uppercasePattern, '-$&')
-	      .toLowerCase()
-	      .replace(msPattern, '-ms-');
-	}
-	
-	module.exports = hyphenateStyleName;
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-	    Symbol.for &&
-	    Symbol.for('react.element')) ||
-	    0xeac7;
-	
-	  var isValidElement = function(object) {
-	    return typeof object === 'object' &&
-	      object !== null &&
-	      object.$$typeof === REACT_ELEMENT_TYPE;
-	  };
-	
-	  // By explicitly using `prop-types` you are opting into new development behavior.
-	  // http://fb.me/prop-types-in-prod
-	  var throwOnDirectAccess = true;
-	  module.exports = __webpack_require__(14)(isValidElement, throwOnDirectAccess);
-	} else {
-	  // By explicitly using `prop-types` you are opting into new production behavior.
-	  // http://fb.me/prop-types-in-prod
-	  module.exports = __webpack_require__(13)();
-	}
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	'use strict';
-	
-	var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-	
-	module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	exports.default = function (obj) {
-	  var rules = [];
-	  Object.keys(_mediaQuery2.default.all).forEach(function (k) {
-	    var v = obj[k];
-	    if (v != null) {
-	      rules.push(keyVal(k, v));
-	    }
-	  });
-	  return join(rules);
-	};
-	
-	var _hyphenateStyleName = __webpack_require__(6);
-	
-	var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
-	
-	var _mediaQuery = __webpack_require__(4);
-	
-	var _mediaQuery2 = _interopRequireDefault(_mediaQuery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var negate = function negate(cond) {
-	  return 'not ' + cond;
-	};
-	
-	function keyVal(k, v) {
-	  var realKey = (0, _hyphenateStyleName2.default)(k);
-	
-	  // px shorthand
-	  if (typeof v === 'number') {
-	    v = v + 'px';
-	  }
-	  if (v === true) {
-	    return k;
-	  }
-	  if (v === false) {
-	    return negate(k);
-	  }
-	  return '(' + realKey + ': ' + v + ')';
-	}
-	
-	function join(conds) {
-	  return conds.join(' and ');
-	}
-	
-	module.exports = exports['default'];
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-	/*
-	Copyright (c) 2014, Yahoo! Inc. All rights reserved.
-	Copyrights licensed under the New BSD License.
-	See the accompanying LICENSE file for terms.
-	*/
-	
-	'use strict';
-	
-	exports.match = matchQuery;
-	exports.parse = parseQuery;
-	
-	// -----------------------------------------------------------------------------
-	
-	var RE_MEDIA_QUERY     = /(?:(only|not)?\s*([^\s\(\)]+)(?:\s*and)?\s*)?(.+)?/i,
-	    RE_MQ_EXPRESSION   = /\(\s*([^\s\:\)]+)\s*(?:\:\s*([^\s\)]+))?\s*\)/,
-	    RE_MQ_FEATURE      = /^(?:(min|max)-)?(.+)/,
-	    RE_LENGTH_UNIT     = /(em|rem|px|cm|mm|in|pt|pc)?$/,
-	    RE_RESOLUTION_UNIT = /(dpi|dpcm|dppx)?$/;
-	
-	function matchQuery(mediaQuery, values) {
-	    return parseQuery(mediaQuery).some(function (query) {
-	        var inverse = query.inverse;
-	
-	        // Either the parsed or specified `type` is "all", or the types must be
-	        // equal for a match.
-	        var typeMatch = query.type === 'all' || values.type === query.type;
-	
-	        // Quit early when `type` doesn't match, but take "not" into account.
-	        if ((typeMatch && inverse) || !(typeMatch || inverse)) {
-	            return false;
-	        }
-	
-	        var expressionsMatch = query.expressions.every(function (expression) {
-	            var feature  = expression.feature,
-	                modifier = expression.modifier,
-	                expValue = expression.value,
-	                value    = values[feature];
-	
-	            // Missing or falsy values don't match.
-	            if (!value) { return false; }
-	
-	            switch (feature) {
-	                case 'orientation':
-	                case 'scan':
-	                    return value.toLowerCase() === expValue.toLowerCase();
-	
-	                case 'width':
-	                case 'height':
-	                case 'device-width':
-	                case 'device-height':
-	                    expValue = toPx(expValue);
-	                    value    = toPx(value);
-	                    break;
-	
-	                case 'resolution':
-	                    expValue = toDpi(expValue);
-	                    value    = toDpi(value);
-	                    break;
-	
-	                case 'aspect-ratio':
-	                case 'device-aspect-ratio':
-	                case /* Deprecated */ 'device-pixel-ratio':
-	                    expValue = toDecimal(expValue);
-	                    value    = toDecimal(value);
-	                    break;
-	
-	                case 'grid':
-	                case 'color':
-	                case 'color-index':
-	                case 'monochrome':
-	                    expValue = parseInt(expValue, 10) || 1;
-	                    value    = parseInt(value, 10) || 0;
-	                    break;
-	            }
-	
-	            switch (modifier) {
-	                case 'min': return value >= expValue;
-	                case 'max': return value <= expValue;
-	                default   : return value === expValue;
-	            }
-	        });
-	
-	        return (expressionsMatch && !inverse) || (!expressionsMatch && inverse);
-	    });
-	}
-	
-	function parseQuery(mediaQuery) {
-	    return mediaQuery.split(',').map(function (query) {
-	        query = query.trim();
-	
-	        var captures    = query.match(RE_MEDIA_QUERY),
-	            modifier    = captures[1],
-	            type        = captures[2],
-	            expressions = captures[3] || '',
-	            parsed      = {};
-	
-	        parsed.inverse = !!modifier && modifier.toLowerCase() === 'not';
-	        parsed.type    = type ? type.toLowerCase() : 'all';
-	
-	        // Split expressions into a list.
-	        expressions = expressions.match(/\([^\)]+\)/g) || [];
-	
-	        parsed.expressions = expressions.map(function (expression) {
-	            var captures = expression.match(RE_MQ_EXPRESSION),
-	                feature  = captures[1].toLowerCase().match(RE_MQ_FEATURE);
-	
-	            return {
-	                modifier: feature[1],
-	                feature : feature[2],
-	                value   : captures[2]
-	            };
-	        });
-	
-	        return parsed;
-	    });
-	}
-	
-	// -- Utilities ----------------------------------------------------------------
-	
-	function toDecimal(ratio) {
-	    var decimal = Number(ratio),
-	        numbers;
-	
-	    if (!decimal) {
-	        numbers = ratio.match(/^(\d+)\s*\/\s*(\d+)$/);
-	        decimal = numbers[1] / numbers[2];
-	    }
-	
-	    return decimal;
-	}
-	
-	function toDpi(resolution) {
-	    var value = parseFloat(resolution),
-	        units = String(resolution).match(RE_RESOLUTION_UNIT)[1];
-	
-	    switch (units) {
-	        case 'dpcm': return value / 2.54;
-	        case 'dppx': return value * 96;
-	        default    : return value;
-	    }
-	}
-	
-	function toPx(length) {
-	    var value = parseFloat(length),
-	        units = String(length).match(RE_LENGTH_UNIT)[1];
-	
-	    switch (units) {
-	        case 'em' : return value * 16;
-	        case 'rem': return value * 16;
-	        case 'cm' : return value * 96 / 2.54;
-	        case 'mm' : return value * 96 / 2.54 / 10;
-	        case 'in' : return value * 96;
-	        case 'pt' : return value * 72;
-	        case 'pc' : return value * 72 / 12;
-	        default   : return value;
-	    }
-	}
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var staticMatch = __webpack_require__(10).match;
-	var dynamicMatch = typeof window !== 'undefined' ? window.matchMedia : null;
-	
-	// our fake MediaQueryList
-	function Mql(query, values){
-	  var self = this;
-	  if(dynamicMatch){
-	    var mql = dynamicMatch.call(window, query);
-	    this.matches = mql.matches;
-	    this.media = mql.media;
-	    // TODO: is there a time it makes sense to remove this listener?
-	    mql.addListener(update);
-	  } else {
-	    this.matches = staticMatch(query, values);
-	    this.media = query;
-	  }
-	
-	  this.addListener = addListener;
-	  this.removeListener = removeListener;
-	
-	  function addListener(listener){
-	    if(mql){
-	      mql.addListener(listener);
-	    }
-	  }
-	
-	  function removeListener(listener){
-	    if(mql){
-	      mql.removeListener(listener);
-	    }
-	  }
-	
-	  // update ourselves!
-	  function update(evt){
-	    self.matches = evt.matches;
-	    self.media = evt.media;
-	  }
-	}
-	
-	function matchMedia(query, values){
-	  return new Mql(query, values);
-	}
-	
-	module.exports = matchMedia;
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	'use strict';
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  var invariant = __webpack_require__(3);
-	  var warning = __webpack_require__(5);
-	  var ReactPropTypesSecret = __webpack_require__(8);
-	  var loggedTypeFailures = {};
-	}
-	
-	/**
-	 * Assert that the values match with the type specs.
-	 * Error messages are memorized and will only be shown once.
-	 *
-	 * @param {object} typeSpecs Map of name to a ReactPropType
-	 * @param {object} values Runtime values that need to be type-checked
-	 * @param {string} location e.g. "prop", "context", "child context"
-	 * @param {string} componentName Name of the component for error messages.
-	 * @param {?Function} getStack Returns the component stack.
-	 * @private
-	 */
-	function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-	  if (process.env.NODE_ENV !== 'production') {
-	    for (var typeSpecName in typeSpecs) {
-	      if (typeSpecs.hasOwnProperty(typeSpecName)) {
-	        var error;
-	        // Prop type validation may throw. In case they do, we don't want to
-	        // fail the render phase where it didn't fail before. So we log it.
-	        // After these have been cleaned up, we'll let them throw.
-	        try {
-	          // This is intentionally an invariant that gets caught. It's the same
-	          // behavior as without this statement except with a better message.
-	          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
-	          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-	        } catch (ex) {
-	          error = ex;
-	        }
-	        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
-	        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-	          // Only monitor this failure once because there tends to be a lot of the
-	          // same error.
-	          loggedTypeFailures[error.message] = true;
-	
-	          var stack = getStack ? getStack() : '';
-	
-	          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
-	        }
-	      }
-	    }
-	  }
-	}
-	
-	module.exports = checkPropTypes;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	'use strict';
-	
-	var emptyFunction = __webpack_require__(2);
-	var invariant = __webpack_require__(3);
-	
-	module.exports = function() {
-	  // Important!
-	  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-	  function shim() {
-	    invariant(
-	      false,
-	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-	      'Use PropTypes.checkPropTypes() to call them. ' +
-	      'Read more at http://fb.me/use-check-prop-types'
-	    );
-	  };
-	  shim.isRequired = shim;
-	  function getShim() {
-	    return shim;
-	  };
-	  var ReactPropTypes = {
-	    array: shim,
-	    bool: shim,
-	    func: shim,
-	    number: shim,
-	    object: shim,
-	    string: shim,
-	    symbol: shim,
-	
-	    any: shim,
-	    arrayOf: getShim,
-	    element: shim,
-	    instanceOf: getShim,
-	    node: shim,
-	    objectOf: getShim,
-	    oneOf: getShim,
-	    oneOfType: getShim,
-	    shape: getShim
-	  };
-	
-	  ReactPropTypes.checkPropTypes = emptyFunction;
-	  ReactPropTypes.PropTypes = ReactPropTypes;
-	
-	  return ReactPropTypes;
-	};
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-	
-	'use strict';
-	
-	var emptyFunction = __webpack_require__(2);
-	var invariant = __webpack_require__(3);
-	var warning = __webpack_require__(5);
-	
-	var ReactPropTypesSecret = __webpack_require__(8);
-	var checkPropTypes = __webpack_require__(12);
-	
-	module.exports = function(isValidElement, throwOnDirectAccess) {
-	  /* global Symbol */
-	  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-	  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-	
-	  /**
-	   * Returns the iterator method function contained on the iterable object.
-	   *
-	   * Be sure to invoke the function with the iterable as context:
-	   *
-	   *     var iteratorFn = getIteratorFn(myIterable);
-	   *     if (iteratorFn) {
-	   *       var iterator = iteratorFn.call(myIterable);
-	   *       ...
-	   *     }
-	   *
-	   * @param {?object} maybeIterable
-	   * @return {?function}
-	   */
-	  function getIteratorFn(maybeIterable) {
-	    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
-	    if (typeof iteratorFn === 'function') {
-	      return iteratorFn;
-	    }
-	  }
-	
-	  /**
-	   * Collection of methods that allow declaration and validation of props that are
-	   * supplied to React components. Example usage:
-	   *
-	   *   var Props = require('ReactPropTypes');
-	   *   var MyArticle = React.createClass({
-	   *     propTypes: {
-	   *       // An optional string prop named "description".
-	   *       description: Props.string,
-	   *
-	   *       // A required enum prop named "category".
-	   *       category: Props.oneOf(['News','Photos']).isRequired,
-	   *
-	   *       // A prop named "dialog" that requires an instance of Dialog.
-	   *       dialog: Props.instanceOf(Dialog).isRequired
-	   *     },
-	   *     render: function() { ... }
-	   *   });
-	   *
-	   * A more formal specification of how these methods are used:
-	   *
-	   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-	   *   decl := ReactPropTypes.{type}(.isRequired)?
-	   *
-	   * Each and every declaration produces a function with the same signature. This
-	   * allows the creation of custom validation functions. For example:
-	   *
-	   *  var MyLink = React.createClass({
-	   *    propTypes: {
-	   *      // An optional string or URI prop named "href".
-	   *      href: function(props, propName, componentName) {
-	   *        var propValue = props[propName];
-	   *        if (propValue != null && typeof propValue !== 'string' &&
-	   *            !(propValue instanceof URI)) {
-	   *          return new Error(
-	   *            'Expected a string or an URI for ' + propName + ' in ' +
-	   *            componentName
-	   *          );
-	   *        }
-	   *      }
-	   *    },
-	   *    render: function() {...}
-	   *  });
-	   *
-	   * @internal
-	   */
-	
-	  var ANONYMOUS = '<<anonymous>>';
-	
-	  // Important!
-	  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
-	  var ReactPropTypes = {
-	    array: createPrimitiveTypeChecker('array'),
-	    bool: createPrimitiveTypeChecker('boolean'),
-	    func: createPrimitiveTypeChecker('function'),
-	    number: createPrimitiveTypeChecker('number'),
-	    object: createPrimitiveTypeChecker('object'),
-	    string: createPrimitiveTypeChecker('string'),
-	    symbol: createPrimitiveTypeChecker('symbol'),
-	
-	    any: createAnyTypeChecker(),
-	    arrayOf: createArrayOfTypeChecker,
-	    element: createElementTypeChecker(),
-	    instanceOf: createInstanceTypeChecker,
-	    node: createNodeChecker(),
-	    objectOf: createObjectOfTypeChecker,
-	    oneOf: createEnumTypeChecker,
-	    oneOfType: createUnionTypeChecker,
-	    shape: createShapeTypeChecker
-	  };
-	
-	  /**
-	   * inlined Object.is polyfill to avoid requiring consumers ship their own
-	   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-	   */
-	  /*eslint-disable no-self-compare*/
-	  function is(x, y) {
-	    // SameValue algorithm
-	    if (x === y) {
-	      // Steps 1-5, 7-10
-	      // Steps 6.b-6.e: +0 != -0
-	      return x !== 0 || 1 / x === 1 / y;
-	    } else {
-	      // Step 6.a: NaN == NaN
-	      return x !== x && y !== y;
-	    }
-	  }
-	  /*eslint-enable no-self-compare*/
-	
-	  /**
-	   * We use an Error-like object for backward compatibility as people may call
-	   * PropTypes directly and inspect their output. However, we don't use real
-	   * Errors anymore. We don't inspect their stack anyway, and creating them
-	   * is prohibitively expensive if they are created too often, such as what
-	   * happens in oneOfType() for any type before the one that matched.
-	   */
-	  function PropTypeError(message) {
-	    this.message = message;
-	    this.stack = '';
-	  }
-	  // Make `instanceof Error` still work for returned errors.
-	  PropTypeError.prototype = Error.prototype;
-	
-	  function createChainableTypeChecker(validate) {
-	    if (process.env.NODE_ENV !== 'production') {
-	      var manualPropTypeCallCache = {};
-	      var manualPropTypeWarningCount = 0;
-	    }
-	    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
-	      componentName = componentName || ANONYMOUS;
-	      propFullName = propFullName || propName;
-	
-	      if (secret !== ReactPropTypesSecret) {
-	        if (throwOnDirectAccess) {
-	          // New behavior only for users of `prop-types` package
-	          invariant(
-	            false,
-	            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-	            'Use `PropTypes.checkPropTypes()` to call them. ' +
-	            'Read more at http://fb.me/use-check-prop-types'
-	          );
-	        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
-	          // Old behavior for people using React.PropTypes
-	          var cacheKey = componentName + ':' + propName;
-	          if (
-	            !manualPropTypeCallCache[cacheKey] &&
-	            // Avoid spamming the console because they are often not actionable except for lib authors
-	            manualPropTypeWarningCount < 3
-	          ) {
-	            warning(
-	              false,
-	              'You are manually calling a React.PropTypes validation ' +
-	              'function for the `%s` prop on `%s`. This is deprecated ' +
-	              'and will throw in the standalone `prop-types` package. ' +
-	              'You may be seeing this warning due to a third-party PropTypes ' +
-	              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
-	              propFullName,
-	              componentName
-	            );
-	            manualPropTypeCallCache[cacheKey] = true;
-	            manualPropTypeWarningCount++;
-	          }
-	        }
-	      }
-	      if (props[propName] == null) {
-	        if (isRequired) {
-	          if (props[propName] === null) {
-	            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
-	          }
-	          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
-	        }
-	        return null;
-	      } else {
-	        return validate(props, propName, componentName, location, propFullName);
-	      }
-	    }
-	
-	    var chainedCheckType = checkType.bind(null, false);
-	    chainedCheckType.isRequired = checkType.bind(null, true);
-	
-	    return chainedCheckType;
-	  }
-	
-	  function createPrimitiveTypeChecker(expectedType) {
-	    function validate(props, propName, componentName, location, propFullName, secret) {
-	      var propValue = props[propName];
-	      var propType = getPropType(propValue);
-	      if (propType !== expectedType) {
-	        // `propValue` being instance of, say, date/regexp, pass the 'object'
-	        // check, but we can offer a more precise error message here rather than
-	        // 'of type `object`'.
-	        var preciseType = getPreciseType(propValue);
-	
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
-	      }
-	      return null;
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createAnyTypeChecker() {
-	    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
-	  }
-	
-	  function createArrayOfTypeChecker(typeChecker) {
-	    function validate(props, propName, componentName, location, propFullName) {
-	      if (typeof typeChecker !== 'function') {
-	        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
-	      }
-	      var propValue = props[propName];
-	      if (!Array.isArray(propValue)) {
-	        var propType = getPropType(propValue);
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
-	      }
-	      for (var i = 0; i < propValue.length; i++) {
-	        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
-	        if (error instanceof Error) {
-	          return error;
-	        }
-	      }
-	      return null;
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createElementTypeChecker() {
-	    function validate(props, propName, componentName, location, propFullName) {
-	      var propValue = props[propName];
-	      if (!isValidElement(propValue)) {
-	        var propType = getPropType(propValue);
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
-	      }
-	      return null;
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createInstanceTypeChecker(expectedClass) {
-	    function validate(props, propName, componentName, location, propFullName) {
-	      if (!(props[propName] instanceof expectedClass)) {
-	        var expectedClassName = expectedClass.name || ANONYMOUS;
-	        var actualClassName = getClassName(props[propName]);
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
-	      }
-	      return null;
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createEnumTypeChecker(expectedValues) {
-	    if (!Array.isArray(expectedValues)) {
-	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
-	      return emptyFunction.thatReturnsNull;
-	    }
-	
-	    function validate(props, propName, componentName, location, propFullName) {
-	      var propValue = props[propName];
-	      for (var i = 0; i < expectedValues.length; i++) {
-	        if (is(propValue, expectedValues[i])) {
-	          return null;
-	        }
-	      }
-	
-	      var valuesString = JSON.stringify(expectedValues);
-	      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createObjectOfTypeChecker(typeChecker) {
-	    function validate(props, propName, componentName, location, propFullName) {
-	      if (typeof typeChecker !== 'function') {
-	        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
-	      }
-	      var propValue = props[propName];
-	      var propType = getPropType(propValue);
-	      if (propType !== 'object') {
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
-	      }
-	      for (var key in propValue) {
-	        if (propValue.hasOwnProperty(key)) {
-	          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-	          if (error instanceof Error) {
-	            return error;
-	          }
-	        }
-	      }
-	      return null;
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createUnionTypeChecker(arrayOfTypeCheckers) {
-	    if (!Array.isArray(arrayOfTypeCheckers)) {
-	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
-	      return emptyFunction.thatReturnsNull;
-	    }
-	
-	    function validate(props, propName, componentName, location, propFullName) {
-	      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-	        var checker = arrayOfTypeCheckers[i];
-	        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
-	          return null;
-	        }
-	      }
-	
-	      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createNodeChecker() {
-	    function validate(props, propName, componentName, location, propFullName) {
-	      if (!isNode(props[propName])) {
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
-	      }
-	      return null;
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function createShapeTypeChecker(shapeTypes) {
-	    function validate(props, propName, componentName, location, propFullName) {
-	      var propValue = props[propName];
-	      var propType = getPropType(propValue);
-	      if (propType !== 'object') {
-	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-	      }
-	      for (var key in shapeTypes) {
-	        var checker = shapeTypes[key];
-	        if (!checker) {
-	          continue;
-	        }
-	        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
-	        if (error) {
-	          return error;
-	        }
-	      }
-	      return null;
-	    }
-	    return createChainableTypeChecker(validate);
-	  }
-	
-	  function isNode(propValue) {
-	    switch (typeof propValue) {
-	      case 'number':
-	      case 'string':
-	      case 'undefined':
-	        return true;
-	      case 'boolean':
-	        return !propValue;
-	      case 'object':
-	        if (Array.isArray(propValue)) {
-	          return propValue.every(isNode);
-	        }
-	        if (propValue === null || isValidElement(propValue)) {
-	          return true;
-	        }
-	
-	        var iteratorFn = getIteratorFn(propValue);
-	        if (iteratorFn) {
-	          var iterator = iteratorFn.call(propValue);
-	          var step;
-	          if (iteratorFn !== propValue.entries) {
-	            while (!(step = iterator.next()).done) {
-	              if (!isNode(step.value)) {
-	                return false;
-	              }
-	            }
-	          } else {
-	            // Iterator will provide entry [k,v] tuples rather than values.
-	            while (!(step = iterator.next()).done) {
-	              var entry = step.value;
-	              if (entry) {
-	                if (!isNode(entry[1])) {
-	                  return false;
-	                }
-	              }
-	            }
-	          }
-	        } else {
-	          return false;
-	        }
-	
-	        return true;
-	      default:
-	        return false;
-	    }
-	  }
-	
-	  function isSymbol(propType, propValue) {
-	    // Native Symbol.
-	    if (propType === 'symbol') {
-	      return true;
-	    }
-	
-	    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
-	    if (propValue['@@toStringTag'] === 'Symbol') {
-	      return true;
-	    }
-	
-	    // Fallback for non-spec compliant Symbols which are polyfilled.
-	    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
-	      return true;
-	    }
-	
-	    return false;
-	  }
-	
-	  // Equivalent of `typeof` but with special handling for array and regexp.
-	  function getPropType(propValue) {
-	    var propType = typeof propValue;
-	    if (Array.isArray(propValue)) {
-	      return 'array';
-	    }
-	    if (propValue instanceof RegExp) {
-	      // Old webkits (at least until Android 4.0) return 'function' rather than
-	      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-	      // passes PropTypes.object.
-	      return 'object';
-	    }
-	    if (isSymbol(propType, propValue)) {
-	      return 'symbol';
-	    }
-	    return propType;
-	  }
-	
-	  // This handles more types than `getPropType`. Only used for error messages.
-	  // See `createPrimitiveTypeChecker`.
-	  function getPreciseType(propValue) {
-	    var propType = getPropType(propValue);
-	    if (propType === 'object') {
-	      if (propValue instanceof Date) {
-	        return 'date';
-	      } else if (propValue instanceof RegExp) {
-	        return 'regexp';
-	      }
-	    }
-	    return propType;
-	  }
-	
-	  // Returns class name of the object, if any.
-	  function getClassName(propValue) {
-	    if (!propValue.constructor || !propValue.constructor.name) {
-	      return ANONYMOUS;
-	    }
-	    return propValue.constructor.name;
-	  }
-	
-	  ReactPropTypes.checkPropTypes = checkPropTypes;
-	  ReactPropTypes.PropTypes = ReactPropTypes;
-	
-	  return ReactPropTypes;
-	};
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_15__;
-
-/***/ })
-/******/ ])
-});
-;
-//# sourceMappingURL=react-responsive.js.map
-
-/***/ }),
-/* 205 */
+/* 214 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_createBrowserHistory__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_createBrowserHistory__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_history_createBrowserHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(12);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -27285,15 +31999,15 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 206 */
+/* 215 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_createHashHistory__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_createHashHistory__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_history_createHashHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(12);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -27341,23 +32055,23 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 207 */
+/* 216 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["i"]; });
 
 
 /***/ }),
-/* 208 */
+/* 217 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(89);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -27419,90 +32133,90 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 209 */
+/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["h"]; });
 
 
 /***/ }),
-/* 210 */
+/* 219 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["g"]; });
 
 
 /***/ }),
-/* 211 */
+/* 220 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["f"]; });
 
 
 /***/ }),
-/* 212 */
+/* 221 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["e"]; });
 
 
 /***/ }),
-/* 213 */
+/* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["d"]; });
 
 
 /***/ }),
-/* 214 */
+/* 223 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["c"]; });
 
 
 /***/ }),
-/* 215 */
+/* 224 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(214);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(215);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(89);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(216);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(217);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(218);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(219);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(220);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(221);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(222);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(223);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(225);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(226);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
 
 
@@ -27532,35 +32246,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 216 */
+/* 225 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["b"]; });
 
 
 /***/ }),
-/* 217 */
+/* 226 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_router__["a"]; });
 
 
 /***/ }),
-/* 218 */
+/* 227 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Router__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Router__ = __webpack_require__(57);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -27610,13 +32324,13 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 219 */
+/* 228 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -27696,13 +32410,13 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 220 */
+/* 229 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -27782,19 +32496,19 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 221 */
+/* 230 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_invariant__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_invariant__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_PathUtils__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_PathUtils__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_PathUtils___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_PathUtils__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(57);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -27958,17 +32672,17 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 222 */
+/* 231 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__matchPath__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__matchPath__ = __webpack_require__(58);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -28044,17 +32758,17 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 223 */
+/* 232 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(90);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -28089,7 +32803,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 224 */
+/* 233 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -28098,10 +32812,10 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 225 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(224)
+var isarray = __webpack_require__(233)
 
 /**
  * Expose `pathToRegexp`.
@@ -28530,7 +33244,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 226 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28540,7 +33254,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _sidebar = __webpack_require__(227);
+var _sidebar = __webpack_require__(236);
 
 var _sidebar2 = _interopRequireDefault(_sidebar);
 
@@ -28549,7 +33263,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _sidebar2.default;
 
 /***/ }),
-/* 227 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28565,11 +33279,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(14);
+var _propTypes = __webpack_require__(15);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -29021,7 +33735,7 @@ Sidebar.defaultProps = {
 exports.default = Sidebar;
 
 /***/ }),
-/* 228 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29085,7 +33799,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 229 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29102,7 +33816,7 @@ module.exports = KeyEscapeUtils;
 
 
 
-var _prodInvariant = __webpack_require__(19);
+var _prodInvariant = __webpack_require__(20);
 
 var invariant = __webpack_require__(1);
 
@@ -29203,7 +33917,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 230 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29219,11 +33933,11 @@ module.exports = PooledClass;
 
 
 
-var PooledClass = __webpack_require__(229);
-var ReactElement = __webpack_require__(18);
+var PooledClass = __webpack_require__(238);
+var ReactElement = __webpack_require__(19);
 
-var emptyFunction = __webpack_require__(9);
-var traverseAllChildren = __webpack_require__(240);
+var emptyFunction = __webpack_require__(10);
+var traverseAllChildren = __webpack_require__(249);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -29399,7 +34113,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 231 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29415,15 +34129,15 @@ module.exports = ReactChildren;
 
 
 
-var _prodInvariant = __webpack_require__(19),
+var _prodInvariant = __webpack_require__(20),
     _assign = __webpack_require__(5);
 
-var ReactComponent = __webpack_require__(58);
-var ReactElement = __webpack_require__(18);
-var ReactPropTypeLocationNames = __webpack_require__(92);
-var ReactNoopUpdateQueue = __webpack_require__(59);
+var ReactComponent = __webpack_require__(59);
+var ReactElement = __webpack_require__(19);
+var ReactPropTypeLocationNames = __webpack_require__(93);
+var ReactNoopUpdateQueue = __webpack_require__(60);
 
-var emptyObject = __webpack_require__(24);
+var emptyObject = __webpack_require__(25);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -30128,7 +34842,7 @@ module.exports = ReactClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 232 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30144,7 +34858,7 @@ module.exports = ReactClass;
 
 
 
-var ReactElement = __webpack_require__(18);
+var ReactElement = __webpack_require__(19);
 
 /**
  * Create a factory that creates HTML tag elements.
@@ -30153,7 +34867,7 @@ var ReactElement = __webpack_require__(18);
  */
 var createDOMFactory = ReactElement.createFactory;
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(91);
+  var ReactElementValidator = __webpack_require__(92);
   createDOMFactory = ReactElementValidator.createFactory;
 }
 
@@ -30304,7 +35018,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 233 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30320,15 +35034,15 @@ module.exports = ReactDOMFactories;
 
 
 
-var _require = __webpack_require__(18),
+var _require = __webpack_require__(19),
     isValidElement = _require.isValidElement;
 
-var factory = __webpack_require__(64);
+var factory = __webpack_require__(65);
 
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 234 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30350,7 +35064,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 235 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30368,10 +35082,10 @@ module.exports = ReactPropTypesSecret;
 
 var _assign = __webpack_require__(5);
 
-var ReactComponent = __webpack_require__(58);
-var ReactNoopUpdateQueue = __webpack_require__(59);
+var ReactComponent = __webpack_require__(59);
+var ReactNoopUpdateQueue = __webpack_require__(60);
 
-var emptyObject = __webpack_require__(24);
+var emptyObject = __webpack_require__(25);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -30397,7 +35111,7 @@ ReactPureComponent.prototype.isPureReactComponent = true;
 module.exports = ReactPureComponent;
 
 /***/ }),
-/* 236 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30416,7 +35130,7 @@ module.exports = ReactPureComponent;
 module.exports = '15.5.4';
 
 /***/ }),
-/* 237 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30432,10 +35146,10 @@ module.exports = '15.5.4';
 
 
 
-var _prodInvariant = __webpack_require__(19);
+var _prodInvariant = __webpack_require__(20);
 
-var ReactPropTypeLocationNames = __webpack_require__(92);
-var ReactPropTypesSecret = __webpack_require__(234);
+var ReactPropTypeLocationNames = __webpack_require__(93);
+var ReactPropTypesSecret = __webpack_require__(243);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -30448,7 +35162,7 @@ if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === 't
   // https://github.com/facebook/react/issues/7240
   // Remove the inline requires when we don't need them anymore:
   // https://github.com/facebook/react/pull/7178
-  ReactComponentTreeHook = __webpack_require__(8);
+  ReactComponentTreeHook = __webpack_require__(9);
 }
 
 var loggedTypeFailures = {};
@@ -30490,7 +35204,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 
         if (process.env.NODE_ENV !== 'production') {
           if (!ReactComponentTreeHook) {
-            ReactComponentTreeHook = __webpack_require__(8);
+            ReactComponentTreeHook = __webpack_require__(9);
           }
           if (debugID !== null) {
             componentStackInfo = ReactComponentTreeHook.getStackAddendumByID(debugID);
@@ -30509,7 +35223,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 238 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30535,7 +35249,7 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 239 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30550,9 +35264,9 @@ module.exports = getNextDebugID;
  */
 
 
-var _prodInvariant = __webpack_require__(19);
+var _prodInvariant = __webpack_require__(20);
 
-var ReactElement = __webpack_require__(18);
+var ReactElement = __webpack_require__(19);
 
 var invariant = __webpack_require__(1);
 
@@ -30579,7 +35293,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 240 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30595,14 +35309,14 @@ module.exports = onlyChild;
 
 
 
-var _prodInvariant = __webpack_require__(19);
+var _prodInvariant = __webpack_require__(20);
 
-var ReactCurrentOwner = __webpack_require__(13);
-var REACT_ELEMENT_TYPE = __webpack_require__(90);
+var ReactCurrentOwner = __webpack_require__(14);
+var REACT_ELEMENT_TYPE = __webpack_require__(91);
 
-var getIteratorFn = __webpack_require__(93);
+var getIteratorFn = __webpack_require__(94);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(228);
+var KeyEscapeUtils = __webpack_require__(237);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -30761,7 +35475,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 241 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30837,7 +35551,7 @@ var resolvePathname = function resolvePathname(to) {
 module.exports = resolvePathname;
 
 /***/ }),
-/* 242 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -30874,7 +35588,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(243);
+	fixUrls = __webpack_require__(252);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -31133,7 +35847,7 @@ function updateLink(linkElement, options, obj) {
 
 
 /***/ }),
-/* 243 */
+/* 252 */
 /***/ (function(module, exports) {
 
 
@@ -31228,7 +35942,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 244 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31274,7 +35988,7 @@ var valueEqual = function valueEqual(a, b) {
 exports.default = valueEqual;
 
 /***/ }),
-/* 245 */
+/* 254 */
 /***/ (function(module, exports) {
 
 var g;
@@ -31299,887 +36013,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-/* 246 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var StaticPage3 = function (_React$Component) {
-  _inherits(StaticPage3, _React$Component);
-
-  function StaticPage3(props) {
-    _classCallCheck(this, StaticPage3);
-
-    return _possibleConstructorReturn(this, (StaticPage3.__proto__ || Object.getPrototypeOf(StaticPage3)).call(this, props));
-  }
-
-  _createClass(StaticPage3, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "static-page4" },
-        _react2.default.createElement(
-          "div",
-          { className: "content" },
-          _react2.default.createElement(
-            "div",
-            { className: "bg" },
-            _react2.default.createElement(
-              "div",
-              { className: "intro white" },
-              _react2.default.createElement(
-                "div",
-                { className: "flex-container" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "left-side" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "intro_heading" },
-                    _react2.default.createElement(
-                      "h1",
-                      null,
-                      " The National Examination Program \"NEP\" "
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "container" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "box1" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_1.png" }),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "img_caption" },
-                        "Risk Based Approach"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "box2" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_2.png" }),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "img_caption" },
-                        "Emphasis on Team work"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "box3" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_3.png" }),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "img_caption" },
-                        "Enhance training of examiners"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "box4" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/icon_4.png" }),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "img_caption" },
-                        "Hire senior industry professionals"
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return StaticPage3;
-}(_react2.default.Component);
-
-exports.default = StaticPage3;
-
-/***/ }),
-/* 247 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Interactivity1 = function (_React$Component) {
-  _inherits(Interactivity1, _React$Component);
-
-  function Interactivity1(props) {
-    _classCallCheck(this, Interactivity1);
-
-    var _this = _possibleConstructorReturn(this, (Interactivity1.__proto__ || Object.getPrototypeOf(Interactivity1)).call(this, props));
-
-    _this.state = {
-      isPopupOpen: false,
-      currentPopup: 0
-    };
-    return _this;
-  }
-
-  _createClass(Interactivity1, [{
-    key: "getPopupContent",
-    value: function getPopupContent() {
-      var currentPopup = this.state.currentPopup;
-      switch (parseInt(currentPopup)) {
-        case 1:
-          return _react2.default.createElement(
-            "div",
-            null,
-            "Popup1"
-          );
-          break;
-        case 2:
-          return _react2.default.createElement(
-            "div",
-            null,
-            "Popup2"
-          );
-          break;
-      }
-    }
-  }, {
-    key: "displayPopup",
-    value: function displayPopup() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        this.state.isPopupOpen && _react2.default.createElement(
-          "div",
-          { className: "popup-container" },
-          _react2.default.createElement(
-            "span",
-            { className: "close-btn icon-close", onClick: this.closePopup.bind(this) },
-            "\uE60A"
-          ),
-          this.getPopupContent()
-        )
-      );
-    }
-  }, {
-    key: "openPopup",
-    value: function openPopup(currentPopup) {
-      this.setState({ isPopupOpen: true, currentPopup: currentPopup });
-    }
-  }, {
-    key: "closePopup",
-    value: function closePopup() {
-      this.setState({ isPopupOpen: false });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "interactivity1" },
-        _react2.default.createElement(
-          "div",
-          { className: "content" },
-          _react2.default.createElement(
-            "div",
-            { className: "bg" },
-            _react2.default.createElement(
-              "div",
-              { className: "intro white" },
-              _react2.default.createElement(
-                "div",
-                { className: "flex-container" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "left-side" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "intro_heading" },
-                    _react2.default.createElement(
-                      "h1",
-                      null,
-                      "The National Examination Programe \"NEP\" "
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "intro_para" },
-                    _react2.default.createElement(
-                      "span",
-                      null,
-                      "Senior Specialized Examiners with experience in:"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "intro_list" },
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Trading"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Portfolio Management"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Valuation"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Complex Products"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Sales"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Compliance"
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        "Forensic Accounting"
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "btn_div" },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "instruction_text" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/hand_icon.png" }),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        "Click each button to know more."
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "buttons" },
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        _react2.default.createElement(
-                          "button",
-                          { id: "btn_01", onClick: this.openPopup.bind(this, 1) },
-                          "Approach 1"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        _react2.default.createElement(
-                          "button",
-                          { id: "btn_02", onClick: this.openPopup.bind(this, 2) },
-                          "Approach 2"
-                        )
-                      )
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "right-side" },
-                  this.displayPopup()
-                )
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Interactivity1;
-}(_react2.default.Component);
-
-exports.default = Interactivity1;
-
-/***/ }),
-/* 248 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Interactivity2 = function (_React$Component) {
-  _inherits(Interactivity2, _React$Component);
-
-  function Interactivity2(props) {
-    _classCallCheck(this, Interactivity2);
-
-    var _this = _possibleConstructorReturn(this, (Interactivity2.__proto__ || Object.getPrototypeOf(Interactivity2)).call(this, props));
-
-    _this.state = {
-      isTabOpen: false,
-      currentTab: 0
-    };
-    return _this;
-  }
-
-  _createClass(Interactivity2, [{
-    key: "getPopupContent",
-    value: function getPopupContent() {
-      var currentTab = this.state.currentTab;
-      switch (parseInt(currentTab)) {
-        case 1:
-          return _react2.default.createElement(
-            "div",
-            null,
-            "Tab1"
-          );
-          break;
-        case 2:
-          return _react2.default.createElement(
-            "div",
-            null,
-            "Tab2"
-          );
-          break;
-        case 3:
-          return _react2.default.createElement(
-            "div",
-            null,
-            "Tab3"
-          );
-          break;
-      }
-    }
-  }, {
-    key: "displayTab",
-    value: function displayTab() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        this.state.isTabOpen && _react2.default.createElement(
-          "div",
-          { className: "tab-container" },
-          _react2.default.createElement(
-            "span",
-            { className: "close-btn icon-close", onClick: this.closeTab.bind(this) },
-            "\uE60A"
-          ),
-          this.getPopupContent()
-        )
-      );
-    }
-  }, {
-    key: "openTabContainer",
-    value: function openTabContainer(currentTab) {
-      this.setState({ isTabOpen: true, currentTab: currentTab });
-    }
-  }, {
-    key: "closeTab",
-    value: function closeTab() {
-      this.setState({ isTabOpen: false });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "interactivity2" },
-        _react2.default.createElement(
-          "div",
-          { className: "content" },
-          _react2.default.createElement(
-            "div",
-            { className: "bg" },
-            _react2.default.createElement(
-              "div",
-              { className: "intro white" },
-              _react2.default.createElement(
-                "div",
-                { className: "flex-container" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "left-side" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "intro_heading" },
-                    _react2.default.createElement(
-                      "h1",
-                      null,
-                      "Kinds of Examinations"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "intro_para" },
-                    _react2.default.createElement(
-                      "span",
-                      null,
-                      "Who they apply to"
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "btn_div" },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "instruction_text" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/hand_icon.png" }),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        "Click each tab to know more."
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "container" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "buttons" },
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        _react2.default.createElement(
-                          "button",
-                          { id: "btn_01", onClick: this.openTabContainer.bind(this, 1),
-                            className: this.state.currentTab === 1 ? "selected" : "" },
-                          "Traditional Examination"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        _react2.default.createElement(
-                          "button",
-                          { id: "btn_02", onClick: this.openTabContainer.bind(this, 2),
-                            className: this.state.currentTab === 2 ? "selected" : "" },
-                          "Dual registrant exams"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        _react2.default.createElement(
-                          "button",
-                          { id: "btn_03", onClick: this.openTabContainer.bind(this, 3),
-                            className: this.state.currentTab === 3 ? "selected" : "" },
-                          "Presence Exam"
-                        )
-                      )
-                    ),
-                    this.displayTab()
-                  )
-                )
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Interactivity2;
-}(_react2.default.Component);
-
-exports.default = Interactivity2;
-
-/***/ }),
-/* 249 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var DragDrop1 = function (_React$Component) {
-  _inherits(DragDrop1, _React$Component);
-
-  function DragDrop1(props) {
-    _classCallCheck(this, DragDrop1);
-
-    return _possibleConstructorReturn(this, (DragDrop1.__proto__ || Object.getPrototypeOf(DragDrop1)).call(this, props));
-  }
-
-  _createClass(DragDrop1, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "dragdrop1" },
-        _react2.default.createElement(
-          "div",
-          { className: "content" },
-          _react2.default.createElement(
-            "div",
-            { className: "bg" },
-            _react2.default.createElement(
-              "div",
-              { className: "container" },
-              _react2.default.createElement(
-                "div",
-                { className: "summary" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "summary_heading" },
-                  _react2.default.createElement(
-                    "h1",
-                    { className: "white" },
-                    "Activity"
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "summary_list white" },
-                    _react2.default.createElement(
-                      "span",
-                      null,
-                      " Can you match the type of examination to its respective description."
-                    ),
-                    _react2.default.createElement("br", null),
-                    _react2.default.createElement("br", null),
-                    _react2.default.createElement(
-                      "span",
-                      { className: "instruction_text" },
-                      _react2.default.createElement("img", { src: "/app/assets/images/template/hand_icon.png" }),
-                      _react2.default.createElement(
-                        "span",
-                        null,
-                        "Drag the exam type to its respective description and click Submit."
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "drag_drop white" },
-                _react2.default.createElement(
-                  "div",
-                  { className: "activity" },
-                  _react2.default.createElement(
-                    "table",
-                    null,
-                    _react2.default.createElement(
-                      "tbody",
-                      null,
-                      _react2.default.createElement(
-                        "tr",
-                        null,
-                        _react2.default.createElement(
-                          "td",
-                          { className: "quiz" },
-                          _react2.default.createElement(
-                            "div",
-                            { className: "quiz_box" },
-                            "Are almost never announced in advance to reduce the chances of documents being destroyed."
-                          )
-                        ),
-                        _react2.default.createElement(
-                          "td",
-                          { className: "drop" },
-                          _react2.default.createElement("div", { className: "drop_box" })
-                        ),
-                        _react2.default.createElement(
-                          "td",
-                          { className: "drag" },
-                          _react2.default.createElement(
-                            "div",
-                            { className: "drag_box" },
-                            _react2.default.createElement(
-                              "button",
-                              { id: "btn_01" },
-                              "Sweep Exams"
-                            )
-                          )
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "tr",
-                        null,
-                        _react2.default.createElement(
-                          "td",
-                          { className: "quiz" },
-                          _react2.default.createElement(
-                            "div",
-                            { className: "quiz_box" },
-                            "Are held as SEC would like more information to determine whether additional guidance or regulation is required. "
-                          )
-                        ),
-                        _react2.default.createElement(
-                          "td",
-                          { className: "drop" },
-                          _react2.default.createElement("div", { className: "drop_box" })
-                        ),
-                        _react2.default.createElement(
-                          "td",
-                          { className: "drag" },
-                          _react2.default.createElement(
-                            "div",
-                            { className: "drag_box" },
-                            _react2.default.createElement(
-                              "button",
-                              { id: "btn_01" },
-                              "Cause Exams"
-                            )
-                          )
-                        )
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return DragDrop1;
-}(_react2.default.Component);
-
-exports.default = DragDrop1;
-
-/***/ }),
-/* 250 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TopNav = function (_React$Component) {
-  _inherits(TopNav, _React$Component);
-
-  function TopNav(props) {
-    _classCallCheck(this, TopNav);
-
-    var uagent = navigator.userAgent.toLowerCase();
-
-    var _this = _possibleConstructorReturn(this, (TopNav.__proto__ || Object.getPrototypeOf(TopNav)).call(this, props));
-
-    _this.state = {
-      isiPad: uagent.search("mobile") > -1
-    };
-    return _this;
-  }
-
-  _createClass(TopNav, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "header-nav" },
-        _react2.default.createElement(
-          "div",
-          { className: "button-container" },
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
-              { "aria-disabled": "false", "aria-label": "menu", "aria-pressed": "false", href: "#", onClick: this.props.onMenuClick, role: "button" },
-              _react2.default.createElement(
-                "span",
-                { className: "icon-tools" },
-                "\uE627"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
-              { "aria-disabled": "false", "aria-label": "playPause", "aria-pressed": "false", href: "#", role: "button" },
-              _react2.default.createElement("span", { className: "icon-playPause" })
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
-              { "aria-disabled": "false", "aria-label": "back", "aria-pressed": "false",
-                className: this.props.currentPageNumber !== 1 ? "tabindex" : "tabindex disabled", href: "#",
-                onClick: this.props.onLoadPrev.bind(null, this), role: "button" },
-              _react2.default.createElement(
-                "span",
-                { className: "icon-back" },
-                "\uE607"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "nav-comp-container" },
-            _react2.default.createElement(
-              "div",
-              { className: "page-counter clearfix" },
-              _react2.default.createElement(
-                "span",
-                { className: "page-number" },
-                this.props.currentPageNumber
-              ),
-              _react2.default.createElement(
-                "span",
-                { className: "page-separator" },
-                "|"
-              ),
-              _react2.default.createElement(
-                "span",
-                { className: "total-pages" },
-                this.props.totalPages
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
-              { "aria-disabled": "false", "aria-label": "next", "aria-pressed": "false",
-                className: this.props.currentPageNumber !== this.props.totalPages ? "tabindex" : "tabindex disabled", href: "#",
-                onClick: this.props.onLoadNext.bind(null, this), role: "button"
-              },
-              _react2.default.createElement(
-                "span",
-                { className: "icon-next" },
-                "\uE617"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
-              { "aria-disabled": "false", "aria-label": "transcript", "aria-pressed": "false", href: "#", role: "button" },
-              _react2.default.createElement("span", { className: "icon-transcript" })
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "button-box" },
-            _react2.default.createElement(
-              "a",
-              { "aria-disabled": "false", "aria-label": "menu", "aria-pressed": "false", href: "#", onClick: this.props.onMenuClick, role: "button" },
-              _react2.default.createElement(
-                "span",
-                { className: "icon-menu" },
-                "\uE616"
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return TopNav;
-}(_react2.default.Component);
-
-exports.default = TopNav;
 
 /***/ })
 /******/ ]);

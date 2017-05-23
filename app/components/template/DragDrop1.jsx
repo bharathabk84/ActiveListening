@@ -20,7 +20,7 @@ export default class DragDrop1 extends React.Component {
                  
                 </div>
              <div className="sub_heading">
-                  Here are some tips on how you can practice active listening
+                  Here are some tips on how you can practice active listening.
                  
                 </div>
                 
@@ -103,7 +103,7 @@ export default class DragDrop1 extends React.Component {
                  
                 </div>
              <div className="sub_heading">
-                  Here are some tips on how you can practice active listening
+                  Here are some tips on how you can practice active listening.
                  
                 </div>
                 
@@ -187,7 +187,7 @@ export default class DragDrop1 extends React.Component {
                  
                 </div>
              <div className="sub_heading">
-                  Here are some tips on how you can practice active listening
+                  Here are some tips on how you can practice active listening.
                  
                 </div>
                 

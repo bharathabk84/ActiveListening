@@ -15,6 +15,10 @@ h1{
     font-size: 1em;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 .bg{
     height: 540px;
 }
@@ -130,7 +134,10 @@ h1{
         width: 56%;
         font-size: 1.5em;
     }
-
+    
+    .btn img{
+        opacity: 0;
+    }
   .left-side
   {
 								 
@@ -198,10 +205,13 @@ h1{
     
   .btn .btn_text
   {
-    color: #5e9e44;
+    color: #1874BB;
     left: -20px;
     position: relative;
     top: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+      
   }
 
   .start-button {
@@ -255,7 +265,7 @@ h1{
 	   }
 	   .flex-container {
 				display: block;
-			    height: 285px;
+			     height: 220px;
 				margin-top: 15%;
 	   }
        .content
@@ -280,6 +290,7 @@ h1{
             text-align: center;
             width: 100%;
 			margin-left: 0px;
+              margin-top: 5%;
         }
            .btn .btn_text
 			{
@@ -308,7 +319,7 @@ h1{
     
 		.right-sidetext {
 			text-align: center;
-			margin-top: 10%;
+			margin-top: 5%;
 			line-height: 0.5;
 			width: 100%;
 			font-size: 1.5em;
@@ -324,8 +335,8 @@ h1{
 	   }
 	   .flex-container {
 				display: block;
-			    height: 285px;
-				margin-top: 15%;
+			    height: 340px;
+				margin-top: 18%;
 	   }
        .content
          {
@@ -525,7 +536,6 @@ h1{
       @media only screen and (max-device-width: 700px) {
           
          
-          
           .quote_symbol{
               width: 50%;
           }
@@ -590,6 +600,7 @@ h1{
           /* background-image: url('/app/assets/images/template/');*/
             background-size: 100% 100%;
             background-repeat: no-repeat;
+             height: 520px;
             
          }
          
@@ -636,7 +647,10 @@ h1{
                 margin-top: 5%;
             }
 
-         
+         .box3 img{
+             position: relative;
+            top: -15px;
+         }
          .intro{
              height: 470px;
          }
@@ -695,7 +709,7 @@ h1{
     @media only screen and (max-device-width: 1024px) {
         .bg{
             
-            height: 650px;
+            height: 620px;
            
         }
         
@@ -717,7 +731,8 @@ h1{
     height:100%;
     width: 100%;
     background-size: contain;
-      background-size: 100% 100%;
+    background-size: 100% 100%;
+    
   }
 
   .intro {
@@ -878,8 +893,9 @@ h1{
       color: #1673ba;
         font-weight: bold;
       position: relative;
-        top: -30px;
-        left: -20px;
+       top: -28px;
+        left: -13px;
+        opacity: 0;
     }
     
     
@@ -887,6 +903,8 @@ h1{
         
         .bg{
              height: 600px;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .flex-container{
             
@@ -916,11 +934,14 @@ h1{
 	 @media only screen and (max-device-width: 700px)
      {
          
+         .bg{
+             height: 550px;
+         }
                
          .intro {
                 width: 100%;
                 border-top: 2px solid #ccc;
-                height: 700px;
+                height: 550px;
                 }
          .intro_para {
                 margin-left: 46px;
@@ -979,12 +1000,21 @@ h1{
          .blue_banner{
              display: none;
          }
+         .btn_div{
+             margin-top: 8%;
+         }
     }
     
     @media only screen and (max-device-width: 480px) and (orientation: landscape)  {
-    
+        
+         .bg{
+             height: 600px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
         .content{
-            height: 650px;
+            height: 600px;
         }
         
         .img_div{
@@ -998,7 +1028,7 @@ h1{
             margin-top: 15px;
         }
         .btn{
-            top: 15px;
+            top: 5px;
         }
     }
     
@@ -1014,7 +1044,7 @@ h1{
         .intro {
                 width: 100%;
                 border-top: 2px solid #ccc;
-                height: 700px;
+                height: 550px;
                 }
         .intro_para {
                 margin-left: 11px;
@@ -1026,7 +1056,7 @@ h1{
                 margin-top: 20px;
             }
         .bg{
-                 background-position-x: -430px;
+                 background-position-x: 0px;
          }
         
         .box1 img , .box2 img , .box3 img{
@@ -1042,7 +1072,9 @@ h1{
             width: 90%;
             margin: auto;
             text-align: center;
-            font-size: 0.6em;
+            font-size: 0.7em;
+            position: relative;
+            top: 8px;
         }
         
         .arrow_img{
@@ -1077,7 +1109,7 @@ h1{
         
         .btn_text{
             font-size: 0.5em;
-            top: -22px;
+            top: -30px;
             left: -12px;
         }
     
@@ -1157,7 +1189,7 @@ h1{
         width: 200px;
         border: 1px solid transparent;
         border-radius: 5px;
-        
+        cursor: pointer;
         text-align: center;
         color: white;
         
@@ -1168,7 +1200,7 @@ h1{
         border: 1px solid transparent;
         border-radius: 10px;
         width: 22%;
-        height: 350px;
+        height: 360px;
         position: absolute;
         top: 25%;
         left: 6%;
@@ -1196,7 +1228,7 @@ h1{
         border: 1px solid transparent;
         border-radius: 10px;
         width: 22%;
-        height: 350px;
+        height: 360px;
         position: absolute;
         top: 25%;
         left: 40%;
@@ -1223,7 +1255,7 @@ h1{
         border: 1px solid transparent;
         border-radius: 10px;
         width: 22%;
-        height: 350px;
+        height: 360px;
         position: absolute;
         top: 25%;
         left: 73%;
@@ -1320,7 +1352,9 @@ h1{
     }
     @media only screen and (max-device-width: 700px) {
         
-
+        .bg{
+            height: 330px;
+        }
       .intro
       {
           height: 300px;
@@ -1376,7 +1410,7 @@ h1{
             width: 90%;
             height: 250px;
             position: absolute;
-            top: 2%;
+            top: 14%;
             left: 5%;
             
         }
@@ -1385,7 +1419,7 @@ h1{
             width: 90%;
             height: 250px;
             position: absolute;
-            top: 2%;
+            top: 14%;
             left: 5%;
 
         }
@@ -1394,7 +1428,7 @@ h1{
             width: 90%;
             height: 250px;
             position: absolute;
-            top: 2%;
+            top: 14%;
             left: 5%;
         }
     }
@@ -1409,6 +1443,7 @@ h1{
         .bg{
         background-repeat: no-repeat;
         background-size: cover;
+            height: 550px;
         }
         
         h1{
@@ -1427,7 +1462,7 @@ h1{
         }
         
          .flex-container {
-            height: 750px;
+            height: 500px;
             margin-top: 0%;
             width: 100%;
             
@@ -1443,7 +1478,7 @@ h1{
             width: 80%;
             height: 270px;
             position: absolute;
-            top: 16%;
+            top: 17%;
             left: 10%;
             border-bottom: 10px solid #F3962A;
         }
@@ -1455,7 +1490,7 @@ h1{
             width: 80%;
             height: 290px;
             position: absolute;
-            top: 16%;
+            top: 17%;
             left: 10%;
              border-bottom: 10px solid #23B59D;
         }
@@ -1467,7 +1502,7 @@ h1{
             width: 80%;
             height: 280px;
             position: absolute;
-            top: 16%;
+            top: 17%;
             left: 10%;
             border-bottom: 10px solid #D25464;
 
@@ -1598,6 +1633,7 @@ h1{
        .bg{
                background-image: none;
                background-color: #E8EBF0;
+                
            }
            .content{
                height: 100%;
@@ -1608,11 +1644,11 @@ h1{
                width: 100%;
                background-color: #1E2E3D;
                margin-top: 2%;
-               height: 100%;
+               height: 820px;
            }
            
            .flex-container{
-               display: block;
+               display: flex;
               width: 100%;
                position: static;
                
@@ -1624,11 +1660,13 @@ h1{
                 color: #fff;
                 width: 80%;
                 margin: auto;
-               
+                height: 40px;
            }
            .box1, .box2, .box3, .box4 {
                width: 50%;
                 margin: auto;
+               height: 350px;
+               margin-top: 2%;
            }
            .box1 img, .box2 img, .box3 img, .box4 img{
                width: 80%;
@@ -1651,6 +1689,7 @@ h1{
            .bg{
                background-image: none;
                background-color: #E8EBF0;
+               height: 100%;
            }
            .content{
                height: 100%;
@@ -1661,37 +1700,40 @@ h1{
                width: 100%;
                background-color: #1E2E3D;
                margin-top: 2%;
-               height: 100%;
+            height: 1200px;
            }
            
            .flex-container{
-               display: block;
-              width: 100%;
-               position: static;
-               
+                 display: block;
+                width: 90%;
+                margin: auto;
+                position: static;
+                height: 46%;
            }
            .img_heading{
                display: block;
                 height: auto;
                 text-align: left;
                 color: #fff;
-                width: 80%;
+                width: 100%;
                 margin: auto;
+              
                
            }
            .box1, .box2, .box3, .box4 {
                width: 80%;
                 margin: auto;
+               margin-top: 3%;
+               height: auto;
            }
            .box1 img, .box2 img, .box3 img, .box4 img{
-               width: 80%;
+               width: 70%;
            }
            
            .img_caption{
-            width: 90%;
+            width: 100%;
             margin: auto;
-            margin-left: 10%;
-               font-weight: normal;
+            font-weight: normal;
                
            }
     }
@@ -1884,12 +1926,14 @@ h1{
   	background-color: #1485C7;
     height: 100%;
     width: 100%;
-    margin-top: 25%;
+    margin-top: 12%;
     color: #fff;
   }
     
     
-    
+         .bg{
+             height: 550px;
+         }
   .left-side
   {
   	width: 90%;
@@ -1907,6 +1951,8 @@ h1{
         display: inline-block;
         width: 63%;
         text-align: left;
+        position: relative;
+        top: 25px;
     }
     
     .box1, .box2, .box3, .box4{
@@ -2099,6 +2145,17 @@ h1{
         }
     }
     
+    @media only screen and (max-device-width: 768px) and (orientation : portrait) {
+         .bottom .box2{
+                    
+                    width: 28%;
+                }
+        
+     .bottom .box3{
+                    
+                    width: 30%;
+                }
+    }
     @media only screen and (max-device-width: 700px) {
         
             .content{
@@ -2107,6 +2164,7 @@ h1{
          .bg{
              background-image: none;
              background-color: #E8EBF0;
+             height: 100%;
          }
          .flex-container{
              display: block;
@@ -2135,6 +2193,7 @@ h1{
          .bg{
              background-image: none;
              background-color: #E8EBF0;
+             height: 100%;
          }
          .flex-container{
              display: block;
@@ -2161,6 +2220,9 @@ h1{
 .static-page5
 {
 
+    .bg{
+        height: 100%;
+    }
 .header
 {
 	margin: auto;
@@ -2172,10 +2234,10 @@ h1{
     .flex-container{
        
         background-color: #1F2E3C;
-        height: 210px;
+        height: 170px;
         width: 100%;
         text-align: center;
-        margin-top: 13%;
+        margin-top: 11%;
     }
     
     .box1, .box2, .box3, .box4, .box5, .box6{
@@ -2188,7 +2250,7 @@ h1{
         width: 90%;
         margin: auto;
         position: absolute;
-        top: 46%;
+        top: 50%;
         left: 5%;
     }
     
@@ -2196,12 +2258,13 @@ h1{
         width: 90%;
         margin-top: 5%;
         font-weight: 600;
+        height: 30px;
     }
     .content
     {
         margin: auto;
         width: 100%;
-        height: 630px;
+        height: 580px;
         background-color: #000;
 
     }
@@ -2222,7 +2285,7 @@ h1{
     }
 
     .big{
-        font-size: 3em;
+        font-size: 2.8em;
         font-weight: 700;
     }
 
@@ -2230,6 +2293,7 @@ h1{
         font-weight: bold;
         width: 30%;
         margin: auto;
+        font-size: 1.2em;
     }
 
     
@@ -2318,7 +2382,7 @@ h1{
         }
         
         .flex-container{
-            height: 430px;
+            height: 500px;
             margin-top: 10%;
         }
          .container {
@@ -2331,6 +2395,11 @@ h1{
                 margin-left: 0%;
             
             }
+         
+         .flex{
+            display: -webkit-flex;
+            display: flex;
+        }
         .sub_heading{
             width: 90%;
             margin-left: 8%;
@@ -2338,7 +2407,7 @@ h1{
         
         .icons{
             display: block;
-            column-count: 2;
+           
             position: static;
             
         }
@@ -2371,12 +2440,15 @@ h1{
     }
     
     @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
-        
+        .content{
+            height: 520px;
+
+        }
         .bg{
              background-position: 0;
              background-size: contain;
             background-repeat: no-repeat;
-             background-position-y: -10px;
+            height: 500px;
             
          }
         
@@ -2385,7 +2457,7 @@ h1{
         }
         
         .flex-container{
-            height: 360px;
+            height: 400px;
         }
          .container {
             
@@ -2403,9 +2475,12 @@ h1{
         
         .icons{
             display: block;
-            column-count: 2;
-            position: static;
             
+        }
+        
+        .flex{
+            display: -webkit-flex;
+            display: flex;
         }
         
         .img_caption{
@@ -2688,7 +2763,8 @@ h1{
   {
   	width: 60%;
       display: inline-block;
-      margin: inherit;
+      position: relative;
+        top: 15%;
       
   }
          
@@ -2725,7 +2801,7 @@ h1{
        text-align: center;
         width: 55%;
         margin-left: 16%;
-        font-weight: bold;
+   
     }
     
     .box_img{
@@ -2733,10 +2809,6 @@ h1{
         width: 25%;
     }
     
-    .container{
-        font-weight: bold;
-    }
-  
     .box_text{
         display: inline-block;
         width: 60%;
@@ -2796,7 +2868,7 @@ h1{
 .flex-container
   {
      display: block;
-    height: 100%;
+    height: 80%;
     width: 100%;
     margin-top: 5%;
     background-color: #E8EBF0;
@@ -3119,9 +3191,7 @@ h1{
     float: left;
     height: 450px;
     width: 100%;
-   
-    
-  }
+   }
     
     .right_content{
         
@@ -3137,41 +3207,42 @@ h1{
         
         .container{
             margin-top: 26%;
+            height: 90px;
         }
         
          .box1{
         position: relative;
-        top: 76%;
+        top: 61%;
     }
     
       .box2{
         position: relative;
-        top: 159%;
+        top: 129%;
     }
     
       .box3{
         position: relative;
-        top: 63%;
+        top: 41%;
     }
     
      .box4{
         position: relative;
-        top: 137%;
+        top: 111%;
     }
     
      .box5{
         position: relative;
-        top: 177%;
+        top: 140%;
     }
     
      .box6{
         position: relative;
-        top: 60%;
+        top: 61%;
     }
     
      .box7{
         position: relative;
-        top: 196%;
+        top: 179%;
     }
     
         
@@ -3183,58 +3254,63 @@ h1{
         
         .container{
             margin-top: 40%;
+            
         }
         .box1{
         position: relative;
-        top: 155%;
+        top: 141%;
     }
     
       .box2{
         position: relative;
-        top: 228%;
+        top: 206%;
     }
     
       .box3{
         position: relative;
-        top: 125%;
+        top: 109%;
     }
     
      .box4{
         position: relative;
-        top: 211%;
+        top: 194%;
     }
     
      .box5{
         position: relative;
-        top: 241%;
+        top: 215%;
     }
     
      .box6{
         position: relative;
-        top: 140%;
+        top: 141%;
     }
     
      .box7{
         position: relative;
-        top: 248%;
+        top: 234%;
     }
     
     }
   
      @media only screen and (max-device-width: 700px) {
-        
-    .content{
-        height: 100%;
-    }
+  
 .flex-container
   {
       display: flex;
     height: 110px;
     width: 90%;
       margin: auto;
-    margin-top: 3%;
+    margin-top: 10%;
   }
-    
+    .flex-container-2
+        {
+        display: flex;
+         width: 69%;
+        margin: auto;
+        margin-top: 15%;
+        }
+         
     .highlight{
         font-size: 2em;
     }
@@ -3245,9 +3321,10 @@ h1{
   
   .bg
   {
-  	background-image: url("/app/assets/images/template/bg4.jpg");
+  	background-image: none;
+    background-color: #E8EBF0;
     display: inline-block;
-    height: 100%;
+    height: 600px;
     width: 100%;
   }
     
@@ -3255,8 +3332,13 @@ h1{
     .box_img img{
            vertical-align: middle;
             width: 70%;
+            width: 100%;
+        text-align: center;
     }
     
+         .header{
+             background-color: #1E2E3C;
+         }
     .left_content{
        text-align: center;
         width: 55%;
@@ -3269,40 +3351,6 @@ h1{
         width: 100%;
     }
     
-    .box1{
-        position: relative;
-        top: 16%;
-    }
-    
-      .box2{
-        position: relative;
-        top: 50%;
-    }
-    
-      .box3{
-        position: relative;
-        top: 18%;
-    }
-    
-     .box4{
-        position: relative;
-        top: 62%;
-    }
-    
-     .box5{
-        position: relative;
-        top: 72%;
-    }
-    
-     .box6{
-        position: relative;
-        top: -23%;
-    }
-    
-     .box7{
-        position: relative;
-        top: 103%;
-    }
     
     .box1 .highlight_text{
         color: #13B093;
@@ -3344,25 +3392,30 @@ h1{
         margin: auto;
         width: 100%;
         position: relative;
-        left: -8%;
+        left: 0%;
         bottom: 5%;
+        height: 50px;
     }
     .container{
-         background-color: #187CC8;
+        
         font-weight: bold;
         text-align: center;
-        margin-top: 22%;
+        margin-top: 0%;
         padding-top: 3%;
         padding-bottom: 3%;
+        background-color: #1E2E3C;
+        height: 70px;
     }
+         
   
     .box1, .box2, .box3, .box4, .box5, .box6, .box7{
         width: 100%;
+        position: static;
     }
   .intro
   {
     float: left;
-    height: 450px;
+    height: 580px;
     width: 100%;
    
     
@@ -3378,86 +3431,140 @@ h1{
     
      @media only screen and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 5) and(orientation: portrait)  {
            
-   .content{
-        height: 540px;
-    }
-         .flex-container
+  .flex-container
   {
-    display: block;
-    height: 100%;
-    width: 100%;
-    margin-top: 5%;
-    background-color: #E8EBF0;
+      display: flex;
+    height: 110px;
+    width: 90%;
+      margin: auto;
+    margin-top: 10%;
   }
-                
-    .left-side
-      {
-        width: 60%;
-          display: inline-block;
-          margin: inherit;
-
-      }
-
-     .right-side{
-         display: inline-block;
-         width: 30%;
-     }
-
-        .sub-heading{
-            font-size: 1.5em;
-            width: 100%;
-            margin-left: 8%;
+    .flex-container-2
+        {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        margin-top: 15%;
         }
-        .sub-heading .highlight{
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-      .bg
-      {
-        background-image: none;
-        height: 100%;
-        width: 100%;
-      }
-
-        .box1, .box2, .box3, .box4, .box5, .box6, .box7{
-            width: 100%;
-            margin-top: 2%;
-            transform: rotate(90deg);
-        }
-        .box_img img{
-               vertical-align: middle;
-                width: 70%;
-        }
-
-        .left_content{
-               text-align: center;
-                width: 85%;
-                margin: auto;
-                font-weight: bold;
-                padding-top: 10%;
-        }
-
-    .box_img{
-        display: inline-block;
-        width: 25%;
+         
+    .highlight{
+        font-size: 2em;
     }
     
-    .container{
-        font-weight: bold;
-        width: 100%;
-        margin: auto;
-        margin-top: -110%;
-        background-color:#1E2E3B;
+      
+         
+    .sub-heading{
+        margin-left: 8%;
     }
   
-    .box_text{
+  .bg
+  {
+  	background-image: none;
+    background-color: #E8EBF0;
+    display: inline-block;
+    height: 600px;
+    width: 100%;
+  }
+    
+    
+    .box_img img{
+           vertical-align: middle;
+            width: 70%;
+            width: 100%;
+        text-align: center;
+    }
+         
+         
+    
+         .header{
+             background-color: #1E2E3C;
+         }
+    .left_content{
+       text-align: center;
+        width: 55%;
+        margin-left: 16%;
+        font-weight: bold;
+    }
+    
+    .box_img{
         display: inline-block;
-        width: 60%;
+        width: 100%;
+    }
+    
+    
+    .box1 .highlight_text{
+        color: #13B093;
+        font-weight: bold;
+    }
+    
+    .box2 .highlight_text{
+        color: #F3962A;
+        font-weight: bold;
+    }
+    
+    .box3 .highlight_text{
+        color: #1385C7;
+        font-weight: bold;
+    }
+    
+    .box4 .highlight_text{
+        color: #75616D;
+        font-weight: bold;
+    }
+    
+    .box5 .highlight_text{
+        color: #A5AEB5;
+        font-weight: bold;
+    }
+    
+    .box6 .highlight_text{
+        color: #D74554;
+        font-weight: bold;
+    }
+    
+    .box7 .highlight_text{
+        color: #88BB2E;
+        font-weight: bold;
+    }
+    
+    .img_caption{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        position: relative;
+        left: 0%;
+        bottom: 5%;
+        height: 70px;
+    }
+         
+         .flex-container-2 .img_caption{
+             height: 60px;
+         }
+    .container{
+        
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background-color: #1E2E3C;
+        height: 110px;
+    }
+         
+     .box5 img , .box6 img, .box7 img{
+          width: 80%;
+         margin: auto;
+         }
+         
+    .box1, .box2, .box3, .box4, .box5, .box6, .box7{
+        width: 100%;
+        position: static;
+        text-align: center;
     }
   .intro
   {
     float: left;
-    height: 450px;
+    height: 580px;
     width: 100%;
    
     
@@ -3466,9 +3573,7 @@ h1{
     .right_content{
         
         font-weight: bold;
-        width: 80%;
-        margin: auto;
-        margin-top: 10%;
+        margin-top: 20%;
     }
 
     }
